@@ -1,19 +1,20 @@
 ---
 type: World Concept
-title: Items
-description: Index of artifacts, boons, and notable loot.
+title: Itens
+description: Índice de artefatos, dádivas e tesouro notável.
 visibility: secret
 status: draft
-tags: [items, gm-only]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:35:00Z }
+lang: pt-BR
+tags: [itens, apenas-mestre]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:55:00Z }
 ---
 
-# Items
+# Itens
 
-*No items catalogued yet.*
+*Nenhum item catalogado ainda.*
 
-Record an item here only when it has a **story consequence**. A +1 weapon does not need a
-concept file; a +1 weapon that remembers its previous owner does.
+Registre um item aqui só quando ele tiver **consequência narrativa**. Uma arma +1 não
+precisa de arquivo; uma arma +1 que lembra do dono anterior, precisa.
 
-Recommended frontmatter: `type: Item`, plus `attunement`, `rarity`, and `visibility` —
-an item's *properties* are often `public` while its *origin* is `secret`.
+Frontmatter recomendado: `type: Item`, mais `attunement`, `rarity` e `visibility` — as
+*propriedades* de um item costumam ser `public` enquanto a *origem* é `secret`.

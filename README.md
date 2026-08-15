@@ -1,7 +1,12 @@
 # Valmorian
 
-A GM companion for the Valmorian D&D campaign — a knowledge base for the world, the NPCs,
-the factions and the sessions, plus a planning companion for the long-term narrative.
+A GM companion for the **Mansão Valmorian** D&D campaign — a knowledge base for the world,
+the NPCs, the factions and the sessions, plus a planning companion for the long-term
+narrative.
+
+O codex é escrito em **português (pt-BR)**. Identificadores estruturais (campos do
+frontmatter, valores de enum, nomes de diretório) ficam em inglês — ver
+[docs/IDIOMA.md](docs/IDIOMA.md).
 
 Built as an [Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
 v0.2 bundle, searched with [QMD](https://github.com/tobi/qmd), and driven by Claude Code.
@@ -30,6 +35,8 @@ Claude Code picks up `.mcp.json` automatically, exposing QMD search as MCP tools
 |------|-----------|
 | `codex/` | The OKF bundle. All campaign canon. Bundle root for absolute links. |
 | `docs/OKF-PROFILE.md` | The normative format spec for this repo — read before authoring. |
+| `docs/IDIOMA.md` | Language policy: pt-BR prose, English identifiers, ASCII filenames. |
+| `docs/GLOSSARIO-DND-2024.md` | pt-BR D&D 2024 terminology, confirmed vs. unverified. |
 | `sources/` | Raw material as Rafael wrote it. Tracked, searchable, **not canon** — the provenance target for `sources:` links. |
 | `scripts/okf_validate.py` | Conformance and link-graph validator. |
 | `.claude/` | Skills, subagents, and slash commands. |
@@ -57,10 +64,13 @@ Backed by four subagents: `lore-keeper` (continuity, read-only), `session-scribe
 ## Searching
 
 ```bash
-qmd search "Drowned Choir" -n 10        # fast BM25 keyword search
-qmd query "who knows about the surfacings"   # hybrid + rerank (needs `qmd embed`)
-qmd get codex/npcs/serath-vane.md       # read a full document
+qmd search "criadagem última ordem" -n 10       # fast BM25 keyword search
+qmd query "quem sabe do incêndio de 1897"       # hybrid + rerank (needs `qmd embed`)
+qmd get codex/npcs/aurelio-bastos.md            # read a full document
 ```
+
+Accented queries work. Unaccented ones match via the ASCII filename, which is why
+filenames are stripped of accents.
 
 ## Validating
 

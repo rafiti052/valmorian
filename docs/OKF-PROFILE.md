@@ -16,7 +16,7 @@ concept, so any OKF-aware agent can read this bundle without knowing this profil
 ## 1. Bundle layout
 
 The bundle root is `codex/`. Absolute links are resolved **relative to the bundle root**,
-not the repo root: `/npcs/serath-vane.md` means `codex/npcs/serath-vane.md`.
+not the repo root: `/npcs/aurelio-bastos.md` means `codex/npcs/aurelio-bastos.md`.
 
 ```
 codex/
@@ -38,8 +38,18 @@ codex/
 `index.md` and `log.md` are the only reserved filenames, per spec. Subdirectories may
 contain their own `index.md` as a directory listing.
 
-Filenames are `kebab-case.md`, derived from the concept title. Never rename a file without
-updating inbound links — `scripts/okf_validate.py` will catch orphans.
+Filenames are `kebab-case.md`, derived from the concept title, and **ASCII only** — strip
+accents and cedillas: `mansao-valmorian.md`, not `mansão-valmorian.md`; `sessao-01.md`, not
+`sessão-01.md`.
+
+Two reasons. Paths appear in absolute links across the whole bundle, and an accented path is
+a portability hazard across filesystems. More practically: QMD indexes filenames, so an
+ASCII filename is what lets `qmd search mansao` find the concept when you type without
+accents — which you will, mid-session, in a hurry. Titles in the frontmatter keep their
+accents; only the path is stripped.
+
+Never rename a file without updating inbound links — `scripts/okf_validate.py` will catch
+orphans.
 
 ---
 
@@ -60,7 +70,15 @@ updating inbound links — `scripts/okf_validate.py` will catch orphans.
 | `visibility` | Secrecy tier. One of `public`, `rumored`, `secret`. See §4. |
 | `status` | Lifecycle: `draft`, `stable`, `deprecated`. Spec-defined values. |
 
-### 2.3 Recommended
+### 2.3 Language
+
+Concept prose is **pt-BR**; frontmatter field names, enum values, `type` values, and
+directory names stay English. Full rationale in [IDIOMA.md](IDIOMA.md).
+
+Optional `lang` field, defaulting to the bundle value in `codex/index.md`. Only worth
+setting on a concept that departs from the default.
+
+### 2.4 Recommended
 
 | Field | Notes |
 |-------|-------|
@@ -71,7 +89,7 @@ updating inbound links — `scripts/okf_validate.py` will catch orphans.
 | `stale_after` | `YYYY-MM-DD`. Useful on session plans and volatile faction state. |
 | `resource` | URI for the underlying asset — the Google Doc, the Notion page, the map image. |
 
-### 2.4 Profile extensions
+### 2.5 Profile extensions
 
 These are Valmorian-specific and carry no meaning to a generic OKF reader. That is fine and
 expected; the spec explicitly allows producer-defined fields.
@@ -79,7 +97,7 @@ expected; the spec explicitly allows producer-defined fields.
 | Field | Applies to | Notes |
 |-------|-----------|-------|
 | `visibility` | all | See §4. |
-| `arc` | threads, sessions, npcs | Link to the owning arc, e.g. `/arcs/the-drowned-crown.md`. |
+| `arc` | threads, sessions, npcs | Link to the owning arc, e.g. `/arcs/o-inventario.md`. |
 | `threads` | sessions, npcs, factions | List of links to live plot threads. |
 | `first_appeared` | npcs, factions, locations, items | Link to the session concept where the party first encountered this. |
 | `last_seen` | npcs | Link to the most recent session concept. |
@@ -89,6 +107,7 @@ expected; the spec explicitly allows producer-defined fields.
 | `pcs` | sessions | List of links to party members present. |
 | `pressure` | threads | `dormant`, `simmering`, `urgent`, `resolved`. How close this is to forcing itself onto the table. |
 | `stat_block` | npcs, bestiary | Free-form 5e-2024 block, or a link to a bestiary concept. |
+| `lang` | all | BCP-47 tag. Defaults to the bundle's `lang` in `codex/index.md`. |
 
 ---
 
@@ -117,10 +136,13 @@ the validator both key off them.
 
 ### 5e 2024 terminology
 
-This campaign runs **D&D 5e (2024 rules)**. Use 2024 vocabulary throughout:
-*species* (not race), *background* as a mechanical package granting a feat, *weapon mastery*
-properties, *bastions*, and the 2024 condition and exhaustion definitions. When a stat block
-is adapted from a 2014 source, say so in `sources`.
+This campaign runs **D&D 5e (2024 rules)**, and the codex is written in pt-BR. Use the
+2024 Portuguese vocabulary: *espécie* (não raça), *antecedente* como pacote mecânico que
+concede talento, *maestria* de armas, e as definições de condição e exaustão de 2024.
+
+The vetted term list is [GLOSSARIO-DND-2024.md](GLOSSARIO-DND-2024.md). Terms in its
+"a confirmar" section are unverified translations — flag them, do not assert them. When a
+stat block is adapted from a 2014 source, say so in `sources`.
 
 ---
 
@@ -141,8 +163,8 @@ Concept-level `visibility` is coarse. For a mostly-public concept that hides one
 
 ```markdown
 > [!secret]
-> Serath is already dead. The figure wearing his face answers to
-> [the Choir](/factions/the-drowned-choir.md).
+> Aurélio já morreu no incêndio. O que serve o chá responde
+> [à Criadagem](/factions/a-criadagem.md).
 ```
 
 Any agent generating player-facing material MUST strip `> [!secret]` blocks and MUST skip
@@ -185,8 +207,8 @@ output into canon.
 
 Cross-links are the graph. Two forms, per spec:
 
-- **Absolute (preferred):** `[Serath Vane](/npcs/serath-vane.md)` — resolved from `codex/`.
-- **Relative:** `[the Choir](../factions/the-drowned-choir.md)` — only within a tight cluster.
+- **Absolute (preferred):** `[Aurélio Bastos](/npcs/aurelio-bastos.md)` — resolved from `codex/`.
+- **Relative:** `[A Criadagem](../factions/a-criadagem.md)` — only within a tight cluster.
 
 Link on first mention of any concept that has its own file. Do not link the same concept
 five times in one document; once, at the top, is enough.

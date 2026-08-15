@@ -63,7 +63,11 @@ sources:
 ```
 
 - Set `status: draft` on everything imported. Rafael promotes to `stable` after review.
-- **Preserve his wording.** Import is not an editing pass. Restructure into the codex's
+- **Keep the source language.** Notes in Portuguese produce concepts in Portuguese.
+  Quotations that are in English — a spell name, a rule from the book — stay in English
+  with Portuguese around them.
+- **Preserve his wording.** Import is not an editing pass, and it is not a translation
+  pass either. Restructure into the codex's
   headings, but keep his sentences. If a passage is genuinely unusable, keep it verbatim
   in a `> [!note] From the original notes` block rather than paraphrasing it away.
 

@@ -71,6 +71,7 @@ FRONTMATTER_RE = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n?", re.DOTALL)
 MD_LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+?)(?:\s+\"[^\"]*\")?\)")
 SECRET_BLOCK_RE = re.compile(r"^>\s*\[!secret\]", re.MULTILINE | re.IGNORECASE)
 AGENT_ACTOR_RE = re.compile(r"^(claude|gpt|gemini|process:|[a-z0-9_.-]+/)", re.IGNORECASE)
+LANG_RE = re.compile(r"^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$")
 
 
 @dataclass
@@ -217,6 +218,11 @@ def check_fields(c: Concept) -> list[Finding]:
     tags = m.get("tags")
     if tags is not None and not isinstance(tags, list):
         out.append(Finding("error", c.rel, "tags must be a YAML list"))
+
+    lang = m.get("lang")
+    if lang is not None and not LANG_RE.match(str(lang)):
+        out.append(Finding("error", c.rel,
+                           f"lang '{lang}' is not a BCP-47 tag (e.g. pt-BR, en)"))
 
     return out
 

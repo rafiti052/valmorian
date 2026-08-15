@@ -9,6 +9,15 @@ allowed-tools: Bash(qmd:*), Bash(python3 scripts/*), Read, Write, Edit, Glob, Gr
 The normative spec is [docs/OKF-PROFILE.md](../../../docs/OKF-PROFILE.md). Read it if you
 have not this session. This skill is the working procedure.
 
+## Language
+
+Prose in **pt-BR**. Field names, enum values, `type` values, directory names and callout
+tags in English — the validator compares against fixed English lists. See
+[docs/IDIOMA.md](../../../docs/IDIOMA.md) and the pt-BR D&D 2024 glossary in
+[docs/GLOSSARIO-DND-2024.md](../../../docs/GLOSSARIO-DND-2024.md).
+
+`description` is prose, so it is Portuguese too, even though it sits in the frontmatter.
+
 ## Before writing anything
 
 1. **Search for an existing concept.** `qmd query "<subject>"`. Duplicates are the main
@@ -25,16 +34,17 @@ Every concept, minimum:
 ```yaml
 ---
 type: NPC                    # required by spec, from the profile's type table
-title: Serath Vane           # required here
-description: One sentence.   # required here — a summary, not a teaser
+title: Aurélio Bastos        # required here — pt-BR, accents kept
+description: Uma frase.      # required here — a summary, not a teaser
 visibility: public           # required here — public | rumored | secret
 status: draft                # required here — draft | stable | deprecated
-tags: [npc, caldrek]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:28:00Z }
+lang: pt-BR                  # optional; defaults to the bundle value
+tags: [npc, mansão]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:48:00Z }
 ---
 ```
 
-Add the type-specific extensions from profile §2.4 — `disposition` and `last_seen` on an
+Add the type-specific extensions from profile §2.5 — `disposition` and `last_seen` on an
 NPC, `pressure` and `arc` on a thread, `session_number` and `pcs` on a session, and so on.
 
 Use a real current UTC timestamp in `generated.at`. Do not copy one from another file.
@@ -57,7 +67,8 @@ Visibility is a ceiling; an inline secret block lowers it locally.
 
 ## Linking
 
-Absolute from the bundle root: `[Serath Vane](/npcs/serath-vane.md)` → `codex/npcs/serath-vane.md`.
+Absolute from the bundle root: `[Aurélio Bastos](/npcs/aurelio-bastos.md)` →
+`codex/npcs/aurelio-bastos.md`. Filenames are ASCII (no accents); titles keep theirs.
 
 Link on first mention, once. Link to concepts that do not exist yet — the validator
 reports them as stubs to write, which is a useful to-do list.

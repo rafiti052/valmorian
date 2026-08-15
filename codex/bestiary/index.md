@@ -1,18 +1,19 @@
 ---
 type: World Concept
-title: Bestiary
-description: Homebrew and reskinned stat blocks for D&D 5e (2024).
+title: Bestiário
+description: Blocos de estatísticas caseiros e reskins para D&D 5e (2024).
 visibility: secret
 status: draft
-tags: [bestiary, dnd-5e-2024, gm-only]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:36:00Z }
+lang: pt-BR
+tags: [bestiário, dnd-5e-2024, apenas-mestre]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:56:00Z }
 ---
 
-# Bestiary
+# Bestiário
 
-| Creature | Basis | CR |
-|----------|-------|----|
-| [Hollow wearer](/bestiary/hollow-wearer.md) | Reskinned 2024 doppelganger | 3 |
+| Criatura | Base | ND |
+|----------|------|-----|
+| [Criado da casa](/bestiary/criado-da-casa.md) | Espectro reskinado (2024) | 1 |
 
-Only write a block when the creature is genuinely custom. For a standard monster with a
-new coat of paint, a reskin note is cheaper and does not drift from the source.
+Só escreva um bloco quando a criatura for realmente caseira. Para um monstro padrão com
+uma pintura nova, uma nota de reskin é mais barata e não desvia da fonte.

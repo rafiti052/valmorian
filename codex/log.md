@@ -1,25 +1,40 @@
 ---
 type: Change Log
-title: Codex Change Log
-description: Chronological record of significant changes to the Valmorian codex.
+title: Registro de Mudanças
+description: Registro cronológico das mudanças significativas no codex da Mansão Valmorian.
 visibility: secret
 status: stable
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:20:00Z }
+lang: pt-BR
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:40:00Z }
 ---
 
-# Change Log
+# Registro de Mudanças
 
-Newest first. Agents append here when they make a structural change — a new arc, a
-resolved thread, a retcon, a bulk import. Routine concept edits do not need an entry;
-git already has those. This log is for the changes you would want to *narrate* to
-yourself six months from now.
+Mais recente primeiro. Os agentes registram aqui quando fazem uma mudança estrutural — um
+arco novo, um fio resolvido, um retcon, uma importação em lote. Edições rotineiras de
+conceito não precisam de entrada; o git já tem essas. Este log é para as mudanças que você
+gostaria de *narrar* para si mesmo daqui a seis meses.
 
-Format: `## YYYY-MM-DD — summary` then bullets, each linking the concepts touched.
+Formato: `## AAAA-MM-DD — resumo`, depois bullets, cada um linkando os conceitos tocados.
 
 ---
 
-## 2026-08-15 — Codex initialised
+## 2026-08-15 — Idioma definido como pt-BR; exemplos retematizados
 
-- Scaffolded the bundle against [OKF v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md).
-- Seeded worked examples across every concept type, tagged `scaffold-example`.
-- No real campaign material imported yet.
+- Prosa do codex passa a ser em português. Identificadores estruturais seguem em inglês —
+  ver [docs/IDIOMA.md](../docs/IDIOMA.md) para o porquê.
+- Glossário D&D 2024 pt-BR em [docs/GLOSSARIO-DND-2024.md](../docs/GLOSSARIO-DND-2024.md),
+  separando termos confirmados dos que ainda preciso confirmar.
+- Exemplos de scaffold retematizados de uma cidade portuária para uma mansão, já que a
+  campanha se chama Mansão Valmorian. Continuam sendo material inventado e descartável.
+
+## 2026-08-15 — `inbox/` substituído por `sources/`
+
+- `inbox/` era gitignored, o que impedia qualquer material de chegar ao companheiro.
+- `sources/` é versionado de propósito: é o canal de entrega e o alvo permanente dos links
+  `sources[].resource`.
+
+## 2026-08-15 — Codex inicializado
+
+- Scaffold criado sobre [OKF v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md).
+- Nenhum material real da campanha importado ainda.

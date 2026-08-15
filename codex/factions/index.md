@@ -1,20 +1,21 @@
 ---
 type: World Concept
-title: Factions
-description: Index of organisations with goals, clocks, and opinions about the party.
+title: Facções
+description: Índice das organizações com objetivos, relógios e opinião sobre o grupo.
 visibility: secret
 status: draft
-tags: [factions, gm-only]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:26:00Z }
+lang: pt-BR
+tags: [facções, apenas-mestre]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:46:00Z }
 ---
 
-# Factions
+# Facções
 
-| Faction | Disposition to party | Visibility |
-|---------|---------------------|------------|
-| [The Drowned Choir](/factions/the-drowned-choir.md) | `wary` | `rumored` |
+| Facção | Disposição com o grupo | Visibilidade |
+|--------|------------------------|--------------|
+| [A Criadagem](/factions/a-criadagem.md) | `friendly` | `rumored` |
 
-## Between sessions
+## Entre sessões
 
-Advance every faction clock by at least one tick per session, whether or not the party
-was involved. A faction that only moves when observed is scenery, not a faction.
+Avance o relógio de toda facção em pelo menos uma marca por sessão, o grupo tendo se
+envolvido ou não. Facção que só se mexe quando observada é cenário, não facção.

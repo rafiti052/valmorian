@@ -1,6 +1,6 @@
 ---
 description: Forge a table-ready NPC and wire them into the codex
-argument-hint: "<name, role, or brief — e.g. 'harbourmaster who fears the Choir'>"
+argument-hint: "<nome, papel ou resumo — ex.: 'a cozinheira que não fala do incêndio'>"
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep, Task
 ---
 

@@ -1,83 +1,86 @@
 ---
 type: World Concept
-title: Narrative Spine
-description: The long-term shape of the Valmorian campaign — arcs, their order, and how to find your way back into them mid-session.
+title: Espinha Narrativa
+description: A forma de longo prazo da campanha Mansão Valmorian — arcos, sua ordem, e como reencontrar o rumo no meio da preparação.
 visibility: secret
 status: draft
-tags: [narrative, planning, gm-only]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:22:00Z }
+lang: pt-BR
+tags: [narrativa, planejamento, apenas-mestre]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:42:00Z }
 ---
 
-# Narrative Spine
+# Espinha Narrativa
 
-This is the document you open when you have lost the plot. It answers one question:
-**what is this campaign about, and where are we in it?**
+Este é o documento que você abre quando perdeu o fio. Ele responde uma pergunta:
+**do que trata esta campanha, e onde estamos nela?**
 
-## The premise in one paragraph
+## A premissa em um parágrafo
 
-> *Replace this. One paragraph, present tense, no proper nouns you have not already
-> decided on. If you cannot write the premise without a glossary, the premise is not
-> finished.*
+> *Substitua isto. Um parágrafo, presente do indicativo, sem nomes próprios que você ainda
+> não decidiu. Se você não consegue escrever a premissa sem um glossário, a premissa ainda
+> não está pronta.*
 
-An example of the shape: *A drowned empire is surfacing, one relic at a time, and every
-person who touches a relic starts remembering a life that was never theirs. The party are
-the first people to notice this is happening on purpose.*
+Um exemplo do formato: *Um grupo herda uma mansão de um parente de quem ninguém se lembra.
+A casa tem mais cômodos do que a planta permite, a criadagem nunca parou de trabalhar, e
+todos ali ainda obedecem à última ordem que um Valmorian deu — ordem que ninguém sabe qual
+foi.*
 
-## The three questions
+## As três perguntas
 
-Every campaign is really a few questions the table is answering together. Name them, and
-individual sessions stop feeling arbitrary — each scene either presses on a question or
-it does not.
+Toda campanha é, no fundo, um punhado de perguntas que a mesa responde junto. Nomeie-as e
+as sessões param de parecer arbitrárias — cada cena ou pressiona uma pergunta ou não.
 
-| # | Question | Whose question is it? |
+| # | Pergunta | De quem é a pergunta? |
 |---|----------|----------------------|
-| 1 | *What is the empire trying to become?* | The world's |
-| 2 | *Is inherited memory the same as inherited guilt?* | The theme's |
-| 3 | *Will the party save the people who drowned them?* | The party's |
+| 1 | *O que a casa está tentando terminar?* | Do mundo |
+| 2 | *Serviço prestado por hábito ainda é lealdade?* | Do tema |
+| 3 | *O grupo vai aceitar a herança sabendo o preço?* | Do grupo |
 
-Question 3 must belong to the **party**, not to you. If you cannot state a question the
-PCs are personally on the hook for, go read [party/](/party/index.md) and find one.
+A pergunta 3 tem que ser **do grupo**, não sua. Se você não consegue enunciar uma pergunta
+pela qual os PJs estão pessoalmente na linha, vá ler [party/](/party/index.md) e ache uma.
 
-## Arc order
+## Ordem dos arcos
 
-Arcs are movements, not chapters — they overlap, and the party decides the tempo. The
-order below is your *expectation*, not a schedule.
+Arcos são movimentos, não capítulos — eles se sobrepõem, e o grupo decide o andamento. A
+ordem abaixo é a sua *expectativa*, não um cronograma.
 
-| Arc | Sessions (est.) | Status | Question pressed |
-|-----|-----------------|--------|------------------|
-| [The Drowned Crown](/arcs/the-drowned-crown.md) | 1–8 | active | 1, 3 |
-| *Arc II — unnamed* | 9–16 | planned | 2 |
-| *Arc III — unnamed* | 17+ | vague | 1, 2, 3 |
+| Arco | Sessões (est.) | Status | Pergunta pressionada |
+|------|----------------|--------|---------------------|
+| [O Inventário](/arcs/o-inventario.md) | 1–8 | ativo | 1, 3 |
+| *Arco II — sem nome* | 9–16 | planejado | 2 |
+| *Arco III — vago* | 17+ | vago | 1, 2, 3 |
 
-Do not write Arc III in detail. You will be wrong about it, and detailed wrong plans are
-harder to abandon than vague ones. A named pressure and a rough shape is enough.
+Não escreva o Arco III em detalhe. Você vai errar, e planos errados detalhados são mais
+difíceis de abandonar do que planos vagos. Uma pressão nomeada e uma forma aproximada
+bastam.
 
-## Finding your way back in
+## Reencontrando o rumo
 
-When you sit down to prep and feel unmoored, run this in order:
+Quando você senta para preparar e se sente sem chão, rode isto na ordem:
 
-1. **Read the last recap.** Not the last three. One.
-2. **Open [threads/](/threads/index.md) and sort by `pressure`.** Anything `urgent` is
-   your session. Anything `simmering` is your B-plot.
-3. **Check the party hooks ledger** in [party/](/party/index.md). Whoever has gone
-   longest without a personal beat gets one.
-4. **Ask what the factions did while nobody was watching.** Factions have clocks; advance
-   them off-screen. This is what makes the world feel alive with the least prep.
-5. **Only then** open this document, and only to check you are still pressing a question.
+1. **Leia o último resumo.** Não os três últimos. Um.
+2. **Abra [threads/](/threads/index.md) e ordene por `pressure`.** O que estiver `urgent`
+   é a sua sessão. O que estiver `simmering` é a trama B.
+3. **Confira o livro-caixa de ganchos** em [party/](/party/index.md). Quem passou mais
+   tempo sem uma cena pessoal ganha uma.
+4. **Pergunte o que as facções fizeram enquanto ninguém olhava.** Facções têm relógios;
+   avance-os fora de cena. É o que faz o mundo parecer vivo com menos preparação.
+5. **Só então** abra este documento, e só para conferir se ainda está pressionando uma
+   pergunta.
 
-Or just run `/session-prep` and let the companion do steps 1–4 and hand you a draft.
+Ou rode `/session-prep` e deixe o companheiro fazer os passos 1–4 e te entregar um rascunho.
 
-## Landmarks
+## Marcos
 
-Scenes you want to happen eventually, unattached to a session. Move them into a
-[Session Plan](/sessions/index.md) when the moment presents itself; delete them when the
-campaign outgrows them.
+Cenas que você quer que aconteçam em algum momento, sem sessão definida. Mova para um
+[Plano de Sessão](/sessions/index.md) quando o momento aparecer; apague quando a campanha
+crescer além delas.
 
-- The party meets someone who remembers *them* from a life they did not live.
-- A relic is destroyed and it turns out that was the wrong call.
-- Someone the party trusts turns out to have been right about the thing they were
-  mocked for in session 2.
+- O grupo encontra um cômodo que já visitou, mobiliado de outro jeito, e ninguém da
+  criadagem acha isso estranho.
+- Um PJ dá uma ordem à criadagem sem perceber que deu, e ela é obedecida ao pé da letra.
+- Alguém em quem o grupo confia se revela certo sobre a coisa de que riram na sessão 2.
 
 > [!note]
-> Landmarks are promises to yourself, not to the players. Breaking one costs nothing.
-> Forcing one costs the campaign's credibility.
+> Marcos são promessas que você faz a si mesmo, não aos jogadores. Quebrar uma não custa
+> nada. Forçar uma custa a credibilidade da campanha.

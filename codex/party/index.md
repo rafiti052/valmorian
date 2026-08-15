@@ -1,38 +1,39 @@
 ---
 type: World Concept
-title: The Party
-description: Player characters, their bonds, and the ledger of personal beats owed to each of them.
+title: O Grupo
+description: Personagens dos jogadores, seus laços, e o livro-caixa das cenas pessoais devidas a cada um.
 visibility: secret
 status: draft
-tags: [party, planning, gm-only]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:33:00Z }
+lang: pt-BR
+tags: [grupo, planejamento, apenas-mestre]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:53:00Z }
 ---
 
-# The Party
+# O Grupo
 
-## Hooks ledger
+## Livro-caixa de ganchos
 
-The most useful table in this codex. Update it every recap; read it every prep.
+A tabela mais útil deste codex. Atualize a cada resumo; leia a cada preparação.
 
-| PC | Player | Personal hook | Last personal beat | Sessions since |
-|----|--------|---------------|--------------------|----------------|
-| [Example PC](/party/example-pc.md) | — | Owes a debt to someone who drowned | Session 1 | 1 |
+| PJ | Jogador | Gancho pessoal | Última cena pessoal | Sessões desde |
+|----|---------|----------------|---------------------|---------------|
+| [PJ de exemplo](/party/exemplo-pj.md) | — | Reconheceu a casa sem nunca ter estado nela | Sessão 1 | 1 |
 
-**Rule of thumb:** nobody goes more than three sessions without a beat that is *theirs*.
-When two PCs are tied, give it to the quieter player.
+**Regra prática:** ninguém passa mais de três sessões sem uma cena que seja *dele*. Em caso
+de empate, dê para o jogador mais quieto.
 
-## Party-level state
+## Estado do grupo
 
-- **Reputation in [Caldrek](/locations/caldrek.md):** unknown quantity, recently employed.
-- **Owed to:** [Serath Vane](/npcs/serath-vane.md), one retrieval.
-- **Owed by:** nobody yet.
+- **Posse da mansão:** pendente do inventário.
+- **Devem a:** [Aurélio Bastos](/npcs/aurelio-bastos.md), a cortesia da recepção.
+- **Devem ao grupo:** ninguém ainda.
 
-## Table agreements
+## Acordos de mesa
 
-Record safety tools, tone lines, and scheduling here. It belongs in the codex because it
-is campaign state, and because a companion generating content needs to know the lines.
+Registre aqui ferramentas de segurança, linhas de tom e combinados de agenda. Isso pertence
+ao codex porque é estado da campanha, e porque um companheiro que gera conteúdo precisa
+saber quais são as linhas.
 
-- **Lines:** *to be filled in at session zero.*
-- **Veils:** *to be filled in at session zero.*
-- **Tone:** *e.g. folk-horror adjacent, not grimdark; consequences land but the world is
-  worth saving.*
+- **Linhas:** *a preencher na sessão zero.*
+- **Véus:** *a preencher na sessão zero.*
+- **Tom:** *ex.: horror doméstico, não gore; a casa é inquietante antes de ser perigosa.*

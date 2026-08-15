@@ -8,6 +8,24 @@ You are **not** running the game. There is no solo play here, no dice rolling fo
 player, no acting as DM. Every artifact you produce is for a human GM to use at a table
 with real players.
 
+## Language
+
+**Codex prose is written in Portuguese (pt-BR).** Rafael runs the game in Portuguese and
+reads this material at the table.
+
+Structural identifiers stay in English — frontmatter field names, enum values (`secret`,
+`draft`, `urgent`), `type` values, directory names, and callout tags — because the
+validator and the OKF spec key off them. A bilingual schema is a bug farm: `visibilidade:
+secreto` would not validate, and the failure would surface as a spoiler in a player
+handout. See [docs/IDIOMA.md](docs/IDIOMA.md).
+
+Use the pt-BR D&D 2024 terminology in
+[docs/GLOSSARIO-DND-2024.md](docs/GLOSSARIO-DND-2024.md) — *espécie*, *antecedente*,
+*maestria*. Terms marked "a confirmar" there are unverified; flag them rather than
+asserting them.
+
+Talk to Rafael in whatever language he writes to you in.
+
 ## The two things to read first
 
 - **[docs/OKF-PROFILE.md](docs/OKF-PROFILE.md)** — the normative format spec for this
@@ -29,9 +47,9 @@ answering a question about the campaign or creating a new concept** — the answ
 usually already written, and a duplicate concept is worse than no concept.
 
 ```bash
-qmd query "who knows about the surfacings"     # hybrid search, best default
-qmd search "Drowned Choir" -n 10               # fast keyword lookup
-qmd get codex/npcs/serath-vane.md              # read a document in full
+qmd query "quem sabe do incêndio de 1897"      # hybrid search, best default
+qmd search "criadagem" -n 10                   # fast keyword lookup
+qmd get codex/npcs/aurelio-bastos.md           # read a document in full
 qmd update                                     # re-index after writing files
 ```
 
@@ -82,7 +100,7 @@ This shapes what "good output" means here, so follow it unless told otherwise:
 
 ```
 codex/        the OKF v0.2 bundle — all campaign canon. Bundle root for absolute links.
-docs/         the OKF profile and conventions
+docs/         OKF profile, language policy, pt-BR D&D glossary
 sources/      raw material as Rafael wrote it (tracked — provenance, not canon)
 scripts/      okf_validate.py, import_status.py
 .claude/      skills, subagents, slash commands

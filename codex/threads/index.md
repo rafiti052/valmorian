@@ -1,37 +1,38 @@
 ---
 type: World Concept
-title: Live Threads
-description: Index of active plot threads, sorted by how hard they are pressing on the party.
+title: Fios Vivos
+description: Índice dos fios de trama ativos, ordenados por quanto estão pressionando o grupo.
 visibility: secret
 status: draft
-tags: [planning, gm-only]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:25:00Z }
+lang: pt-BR
+tags: [planejamento, apenas-mestre]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:45:00Z }
 ---
 
-# Live Threads
+# Fios Vivos
 
-A **thread** is one unanswered question with a clock on it. Arcs are shape; threads are
-pressure. If you only maintain one index in this codex, maintain this one.
+Um **fio** é uma pergunta em aberto com um relógio em cima. Arcos são forma; fios são
+pressão. Se você só for manter um índice deste codex, mantenha este.
 
-## Pressure ladder
+## Escada de pressão
 
-| `pressure` | Meaning | Prep implication |
-|------------|---------|------------------|
-| `dormant` | Seeded, party unaware. | Nothing. Let it sit. |
-| `simmering` | Party aware, no deadline. | Good B-plot material. |
-| `urgent` | A clock is running out. | This is your next session's spine. |
-| `resolved` | Answered at the table. | Archive it; do not delete — recaps link to it. |
+| `pressure` | Significa | Implicação na preparação |
+|------------|-----------|--------------------------|
+| `dormant` | Semeado, grupo não sabe. | Nada. Deixe quieto. |
+| `simmering` | Grupo sabe, sem prazo. | Bom material de trama B. |
+| `urgent` | Um relógio está acabando. | É a espinha da próxima sessão. |
+| `resolved` | Respondido na mesa. | Arquive; não apague — os resumos linkam para ele. |
 
-## Active
+## Ativos
 
-| Thread | Pressure | Arc |
-|--------|----------|-----|
-| [Who wears Serath's face?](/threads/who-wears-seraths-face.md) | `urgent` | [The Drowned Crown](/arcs/the-drowned-crown.md) |
+| Fio | Pressão | Arco |
+|-----|---------|------|
+| [Quem deu a última ordem?](/threads/quem-deu-a-ultima-ordem.md) | `urgent` | [O Inventário](/arcs/o-inventario.md) |
 
-## Resolved
+## Resolvidos
 
-*None yet.*
+*Nenhum ainda.*
 
 > [!note]
-> A thread with no owner rots. Every thread names an NPC or faction that *wants* the
-> answer to go a particular way. If nobody in the world cares, the players will not either.
+> Fio sem dono apodrece. Todo fio nomeia um NPC ou facção que *quer* que a resposta seja de
+> um jeito específico. Se ninguém no mundo se importa, os jogadores também não vão.

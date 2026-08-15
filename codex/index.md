@@ -1,62 +1,72 @@
 ---
 okf_version: "0.2"
 type: Campaign
-title: Valmorian
-description: GM knowledge base and planning companion for the Valmorian campaign, running D&D 5e (2024 rules).
+title: Mansão Valmorian
+description: Base de conhecimento e companheiro de planejamento do mestre para a campanha Mansão Valmorian, em D&D 5e (regras de 2024).
 visibility: secret
 status: draft
-tags: [campaign, dnd-5e-2024, gm-only]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:20:00Z }
+lang: pt-BR
+tags: [campanha, dnd-5e-2024, apenas-mestre]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:40:00Z }
 ---
 
-# Valmorian
+# Mansão Valmorian
 
-The bundle root for the Valmorian campaign codex. Everything here is **GM-only**.
+Raiz do bundle do codex da campanha. Tudo aqui é **apenas para o mestre**.
 
 > [!warning]
-> This whole bundle is written from the GM's side of the screen. Do not share the repo,
-> a directory listing, or a rendered view of it with players. Player-facing material is
-> generated on demand by filtering on `visibility` — see
-> [the OKF profile](../docs/OKF-PROFILE.md#4-secrecy-model).
+> Este bundle inteiro é escrito do lado do mestre da tela. Não compartilhe o repositório,
+> uma listagem de diretórios, nem uma visualização renderizada dele com os jogadores.
+> Material para jogadores é gerado sob demanda filtrando por `visibility` — veja
+> [o perfil OKF](../docs/OKF-PROFILE.md#4-secrecy-model).
 
-## System
+## Sistema e idioma
 
-D&D 5e, **2024 rules**. Species not race; backgrounds grant feats; weapon mastery is in
-play. House rulings that diverge from RAW live in [/rules](/rules/index.md) and are the
-final word when they conflict with the books.
+D&D 5e, **regras de 2024**. A prosa do codex é em **pt-BR**; nomes de campos, valores de
+enum e nomes de diretórios ficam em inglês porque o validador compara com listas fixas —
+veja [docs/IDIOMA.md](../docs/IDIOMA.md).
 
-## How this bundle is organised
+Terminologia em [docs/GLOSSARIO-DND-2024.md](../docs/GLOSSARIO-DND-2024.md): *espécie*,
+*antecedente*, *maestria*. Regras da casa em [/rules](/rules/index.md) têm precedência
+sobre o livro.
 
-| Directory | What lives there |
-|-----------|------------------|
-| [world/](/world/index.md) | Cosmology, calendar, history, the themes the campaign is *about*. |
-| [arcs/](/arcs/index.md) | The long-term narrative skeleton. Start here when you feel lost. |
-| [threads/](/threads/index.md) | Live plot threads and their pressure. What is about to happen *to* the party. |
-| [factions/](/factions/index.md) | Organisations with goals, clocks, and opinions about the party. |
-| [npcs/](/npcs/index.md) | Named characters. |
-| [locations/](/locations/index.md) | Regions, settlements, sites. |
-| [sessions/](/sessions/index.md) | Plans for what is next, recaps of what happened. |
-| [party/](/party/index.md) | The PCs, their bonds, and the hooks you owe each of them. |
-| [items/](/items/index.md) | Artifacts and notable loot. |
-| [rules/](/rules/index.md) | House rules and table rulings. |
-| [bestiary/](/bestiary/index.md) | Homebrew and reskinned stat blocks. |
+## Como o bundle está organizado
 
-## Working here
+| Diretório | O que vive lá |
+|-----------|---------------|
+| [world/](/world/index.md) | Cosmologia, calendário, história, os temas de que a campanha *trata*. |
+| [arcs/](/arcs/index.md) | O esqueleto narrativo de longo prazo. Comece aqui quando se sentir perdido. |
+| [threads/](/threads/index.md) | Fios de trama vivos e sua pressão. O que está prestes a acontecer *com* o grupo. |
+| [factions/](/factions/index.md) | Organizações com objetivos, relógios e opinião sobre o grupo. |
+| [npcs/](/npcs/index.md) | Personagens nomeados. |
+| [locations/](/locations/index.md) | Regiões, assentamentos, locais. |
+| [sessions/](/sessions/index.md) | Planos do que vem e resumos do que aconteceu. |
+| [party/](/party/index.md) | Os PJs, seus laços, e os ganchos que você deve a cada um. |
+| [items/](/items/index.md) | Artefatos e tesouro notável. |
+| [rules/](/rules/index.md) | Regras da casa e decisões de mesa. |
+| [bestiary/](/bestiary/index.md) | Blocos de estatísticas caseiros e reskins. |
 
-Ask the companion for what you need rather than opening files by hand:
+## Trabalhando aqui
+
+Peça ao companheiro o que você precisa em vez de abrir arquivos na mão:
 
 ```
-/session-prep          plan the next session from live threads and party hooks
-/recap                 turn raw session notes into a Session Recap concept
-/npc <name or brief>   forge an NPC and wire them into the graph
-/canon-check           find contradictions, dangling links, and forgotten threads
-/thread                open, advance, or resolve a plot thread
-/import <path>         convert raw material in sources/ into OKF concepts
+/session-prep          planeja a próxima sessão a partir dos fios vivos e ganchos do grupo
+/recap                 transforma notas cruas de sessão em um conceito Session Recap
+/npc <nome ou resumo>  forja um NPC e o conecta ao grafo
+/canon-check           acha contradições, links quebrados e fios esquecidos
+/thread                abre, avança ou resolve um fio de trama
+/import <caminho>      converte material cru de sources/ em conceitos OKF
 ```
 
 ## Status
 
-This is a **scaffold**. The concepts below are worked examples showing the shape of each
-type — coherent enough to demonstrate cross-linking, but not your campaign. Replace them
-as you import real material. Every example carries `status: draft` and the tag
-`scaffold-example`, so `/canon-check` can list what is still placeholder.
+Isto é um **scaffold**. Os conceitos abaixo são exemplos de trabalho que mostram o formato
+de cada tipo — coerentes o bastante para demonstrar os links cruzados, mas **não são a sua
+campanha**. Eu inventei todos eles. Substitua conforme importar material real.
+
+Todo exemplo tem `status: draft` e a tag `scaffold-example`:
+
+```bash
+grep -rl "scaffold-example" codex/
+```
