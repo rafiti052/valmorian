@@ -1,0 +1,24 @@
+# QMD local index — rebuildable from the markdown, do not commit
+.qmd/index.sqlite
+.qmd/index.sqlite-*
+.qmd/cache/
+
+# QMD models live in ~/.cache/qmd/models, but guard against stray copies
+*.gguf
+
+# Raw imported material staged for conversion. Drop notes here; the
+# import pipeline writes OKF concepts into codex/ and you delete the source.
+# Committing raw exports would duplicate canon and confuse search.
+inbox/*
+!inbox/.gitkeep
+!inbox/README.md
+
+# Local agent state
+.claude/settings.local.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
