@@ -9,37 +9,42 @@ When an item is done, keep the line and mark it — the history is useful.
 
 ---
 
-## P0 — blocking, this repo is public
+## P0 — this repo is public, and staying that way
 
-### [ ] Decide repo visibility before committing anything else from `sources/`
+### [x] Repo visibility — decided: stays public
 
-`rafiti052/valmorian` is a **public** GitHub repo. `sources/` currently holds 80 files /
-288 MB that were never meant to be read by strangers:
+Rafael's call, 2026-08-15: no need to make `rafiti052/valmorian` private. Recorded here
+so it does not get re-litigated every time someone notices `sources/`.
 
-- **Player character sheets** — `Ficha *.pdf`, `Backstories.pdf`. Other people's
-  creative work, and filled sheets often carry real names. At least one filename under
-  `sources/Yara/` is a player's real first name, so even the directory listing leaks.
+The consequence is that option 3 below is now the operating rule, not a choice:
+**`sources/` is curated, not wholesale-committed.** Rafael's own prose can go in; nothing
+third-party does.
+
+### [ ] Keep third-party material out of the public repo
+
+Not a preference — this is what makes a public `sources/` safe. Currently untracked and
+must stay that way unless the rights are cleared:
+
 - **Commercial rulebook** — `dampd-5e---livro-do-jogador-2024.pdf` (36 MB), the pt-BR
-  D&D 2024 Player's Handbook. Publishing this is straightforward copyright infringement.
-- **VTT / map art** — `Mapas/` (92 MB) and `Cenarios/` (111 MB). Much of this is likely
-  purchased or licensed art whose licence does not include public redistribution.
-- **Third-party homebrew** — `updated-my-amphitari-race-...webp` is a Reddit user's
-  Amphitari species art, reposted without attribution.
+  D&D 2024 Player's Handbook. Publishing it is straightforward copyright infringement.
+  Already guarded by `.gitignore`; see the item below.
+- **VTT / map art** — `Mapas/` (92 MB) and `Cenarios/` (111 MB). Likely purchased or
+  licensed art whose licence does not cover public redistribution. Check the licences
+  before any of it is committed.
+- **Third-party homebrew** — `updated-my-amphitari-race-...webp`, a Reddit user's
+  Amphitari species art. Needs attribution and permission, or it stays out.
+- **Player material** — `Ficha *.pdf`, `Backstories.pdf`, and `sources/Yara/`. Other
+  people's creative work, and filled sheets carry real names; one filename under
+  `sources/Yara/` is a player's real first name, so even the directory listing leaks.
+  This one is not yours to decide alone — worth asking the table before it goes public.
 
-Three ways out, pick one:
+Ingestion still works on all of it: the companion reads the working tree, so these files
+being untracked costs nothing day to day. What it costs is that `sources[].resource`
+provenance links to them resolve only on your machine. That is the trade the public-repo
+decision buys, and it is a fine trade.
 
-1. **Make the repo private.** One command, keeps the `sources/`-is-tracked design that
-   `CLAUDE.md` and `sources/README.md` are built around. Recommended.
-2. **Keep it public, keep `sources/` local.** Ignore the whole directory, accept that
-   `sources[].resource` provenance links resolve only on your machine.
-3. **Keep it public, curate `sources/`.** Commit only your own prose; everything
-   third-party stays ignored. Most work, most fragile.
-
-Until this is decided, nothing new from `sources/` gets committed.
-
-```bash
-gh repo edit rafiti052/valmorian --visibility private --accept-visibility-change-consequences
-```
+Practical rule when committing from `sources/`: **add files by name, never `git add
+sources/`.**
 
 ### [x] Stop the rulebook from being committed by accident
 
@@ -106,9 +111,12 @@ Nothing under `sources/` has been converted to concepts. Highest-value first:
 - `Mansao_Valmorian_Sessao_1_Roteiro.pdf`, `npc_fichas.pdf` — session 1 script and NPC
   sheets.
 - `Ficha *.pdf` + `Backstories.pdf` → `codex/party/`, replacing the `exemplo-pj.md`
-  placeholder.
+  placeholder. The derived concepts are your prose and can be committed; the source PDFs
+  stay untracked. Since the repo is public, check with the table before their characters'
+  backstories go up.
 - `Mapas/`, `Cenarios/` → attach to `codex/locations/mansao-valmorian.md` rather than
-  becoming concepts of their own.
+  becoming concepts of their own. Reference them by path; the image files stay untracked
+  pending the licence question in P0.
 
 Run `/import` once P1 is fixed so `import_status.py` can actually report.
 
@@ -127,11 +135,12 @@ call is recorded rather than looking like an accident later.
 
 ### [ ] Decide how binary assets live in git
 
-If the repo goes private and `sources/` stays tracked, 288 MB of PNG/JPG enters history
-permanently — git does not delta-compress them, and every clone pays for every revision
-of every map. Worth considering Git LFS before the first big commit rather than after.
-No single file is over GitHub's 100 MB hard limit today, so this is about repo weight,
-not a blocker.
+Mostly deferred by the public-repo decision: the 288 MB of PNG/JPG in `Mapas/` and
+`Cenarios/` is staying untracked for licence reasons anyway. Revisit only if some of that
+art turns out to be yours or freely licensed and worth committing — git does not
+delta-compress binaries, so every clone would pay for every revision of every map. Git
+LFS is the answer if that day comes, and it is much easier to set up before the first big
+commit than after. No single file is over GitHub's 100 MB hard limit today.
 
 ---
 
