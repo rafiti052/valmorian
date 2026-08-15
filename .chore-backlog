@@ -1,0 +1,148 @@
+# .chore-backlog
+
+Parking lot for repo hygiene and "make this actually work" items. Not campaign canon —
+nothing here belongs in `codex/`. Written in English because it is infrastructure, not
+table material; switch it to pt-BR if you'd rather.
+
+Convention: `[ ]` open, `[x]` done, `[~]` in progress. Newest sections at the bottom.
+When an item is done, keep the line and mark it — the history is useful.
+
+---
+
+## P0 — blocking, this repo is public
+
+### [ ] Decide repo visibility before committing anything else from `sources/`
+
+`rafiti052/valmorian` is a **public** GitHub repo. `sources/` currently holds 80 files /
+288 MB that were never meant to be read by strangers:
+
+- **Player character sheets** — `Ficha *.pdf`, `Backstories.pdf`. Other people's
+  creative work, and filled sheets often carry real names. At least one filename under
+  `sources/Yara/` is a player's real first name, so even the directory listing leaks.
+- **Commercial rulebook** — `dampd-5e---livro-do-jogador-2024.pdf` (36 MB), the pt-BR
+  D&D 2024 Player's Handbook. Publishing this is straightforward copyright infringement.
+- **VTT / map art** — `Mapas/` (92 MB) and `Cenarios/` (111 MB). Much of this is likely
+  purchased or licensed art whose licence does not include public redistribution.
+- **Third-party homebrew** — `updated-my-amphitari-race-...webp` is a Reddit user's
+  Amphitari species art, reposted without attribution.
+
+Three ways out, pick one:
+
+1. **Make the repo private.** One command, keeps the `sources/`-is-tracked design that
+   `CLAUDE.md` and `sources/README.md` are built around. Recommended.
+2. **Keep it public, keep `sources/` local.** Ignore the whole directory, accept that
+   `sources[].resource` provenance links resolve only on your machine.
+3. **Keep it public, curate `sources/`.** Commit only your own prose; everything
+   third-party stays ignored. Most work, most fragile.
+
+Until this is decided, nothing new from `sources/` gets committed.
+
+```bash
+gh repo edit rafiti052/valmorian --visibility private --accept-visibility-change-consequences
+```
+
+### [x] Stop the rulebook from being committed by accident
+
+`.gitignore` now excludes `dampd-5e*.pdf` and the `livro-do-jogador` /
+`players-handbook` name patterns. The file stays on disk — the companion reads the
+working tree, so ingestion still works — it just cannot enter git history.
+
+Note this only helps going forward. It was never committed, so there is nothing to purge
+from history yet. That stays true only as long as P0 above is respected.
+
+---
+
+## P1 — the toolchain does not run
+
+### [ ] Install PyYAML
+
+Both repo scripts fail on import:
+
+```
+$ python3 scripts/okf_validate.py
+error: PyYAML is required. Install with: pip install pyyaml
+```
+
+`CLAUDE.md` non-negotiable #7 says run the validator after every batch of writes. That
+instruction has never been executable. Same for `import_status.py`, which is how #8
+(provenance on import) is supposed to be checked.
+
+System Python is 3.14.6 and almost certainly externally managed, so a bare `pip install`
+will refuse. Wants a venv:
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install pyyaml
+```
+
+If you go that route, add `.venv/` to `.gitignore` and decide whether the scripts should
+find it automatically (shebang, or a `scripts/run` wrapper) so you don't have to remember
+to activate it.
+
+### [ ] Build the QMD index — it is empty
+
+`qmd status` reports **0 files indexed, 0 vectors**. Every "search before you write"
+instruction in `CLAUDE.md` is currently a no-op that silently returns nothing, which is
+the worst possible failure mode: it looks like "the codex has no answer" and invites
+inventing canon. Directly undermines non-negotiable #1.
+
+```bash
+qmd update && qmd embed
+```
+
+`qmd embed` is the one that enables `vec`/`hyde` search; without it only BM25 keyword
+search works. Then decide where re-indexing belongs — a git hook, or just a habit.
+
+---
+
+## P2 — content and structure
+
+### [ ] Ingest `sources/` — 80 files, none of it in the codex
+
+Nothing under `sources/` has been converted to concepts. Highest-value first:
+
+- `sessao_2_5_apoio_mesa_com_constructos_v2.docx.md` and
+  `sessao_3_estrutura_narrativa.md` — your own prose, already markdown, no rights
+  questions. Start here.
+- `Mansao_Valmorian_Sessao_1_Roteiro.pdf`, `npc_fichas.pdf` — session 1 script and NPC
+  sheets.
+- `Ficha *.pdf` + `Backstories.pdf` → `codex/party/`, replacing the `exemplo-pj.md`
+  placeholder.
+- `Mapas/`, `Cenarios/` → attach to `codex/locations/mansao-valmorian.md` rather than
+  becoming concepts of their own.
+
+Run `/import` once P1 is fixed so `import_status.py` can actually report.
+
+### [ ] Clear out the scaffold examples
+
+`codex/` has 10 concept files and some are seeded placeholders rather than real canon —
+`codex/party/exemplo-pj.md` most obviously. Decide per file: promote to real canon,
+or delete. A placeholder that survives into a populated codex reads as canon six months
+from now.
+
+### [ ] Decide on `sources/.gitkeep`
+
+Currently staged as deleted. It was there to keep an empty directory in git; the
+directory has 80 files now, so the deletion is correct — this item exists only so the
+call is recorded rather than looking like an accident later.
+
+### [ ] Decide how binary assets live in git
+
+If the repo goes private and `sources/` stays tracked, 288 MB of PNG/JPG enters history
+permanently — git does not delta-compress them, and every clone pays for every revision
+of every map. Worth considering Git LFS before the first big commit rather than after.
+No single file is over GitHub's 100 MB hard limit today, so this is about repo weight,
+not a blocker.
+
+---
+
+## Done
+
+- [x] **Consolidate onto `main`.** `claude/dnd-gm-companion-agent-61mo6u` renamed to
+  `main`, pushed, set as GitHub default, old remote branch deleted, `origin/HEAD`
+  repointed. The `local-folder-connection-fcb991` worktree and branch were identical at
+  `c983eb6` and were removed.
+- [x] **Restore `sources/README.md`.** It had been deleted from the working tree, almost
+  certainly by copying a folder over the scaffold. It documents the whole ingestion
+  workflow, so it is back.
+- [x] **Remove `.DS_Store` noise** from the repo root and `sources/`. Already gitignored,
+  just clutter on disk.

@@ -13,6 +13,14 @@ sources/**/*.tmp
 sources/**/~$*
 sources/**/*.lock
 
+# Third-party copyrighted material. This repo is PUBLIC — committing a
+# commercial rulebook here republishes it. Keep the file on disk (the companion
+# reads the working tree just fine); keep it out of history.
+# See .chore-backlog → "Third-party material in sources/".
+sources/**/dampd-5e*.pdf
+sources/**/*livro-do-jogador*.pdf
+sources/**/*players-handbook*.pdf
+
 # Local agent state
 .claude/settings.local.json
 
