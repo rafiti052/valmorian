@@ -6,12 +6,12 @@
 # QMD models live in ~/.cache/qmd/models, but guard against stray copies
 *.gguf
 
-# Raw imported material staged for conversion. Drop notes here; the
-# import pipeline writes OKF concepts into codex/ and you delete the source.
-# Committing raw exports would duplicate canon and confuse search.
-inbox/*
-!inbox/.gitkeep
-!inbox/README.md
+# sources/ IS tracked on purpose — it is the channel by which raw material
+# reaches the companion, and the provenance target for codex `sources:` links.
+# Only exclude the genuinely unhelpful.
+sources/**/*.tmp
+sources/**/~$*
+sources/**/*.lock
 
 # Local agent state
 .claude/settings.local.json

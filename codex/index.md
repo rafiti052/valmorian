@@ -51,7 +51,7 @@ Ask the companion for what you need rather than opening files by hand:
 /npc <name or brief>   forge an NPC and wire them into the graph
 /canon-check           find contradictions, dangling links, and forgotten threads
 /thread                open, advance, or resolve a plot thread
-/import <path>         convert raw notes in inbox/ into OKF concepts
+/import <path>         convert raw material in sources/ into OKF concepts
 ```
 
 ## Status

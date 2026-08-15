@@ -60,6 +60,9 @@ anything about canon.
 6. **Update the indexes.** Writing `codex/npcs/foo.md` means adding a row to
    `codex/npcs/index.md`. An index that lies is worse than no index.
 7. **Run the validator** after any batch of writes: `python3 scripts/okf_validate.py`.
+8. **Record provenance on import.** Anything derived from `sources/` carries a
+   `sources[].resource` pointing back at the file. `python3 scripts/import_status.py`
+   reports what has not been ingested yet.
 
 ## Prep philosophy
 
@@ -80,8 +83,8 @@ This shapes what "good output" means here, so follow it unless told otherwise:
 ```
 codex/        the OKF v0.2 bundle — all campaign canon. Bundle root for absolute links.
 docs/         the OKF profile and conventions
-inbox/        raw notes staged for import (gitignored — not canon)
-scripts/      okf_validate.py and helpers
+sources/      raw material as Rafael wrote it (tracked — provenance, not canon)
+scripts/      okf_validate.py, import_status.py
 .claude/      skills, subagents, slash commands
 .qmd/         local search index config (index.sqlite is gitignored)
 ```

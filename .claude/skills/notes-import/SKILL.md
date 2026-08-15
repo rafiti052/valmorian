@@ -1,6 +1,6 @@
 ---
 name: notes-import
-description: Convert raw campaign notes into OKF concepts in the Valmorian codex. Use when importing existing material from Obsidian vaults, Google Docs, Notion pages, World Anvil exports, plain markdown, or scanned session notes — or whenever the user says import, migrate, bring in my notes, or points at a file in inbox/.
+description: Convert raw campaign notes into OKF concepts in the Valmorian codex. Use when importing existing material from Obsidian vaults, Google Docs, Notion pages, World Anvil exports, plain markdown, or scanned session notes — or whenever the user says import, migrate, ingest, bring in my notes, or points at anything in sources/.
 allowed-tools: Bash(qmd:*), Bash(python3 scripts/*), Read, Write, Edit, Glob, Grep, WebFetch
 ---
 
@@ -13,14 +13,17 @@ concepts without losing information and without silently inventing the gaps.
 
 | Source | Approach |
 |--------|----------|
-| Loose markdown / Obsidian vault | Copy into `inbox/`, then work from there. Obsidian `[[wikilinks]]` become OKF absolute links. |
+| Loose markdown / Obsidian vault | Already in `sources/`. Obsidian `[[wikilinks]]` become OKF absolute links. |
 | Google Docs | The Google Drive connector is available — `search_files`, then `read_file_content`. Record the doc URL in `sources[].resource`. |
 | Notion | The Notion connector is available — `notion-search`, then `notion-fetch`. Record the page URL. |
-| World Anvil / Kanka / other exports | Ask for a markdown or JSON export into `inbox/`. |
+| World Anvil / Kanka / other exports | Ask for a markdown or JSON export committed to `sources/`. |
 | Handwritten / scanned | Ask Rafael to transcribe or photograph; read images directly. |
 
-`inbox/` is gitignored. It is a staging area, not canon — delete source files once
-converted, or leave them; either way they never become the source of truth.
+`sources/` is **tracked on purpose**: it is the channel by which material reaches this
+repo, and the provenance target for `sources[].resource` links. Never delete or edit a
+file there to fix canon — fix the concept in `codex/` instead. Superseded material stays;
+it is not competing with canon, because the validator reads only `codex/` and search
+labels these results `sources`.
 
 ## Procedure
 

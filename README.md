@@ -30,7 +30,7 @@ Claude Code picks up `.mcp.json` automatically, exposing QMD search as MCP tools
 |------|-----------|
 | `codex/` | The OKF bundle. All campaign canon. Bundle root for absolute links. |
 | `docs/OKF-PROFILE.md` | The normative format spec for this repo — read before authoring. |
-| `inbox/` | Raw notes staged for import. Gitignored, not canon. |
+| `sources/` | Raw material as Rafael wrote it. Tracked, searchable, **not canon** — the provenance target for `sources:` links. |
 | `scripts/okf_validate.py` | Conformance and link-graph validator. |
 | `.claude/` | Skills, subagents, and slash commands. |
 
@@ -49,7 +49,7 @@ document to open when you have lost the plot.
 | `/npc` | Forges a table-ready NPC and wires them into the graph. |
 | `/canon-check` | Audits for contradictions, secrecy leaks, forgotten threads, broken links. |
 | `/thread` | Opens, advances, or resolves a plot thread. Also handles "I'm lost". |
-| `/import` | Converts raw notes in `inbox/` into OKF concepts. |
+| `/import` | Converts raw material in `sources/` into OKF concepts. |
 
 Backed by four subagents: `lore-keeper` (continuity, read-only), `session-scribe`
 (recaps), `npc-smith` (characters), `plot-weaver` (arcs and long-term shape).
@@ -65,6 +65,7 @@ qmd get codex/npcs/serath-vane.md       # read a full document
 ## Validating
 
 ```bash
+python3 scripts/import_status.py          # what in sources/ is not yet ingested
 python3 scripts/okf_validate.py           # 0 = clean, 1 = errors
 python3 scripts/okf_validate.py --strict  # warnings count as failures
 python3 scripts/okf_validate.py --json    # machine-readable

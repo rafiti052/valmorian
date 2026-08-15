@@ -1,10 +1,19 @@
 ---
 description: Convert raw notes into OKF concepts in the codex
-argument-hint: "[path in inbox/, a Google Doc or Notion link, or a description of where the notes live]"
+argument-hint: "[path in sources/, a Google Doc or Notion link, or nothing to sweep all of sources/]"
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep, WebFetch, Task
 ---
 
 Import campaign material into the codex. Source: **$ARGUMENTS**
+
+If no argument was given, sweep everything not yet ingested. Start with:
+
+```bash
+python3 scripts/import_status.py
+```
+
+It lists source files no concept cites yet (`!`), what is already converted, and any
+`sources[].resource` pointing at a file that has since vanished.
 
 Follow the **notes-import** skill. The order matters:
 
