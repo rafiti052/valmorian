@@ -1,58 +1,83 @@
 ---
 type: Site
 title: Mansão Valmorian
-description: A casa herdada pelo grupo, que tem mais cômodos do que a planta permite e ganha mais a cada um que é catalogado.
+description: Encruzilhada com telhado — prisão, estrada e casa de custódia entre planos, com subsolo de contenção maquinomágica e uma feira feérica que se monta do lado de fora.
 visibility: public
 status: draft
 lang: pt-BR
-arc: /arcs/o-inventario.md
+threads: [/threads/a-fenda-sob-a-cripta.md]
 first_appeared: /sessions/sessao-01.md
-tags: [local, mansão, cenário-inicial, scaffold-example]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:49:00Z }
+sources:
+  - resource: "/sources/Mansao_Valmorian_Sessao_1_Roteiro.pdf"
+    title: "Mansão Valmorian — Sessão 1 (roteiro)"
+    author: "human:rafael"
+  - resource: "/sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md"
+    title: "Sessão 2.5 — Apoio de Mesa"
+    author: "human:rafael"
+  - resource: "/sources/sessao_3_estrutura_narrativa.md"
+    title: "Sessão 3 — Estrutura Narrativa"
+    author: "human:rafael"
+tags: [local, mansão, contenção]
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:12:00Z }
 ---
 
 # Mansão Valmorian
 
-> [!note]
-> **Exemplo de scaffold.** Demonstra o formato de um conceito Site.
+> "Isso aqui não é quintal de casa nenhuma. É encruzilhada com telhado."
+> — [Leôncio Mirtilo](/npcs/leoncio-mirtilo.md)
 
-## Primeira impressão
+## O que ela é
 
-> [!read-aloud]
-> A casa é maior por dentro do que o terreno explica, e ninguém na rua acha isso digno de
-> comentário. As janelas do andar de cima estão acesas. O portão está destrancado. Alguém
-> varreu a escada da frente hoje de manhã, e o pó já voltou.
+Um **arranjo antigo com função**, não uma casa mal-assombrada. Quatro coisas ao mesmo tempo:
 
-## Três coisas que se nota
+| Camada | Quem explicou |
+|---|---|
+| **Entroncamento** entre planos — lugar de passagem e espera | [Leôncio](/npcs/leoncio-mirtilo.md) |
+| **Vigília e contenção** — os "olhos" vigiam rachaduras, não pessoas | [Espirro Dourado](/npcs/espirro-dourado.md) |
+| **Tutela e abrigo** — acolhe forças que precisam amadurecer longe do ruído | [Silena](/npcs/silena-pouca-sombra.md) |
+| **Autorização e custódia** — nome, selo, permissão | [Valério](/npcs/valerio-veraneio.md) |
 
-1. A planta do cartório mostra catorze cômodos. Ninguém que entrou conseguiu contar menos
-   de dezenove.
-2. Não há espelho em nenhum cômodo, mas há pregos onde eles estavam.
-3. A casa está sempre limpa e nunca se vê ninguém limpando.
+Não é bem o mundo de onde o grupo veio: é **um bolso entre caminhos**, feito para conter,
+receber e não cair inteiro para lado nenhum.
 
-## Quem manda
+## Como ela funciona
 
-| Quem | Controla | Quer |
-|------|----------|------|
-| [A Criadagem](/factions/a-criadagem.md) | A rotina da casa, a copa, a contagem | Concluir o inventário |
-| [Aurélio Bastos](/npcs/aurelio-bastos.md) | O acesso, a agenda do dia | Que o grupo se instale |
-| O espólio | O papel que dá a posse | Assinatura e ir embora |
+Funcionamento **maquinomágico real**, segundo o [Crispim Catraca](/npcs/crispim-catraca.md).
+Os constructos não são só guarda — fazem manutenção, vigilância e contenção, e mantêm a casa
+de pé. O laboratório do subsolo existe para manter esse sistema. Quando o núcleo muda,
+outros setores respondem.
 
-## Cômodos que valem uma cena
+**A casa chama quem precisa.** Puxa o Crispim à força uma vez por mês. Ele suspeita que
+esteja começando a chamar os personagens por função, linhagem ou nome verdadeiro.
 
-- **A copa** — o livro de ordens fica ali, e a última página foi arrancada.
-- **O quarto azul** — pronto antes de o grupo chegar, e pronto para o número exato de
-  pessoas que chegou.
-- **O escritório** — o último cômodo da contagem. A porta não está trancada; ela
-  simplesmente ainda não é um cômodo.
+## A gramática de acesso
+
+Das anotações do [Vhaelyr](/npcs/vhaelyr.md) no laboratório:
+
+- **"Ametista valida."** — o [Selo](/items/selo-de-ametista.md)
+- **"Ônix contém."** — o [Ônix Negro](/items/onix-negro.md)
+- **"Sangue Valerius autoriza."** — a [Enna](/party/enna.md)
+- "Sem herdeiro compatível, abertura parcial."
+- **"Forçar não substitui permissão."**
+
+E o registro parcial da biblioteca: *"Valerius custodiam. Valmorian contem."*
+
+## Andares
+
+- **F1** — salão principal, salão de baile, biblioteca, sala de pintura, corredor principal.
+- **B1 (subsolo)** — corredor e celas, laboratório, passarela, sala do portal, sala do
+  tesouro, e o [Ônix Negro](/items/onix-negro.md). **Todo percorrido.**
+- **F2–F4** — mapas existem em `sources/Mapas/`, **nunca visitados em cena**.
+- **Externo** — jardins, fonte, estábulos, casa do jardineiro, portão, e a
+  **casa de guarda**, que fazia triagem e quarentena.
+
+## Estado atual
+
+A mansão mudou por fora depois do subsolo: manhã ensolarada, brisa de primavera, e a
+**Feira de Intervalo** montada com barracas feéricas. O grupo saiu dali para a
+[igreja](/locations/igreja-de-lathander.md).
 
 > [!secret]
-> A copa é o caminho mais limpo para
-> [Quem deu a última ordem?](/threads/quem-deu-a-ultima-ordem.md). A página arrancada está
-> na lareira do escritório, que só existe depois que o inventário chega lá — motivo pelo
-> qual a criadagem não tem pressa em impedir ninguém de procurar.
-
-## Se o grupo for embora
-
-A contagem continua sem eles. Voltar para uma casa com mais cômodos do que quando saíram é
-melhor do que voltar para uma casa que esperou parada.
+> **M. Valmorian** assinou três quadros da Lagoa Nymrath na sala de pintura e buscava ervas
+> para uma criança sob tutela da lagoa. Quem é M. Valmorian **não foi decidido**. É a peça
+> mais visível que falta no seu cenário.

@@ -144,6 +144,168 @@ commit than after. No single file is over GitHub's 100 MB hard limit today.
 
 ---
 
+## Handoff — handover ingestion, stopped mid-way 2026-08-15
+
+Rafael pasted the campaign handover document into chat and asked for a full import. This
+section records exactly where that stopped so whoever picks it up does not re-derive it.
+
+**Two Claude sessions worked this repo concurrently.** Territory was split: this session
+took `world/`, `factions/`, `npcs/`, `arcs/`, `threads/` and those indexes; the sibling
+session took `party/`, `bestiary/`, `sessions/sessao-04-plano.md`. The sibling finished and
+handed its files over. Nothing is in flight from either side now.
+
+### [ ] P0 — the handover doc leaked player backstories to the public remote
+
+**This is the item that matters most in this section.** It sits directly on top of "Keep
+third-party material out of the public repo" above, and it breaks the operating rule that
+item establishes.
+
+`sources/handover-campanha-valmorian.md` (746 lines) was committed in `1efea05` on branch
+`codex/handover-e-cripta` and **that branch was pushed**. `origin/codex/handover-e-cripta`
+resolves to that commit on `github.com/rafiti052/valmorian`, which is public.
+
+The file contains all five players' backstories in running prose — the Valerius massacre,
+Refúgio do Carvalho and Sir Kaelan's death, Líria's abandonment, Eron's death — plus sheet
+details, items and table secrets. That is exactly the "Player material" bullet above, and
+that bullet says it is **not yours to decide alone**.
+
+The PDFs did not leak. On `origin`, `sources/` holds only `README.md` and this markdown
+file. The exposure is the derived document, not the sources.
+
+Options, none taken — this needs Rafael:
+
+1. Make the repo private. Closes this and the standing risk from `sources/` in one move.
+2. `git push origin --delete codex/handover-e-cripta`. Removes the file from the remote;
+   the repo stays public and the next commit can repeat the mistake.
+3. Rewrite the branch history. More work, same partial result as 2.
+
+Public-repo content may already be cloned or indexed, so treat 2 and 3 as damage limitation
+rather than undo. Worth telling the table either way.
+
+Side effect while this is unresolved: the file is not on `main`, so every
+`sources[].resource` pointing at it resolves nowhere on this branch. Restoring it to `main`
+would fix the provenance links **and** widen the exposure — do not do it before the call is
+made.
+
+### [x] Scaffold concepts removed
+
+Seven placeholder files whose invented canon contradicted the real campaign (an inherited
+house on the Material Plane, an "Inventory" arc, a butler named Aurélio Bastos who is not
+Irmão Aurélio): `arcs/o-inventario.md`, `bestiary/criado-da-casa.md`,
+`factions/a-criadagem.md`, `npcs/aurelio-bastos.md`, `party/exemplo-pj.md`,
+`sessions/sessao-02-plano.md`, `threads/quem-deu-a-ultima-ordem.md`.
+
+This closes most of "Clear out the scaffold examples" above. **One survivor:**
+`sessions/sessao-01.md` is still scaffold and is the source of all 3 remaining validator
+errors (it links the three deleted files). The sibling session marked it as fiction in
+`sessions/index.md` rather than deleting it, leaving the call to Rafael. It should either be
+rewritten as a real recap of the played session 1 or deleted.
+
+### [x] PyYAML — resolved, and the P1 item above is stale
+
+`python3 -c "import yaml"` works; the validator runs. The `pip install` in that item still
+fails under PEP 668, so the venv advice there remains correct if it ever breaks again, but
+the item itself can be closed.
+
+### [~] Handover ingestion — written
+
+Everything below is derived from `sources/handover-campanha-valmorian.md` plus the two
+session docs, and every concept carries `sources[]` provenance and `generated`.
+
+- `world/` — `o-demiplano.md`, `as-leis-da-casa.md`, `lathander-guardiao.md`,
+  `arte-como-interface.md`
+- `factions/` — `casa-valerius.md`, `os-arquitetos-fundadores.md`,
+  `a-criadagem-vinculada.md`, `elfos-de-lethariel.md`
+- `npcs/` — `mordecai.md`, `irmao-aurelio.md`, `crispim-catraca.md`, `doutor-fini.md`
+- `threads/` — `a-linhagem-valerius.md`, `o-onix-negro.md`, `por-que-esses-cinco.md`,
+  `quem-e-a-mae-de-liria.md`, `onde-esta-marea.md`, `a-mansao-conhece-eron.md`,
+  `por-que-a-arte-responde.md`, `quem-mandou-o-drow.md`
+
+### [ ] Handover ingestion — not written
+
+Stopped here on Rafael's instruction. Nothing below was started, so there is no half-file
+to clean up.
+
+- **`npcs/`** — Chef Espectral (§27), Valthar (§37–38, keep `[OPEN]`: do not decide alive/
+  dead/founder/enemy/prisoner), Marea (§16), M. Valmorian (§20, the painter — secret: Líria's
+  mother), Sir Kaelan (§13), Eron (§21). Thread concepts already link Marea, M. Valmorian
+  and Valthar, so those three are load-bearing.
+- **`arcs/`** — the whole directory is a bare `index.md` still carrying the deleted
+  `o-inventario` row. The real spine per §54/§74: the campaign has left "where are we?" and
+  entered "why do these systems recognise *us*?", ending in a choice about the Mansion's
+  fate, not a villain in the basement. Guiding sentence to build from is §75.
+- **`rules/`** — empty. Two house rules are documented in the handover and are being used at
+  the table: the Nox/Líria 0-HP homebrew bond (§19, check the sheet before ruling) and the
+  operating rule that **the player's sheet outranks RAW** (§1).
+- **Indexes** — `world/`, `factions/`, `npcs/`, `threads/` indexes list none of the new
+  files; `arcs/index.md` still lists the deleted arc. This is 26 of the 53 validator
+  warnings and violates `CLAUDE.md` non-negotiable #6.
+- **Session recaps** — sessions 1, 2, 2.5 and 3 were all played and none has a `Session
+  Recap`. Board state as of the stop: the party finished the sub-basement (lab, treasure
+  room, portal room, **Ônix Negro**), rested, and **stopped at the fair**. Church and crypt
+  are still unplayed.
+
+### [ ] Open decisions that are Rafael's, recorded so they are not silently invented
+
+- **Doutor Fini** — Rafael named a gnome who explains things and opens the narrative beyond
+  the mansion in session 4. Unclear whether he is Crispim Catraca renamed or a second gnome.
+  Recorded as an open question in `npcs/doutor-fini.md`; nothing invented around him.
+- **Session numbering conflict.** Rafael said the last played session was 3, ending at the
+  fair, and that 3.5 would close session 3 with a cliffhanger. `sessions/sessao-04-plano.md`
+  opens with the party already mid-combat in the church nave with initiative rolled. Both
+  cannot be true, and that document is the one going to the table.
+- **Lathander vs Lethander** — Bri's backstory spells it `Lethander`, the session docs spell
+  it `Lathander`. Both sessions used `Lathander` throughout. One find-and-replace if wrong.
+- **Bri's background** — `Soldado` on the sheet, `Herói do Povo` in the backstory.
+- **Bob has no personal mystery tied to the mansion** — the only PC without one, which
+  weakens the "the house chose these five" premise in front of his player. Three options
+  that do not break the "Bob is not the author of the Mansion" rule are laid out in
+  `threads/por-que-a-arte-responde.md`; none chosen.
+- **The Valerius traitors have no name and no faction.** Without them
+  `threads/a-linhagem-valerius.md` has no antagonist, and they are the natural candidates
+  for `threads/quem-mandou-o-drow.md` too.
+- **Treasure-room items** — boots, bracer and belt. The party has been carrying them since
+  last session and no source says what they are.
+- **`Ritual Room of the Nine Hells`** — a room label on the B1 map, probably where the Ônix
+  Negro sits. "Nine Hells" is a very strong claim about what the mansion contains, and it is
+  unclear whether it is Rafael's canon or just the name that shipped with the map asset.
+  Nothing in `world/` or `factions/` asserts it, and nothing should until he says.
+- **"Avorio"** — both maps are titled *Avorio Mansion F1/B1*, almost certainly the asset
+  pack's name (2-Minute Tabletop), not campaign canon. Unused anywhere in the codex. Keep it
+  that way unless Rafael adopts it.
+
+### Map geography — checked against written lore, no conflict
+
+`sources/Mapas/1. final/` (`F1final.jpg`, `B1final.jpg`) was found after the ingestion
+stopped. It corroborates rather than contradicts what is written:
+
+- The church (`Church Hall`, `Church Back Room`) and the guardhouse (`Guard's Office`, with
+  `Jail Cell` and `Armory` below it on B1) are **buildings on the mansion grounds**, not a
+  separate village. That turns Irmão Aurélio's "the temple guarded the light, the guardhouse
+  the limits, the mansion the containment" from old lore into a description of the site, and
+  the jail cell corroborates the triage/quarantine detail he gives. `world/o-demiplano.md`
+  and `npcs/irmao-aurelio.md` already read correctly against this.
+- The crypt is the **`Ancestral Crypt`** — which answers whose the six tombs are, and bears
+  on `threads/o-onix-negro.md` and on Valthar's still-open status when that NPC gets written.
+- It connects the church to the mansion underground: `Up to Surface` (west, into the church
+  annex) and `Up to Private Prayer Room` (east, inside the mansion by the Drawing Room),
+  plus an unmapped `Hidden Passageway`.
+- B1 room names resolve session-2.5 ambiguities: `Private Cell` = the treasure room,
+  `Owner's Secret Room (Torturehouse/Mechanical Lab)` = Vhaelyr's lab, `Teleportation Room`
+  = the portal room.
+
+### Validator state at the stop
+
+```
+52 concepts · 3 errors · 53 warnings
+```
+
+All 3 errors are `sessions/sessao-01.md`. 26 warnings are missing index rows. The rest are
+secrecy-tier warnings, most of them the deliberate kind (a `public` concept linking a
+`secret` one), worth a pass but not bugs on their face.
+
+---
+
 ## Done
 
 - [x] **Consolidate onto `main`.** `claude/dnd-gm-companion-agent-61mo6u` renamed to
