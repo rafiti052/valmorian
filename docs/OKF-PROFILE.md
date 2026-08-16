@@ -33,6 +33,8 @@ codex/
   items/                # artifacts, boons, notable loot
   rules/                # house rules and rulings made at the table
   bestiary/             # homebrew and reskinned stat blocks
+  rulebooks/            # rules references used by the campaign
+  homebrew/             # adopted or evaluated non-core rules material
 ```
 
 `index.md` and `log.md` are the only reserved filenames, per spec. Subdirectories may
@@ -89,6 +91,22 @@ setting on a concept that departs from the default.
 | `stale_after` | `YYYY-MM-DD`. Useful on session plans and volatile faction state. |
 | `resource` | URI for the underlying asset — the Google Doc, the Notion page, the map image. |
 
+Each entry in `sources` may also declare ingestion coverage. These fields make the
+difference between "cited" and "actually processed" machine-readable. For every local
+`resource` under `/sources/`, all three fields below are **required**:
+
+| Field | Meaning |
+|-------|---------|
+| `sha256` | SHA-256 of a local source file at intake. |
+| `coverage` | `full`, `partial`, `catalog-only`, or `deferred`. |
+| `locator` | Human-readable page, form-field group, section, or image locator. |
+
+Use `coverage: partial` unless the cited concept accounts for the whole source. A local
+source always has a locator: for an indivisible asset cited as a whole, write
+`locator: "arquivo completo"`. Locator omission is allowed only for non-file evidence
+without a stable internal subdivision, such as a short conversation citation; it is not
+an exception for local files.
+
 ### 2.5 Profile extensions
 
 These are Valmorian-specific and carry no meaning to a generic OKF reader. That is fine and
@@ -133,6 +151,8 @@ the validator both key off them.
 | `Item` | `items/` | Artifacts, boons, notable loot. |
 | `House Rule` | `rules/` | A ruling made at or before the table. |
 | `Stat Block` | `bestiary/` | Homebrew or reskinned creature. |
+| `Rulebook` | `rulebooks/` | A rules reference used by the campaign; commercial full text stays in the local-only QMD corpus. |
+| `Homebrew` | `homebrew/` | Campaign-adopted species, subclass, subsystem, or other non-core rules material. |
 
 ### 5e 2024 terminology
 
@@ -181,8 +201,12 @@ Every concept records where it came from. This matters most for imported materia
 Actor strings follow the spec convention:
 
 - `human:rafael` — you, at the keyboard
-- `claude-opus-5/gm-companion` — an agent in this repo
+- `gpt-5/codex` — Codex acting in this repo
+- `claude-opus-5/gm-companion` — a Claude-based companion, when it actually made the write
 - `process:okf-import` — the import pipeline
+
+Use the actor that actually made the write; these examples are not a required producer
+list and must not be used to backdate or misattribute a change.
 
 ```yaml
 generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:30:00Z }
@@ -194,6 +218,22 @@ sources:
 verified:
   - { by: "human:rafael", at: 2026-08-15T20:00:00Z }
 ```
+
+Local intake records are stricter:
+
+```yaml
+sources:
+  - resource: "/sources/Backstories.pdf"
+    title: "Backstories — Enna"
+    author: "human:rafael"
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Enna, pp. 2-3"
+```
+
+The digest is the immutable intake hash of the exact file named by `resource`; never
+reuse a digest after replacing or editing the source. `coverage` describes what this
+concept extracted from that source, not how much prose the concept contains.
 
 `generated` supersedes any `timestamp` field from OKF v0.1. Do not use `timestamp`.
 

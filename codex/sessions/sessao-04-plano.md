@@ -19,11 +19,17 @@ sources:
   - resource: "/sources/sessao_3_estrutura_narrativa.md"
     title: "Sessão 3 — Estrutura Narrativa"
     author: "human:rafael"
+    sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
+    coverage: partial
+    locator: "§§6-7 — Igreja e Cripta; Fechamento esperado"
   - resource: "/sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md"
     title: "Sessão 2.5 — Apoio de Mesa"
     author: "human:rafael"
+    sha256: cb83d87b7cb6c8c062aabf347ae2f8caf8526aa18d9cecd7dfd3d21220599cb8
+    coverage: partial
+    locator: "Subsolo; Feira; NPC extra — Irmão Aurélio"
 tags: [plano, igreja, cripta, combate]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:45:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Sessão 4 — A Igreja e a Cripta
@@ -49,7 +55,7 @@ Tudo abaixo serve a isso. Se a sessão só entregar isso e a descida, foi uma bo
 | Nave — rodadas 1 e 2 | Deixar o grupo achar que está ganhando | Não |
 | Nave — a verdade dos ossos | Eles remontam. O coro se ajuda. Atrito não resolve | Não |
 | A descida | Aurélio nomeia a cripta; a pressão empurra escada abaixo | Não |
-| A fenda | A imagem. O que o Vhaelyr causou lá embaixo chegou aqui | Não |
+| A fenda | A imagem. O que Milara causou lá embaixo chegou aqui | Não |
 | O ritual dos três | O clímax, com cargo para os cinco | Não |
 | Rescaldo e gancho | O que sobrou, e o nome certo | Sim, vira uma fala solta |
 
@@ -130,7 +136,7 @@ O que ele faz **nesta sessão especificamente** — invenção minha, definida a
 o conceito dele mudar:
 
 - **Harmonização** (ação, mantida como concentração): aliados a até 30 pés ganham +1d4 em
-  salvaguardas contra necrótico. **Ele perde a concentração se sofrer dano** — e é isso que
+  testes de resistência contra dano necrótico. **Ele perde a concentração se sofrer dano** — e é isso que
   faz a mesa decidir se protege o velho ou continua atacando.
 - Se ele cair, **a cripta fica mais difícil, não impossível.** Ver o ritual.
 - Fala dele, quando a ficha cair para a mesa:
@@ -180,15 +186,16 @@ Três saídas, e **as três importam**:
 **A cripta é isolada do resto do subsolo.** Não se liga ao laboratório, ao portal nem à
 Ritual Room. Quem estiver lá embaixo não tem como fugir para o terreno já conhecido.
 
-> [!secret]
-> **A cripta é o túnel que liga a igreja à mansão.** É literalmente o arranjo antigo de que o
-> Aurélio fala — templo, casa de guarda e casa não são três lugares, são três construções do
-> mesmo terreno, costuradas por baixo.
->
-> E isso quer dizer que **a fenda já tem caminho aberto para dentro da casa**, saindo na Sala
-> de Oração Privada, parede com parede com a sala dos quadros da lagoa da
-> [Líria](/party/liria.md). Se a sessão terminar em fecho parcial, é por ali que a próxima
-> coisa entra. **Não diga isso na mesa.** Deixe alguém olhar o mapa e perceber.
+### Verdade do mestre
+
+**A cripta é o túnel que liga a igreja à mansão.** É literalmente o arranjo antigo de que o
+Aurélio fala — templo, casa de guarda e casa não são três lugares, são três construções do
+mesmo terreno, costuradas por baixo.
+
+Isso quer dizer que **a fenda já tem caminho aberto para dentro da casa**, saindo na Sala
+de Oração Privada, parede com parede com a sala dos quadros da lagoa da
+[Líria](/party/liria.md). Se a sessão terminar em fecho parcial, é por ali que a próxima
+coisa entra. **Não diga isso na mesa.** Deixe alguém olhar o mapa e perceber.
 
 Os túmulos são **da família**. O mapa chama a sala de *Ancestral Crypt*.
 
@@ -202,7 +209,7 @@ Os túmulos são **da família**. O mapa chama a sala de *Ancestral Crypt*.
 O que a mesa pode ler, sem CD, só perguntando:
 
 - Isto **não** é o portal do subsolo. É um rasgo, não uma porta.
-- É recente. Abriu quando o [Vhaelyr](/npcs/vhaelyr.md) mexeu na contenção lá embaixo.
+- É recente. Abriu quando [Milara](/npcs/milara.md) mexeu na contenção lá embaixo.
 - A luz de Lathander está segurando a borda há tempo demais e está perdendo.
 
 ## 4. O ritual dos três
@@ -248,7 +255,7 @@ da campanha deles.** Cada um ganha um trabalho concreto por rodada.
 **Três sucessos de Enna em três rodadas fecha.** Cada rodada em que ela falha, ou em que
 Aurélio é derrubado, a fenda cobra:
 
-- **Rodada perdida:** todos na cripta fazem salvaguarda de Constituição CD 13, 2d6 de
+- **Rodada perdida:** todos na cripta fazem um teste de resistência de Constituição CD 13, 2d6 de
   necrótico na falha, metade no sucesso. A borda avança 5 pés.
 
 **Se o Aurélio caiu na nave:** a Enna faz os testes com desvantagem. Continua possível.

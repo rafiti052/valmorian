@@ -10,10 +10,16 @@ sources:
   - resource: "/sources/Ficha Bri.pdf"
     title: "Ficha Bri"
     author: "human:rafael"
+    sha256: 447c58f8c28ab4e20341430fbf962c616dfc719a06c0fe3fb9d0f8b203e5e73a
+    coverage: partial
+    locator: "campos AcroForm preenchidos de Bri, pp. 1-2"
   - resource: "/sources/Backstories.pdf"
     title: "Backstories — PCs Mansão Valmorian"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:50:00Z }
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Bri, pp. 4-6"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Bri

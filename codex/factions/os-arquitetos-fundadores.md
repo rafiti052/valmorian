@@ -11,7 +11,10 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §5, §8"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:56:00Z }
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§5, §8"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
 # Os Arquitetos Fundadores
@@ -35,7 +38,7 @@ O que construíram:
 
 ## O que o grupo já viu do trabalho deles
 
-- o núcleo do subsolo, tratado pelo drow como "máquina de contenção obsoleta";
+- o núcleo do subsolo, tratado por [Milara](/npcs/milara.md) como "máquina de contenção obsoleta";
 - os quatro fragmentos e o círculo rúnico da antessala da biblioteca;
 - os construtos de manutenção — que o [Crispim Catraca](/npcs/crispim-catraca.md) conserta
   uma vez por mês porque a casa o sequestra para isso.

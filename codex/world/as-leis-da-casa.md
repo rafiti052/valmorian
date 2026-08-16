@@ -10,7 +10,10 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §6, §52"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:55:00Z }
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§6, §52"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
 # As Leis da Casa
@@ -58,7 +61,7 @@ sistema **não** funciona colocando pedras em buracos. Ele autentica por três e
 
 > **relíquia + componente arcano + linhagem**
 
-Concretamente, nas anotações do drow no laboratório:
+Concretamente, nas anotações de [Milara](/npcs/milara.md) no laboratório:
 
 - *"Ametista valida."* — [o Selo](/items/selo-de-ametista.md)
 - *"Ônix contém."* — [o Ônix Negro](/items/onix-negro.md)

@@ -11,10 +11,16 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §16"
     author: "human:rafael"
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§16"
   - resource: "/sources/Backstories.pdf"
     title: "Backstories — Líria"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:15:00Z }
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Líria, pp. 9-11"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Onde está Marea

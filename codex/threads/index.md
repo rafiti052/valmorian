@@ -6,7 +6,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [planejamento, apenas-mestre]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:45:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
 # Fios Vivos
@@ -27,7 +27,15 @@ pressão. Se você só for manter um índice deste codex, mantenha este.
 
 | Fio | Pressão | Arco |
 |-----|---------|------|
-| [Quem deu a última ordem?](/threads/quem-deu-a-ultima-ordem.md) | `urgent` | [O Inventário](/arcs/o-inventario.md) |
+| [A fenda sob a cripta](/threads/a-fenda-sob-a-cripta.md) | `urgent` | — |
+| [O Ônix Negro](/threads/o-onix-negro.md) | `urgent` | — |
+| [A linhagem Valerius](/threads/a-linhagem-valerius.md) | `simmering` | — |
+| [Por que esses cinco?](/threads/por-que-esses-cinco.md) | `simmering` | — |
+| [Quem é a mãe de Líria](/threads/quem-e-a-mae-de-liria.md) | `simmering` | — |
+| [Quem mandou a drow](/threads/quem-mandou-a-drow.md) | `simmering` | — |
+| [A mansão conhece Eron?](/threads/a-mansao-conhece-eron.md) | `dormant` | — |
+| [Onde está Marea](/threads/onde-esta-marea.md) | `dormant` | — |
+| [Por que a arte responde](/threads/por-que-a-arte-responde.md) | `dormant` | — |
 
 ## Resolvidos
 

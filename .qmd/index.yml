@@ -2,9 +2,23 @@ collections:
   codex:
     path: ./codex
     pattern: "**/*.md"
+    context:
+      "": Conceitos de campanha e preparação do mestre, em português. Podem estar em draft e conter segredos; recupere o documento completo antes de afirmar cânone.
   sources:
     path: ./sources
     pattern: "**/*.{md,markdown,txt,text}"
+    context:
+      "": Evidência bruta e não canônica em sources/. Use para proveniência e reconcilie com o codex antes de afirmar fatos.
+  docs:
+    path: ./docs
+    pattern: "**/*.md"
+    context:
+      "": Documentação do formato, políticas e manifesto de ingestão; não é cânone da campanha.
+  rulebooks-local:
+    path: ./local-corpus/rulebooks
+    pattern: "**/*.md"
+    context:
+      "": Material comercial local para consulta de regras; nunca tratar como cânone de campanha sem decisão ou locator de página.
 models:
   embed: hf:ggml-org/embeddinggemma-300M-GGUF/embeddinggemma-300M-Q8_0.gguf
   generate: hf:tobil/qmd-query-expansion-1.7B-gguf/qmd-query-expansion-1.7B-q4_k_m.gguf

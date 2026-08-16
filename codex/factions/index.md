@@ -6,14 +6,17 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [facções, apenas-mestre]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:46:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Facções
 
 | Facção | Disposição com o grupo | Visibilidade |
 |--------|------------------------|--------------|
-| [A Criadagem](/factions/a-criadagem.md) | `friendly` | `rumored` |
+| [A Criadagem Vinculada](/factions/a-criadagem-vinculada.md) | `friendly` | `public` |
+| [Casa Valerius](/factions/casa-valerius.md) | `neutral` | `rumored` |
+| [Elfos de Lethariel](/factions/elfos-de-lethariel.md) | `neutral` | `rumored` |
+| [Os Arquitetos Fundadores](/factions/os-arquitetos-fundadores.md) | `neutral` | `rumored` |
 
 ## Entre sessões
 

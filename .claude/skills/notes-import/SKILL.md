@@ -60,9 +60,15 @@ sources:
     title: "Valmorian world bible v3"
     author: "human:rafael"
     last_modified: 2026-03-02
+    sha256: "<64 hex characters for local files>"
+    coverage: full
+    locator: "pages 1-12"
 ```
 
 - Set `status: draft` on everything imported. Rafael promotes to `stable` after review.
+- Set `coverage` honestly: a citation without it is treated as `partial` by
+  `scripts/import_status.py`; use `catalog-only` for searchable metadata and `deferred`
+  only when a later ingestion is explicitly planned.
 - **Keep the source language.** Notes in Portuguese produce concepts in Portuguese.
   Quotations that are in English — a spell name, a rule from the book — stay in English
   with Portuguese around them.

@@ -6,7 +6,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [itens, apenas-mestre]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:55:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Itens

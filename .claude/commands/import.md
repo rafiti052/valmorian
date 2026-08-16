@@ -24,7 +24,8 @@ Follow the **notes-import** skill. The order matters:
    contradictions between sources, and anything you could not classify. Wait for his go.
 3. **Convert**, preserving his wording. Import is not an editing pass.
 4. **Set provenance honestly** — `generated: { by: process:okf-import, ... }` and a
-   `sources` entry with the real URL or path. Everything lands as `status: draft`.
+   `sources` entry with the real URL or path, SHA-256 for local files, coverage, and a
+   page/field/section locator when available. Everything lands as `status: draft`.
 5. **Never guess `visibility: public`.** Default unmarked material to `secret` and list
    it in the report as needing a visibility pass.
 6. **Reconcile** — absolute links, directory indexes, a `codex/log.md` entry, then

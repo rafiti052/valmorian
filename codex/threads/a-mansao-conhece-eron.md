@@ -11,10 +11,16 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §21, §68"
     author: "human:rafael"
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§21, §68"
   - resource: "/sources/Backstories.pdf"
     title: "Backstories — Yara"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:15:00Z }
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Yara, pp. 12-15"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # A mansão conhece Eron?
@@ -61,7 +67,8 @@ para isso: ninguém passa mais de três sessões sem uma cena que seja dele.
 | Deixar ela ser a única que lê o terreno quebrado — competência é consolo | Ressuscitá-lo, ou oferecer isso |
 | Se ela puxar o assunto, **parar a mesa e dar espaço** | Forçar a cena quando a jogadora não quer |
 
-> [!secret]
-> A característica emocional central dela é **"não abandona alguém sob sua proteção"**, e a
-> culpa que sobrou é a de não ter sido suficiente. A resolução boa não é descobrir o que
-> houve com o Eron. É ela conseguir, uma vez, ser suficiente — com testemunha.
+## Direção emocional do mestre
+
+A característica emocional central dela é **"não abandona alguém sob sua proteção"**, e a
+culpa que sobrou é a de não ter sido suficiente. A resolução boa não é descobrir o que
+houve com o Eron. É ela conseguir, uma vez, ser suficiente — com testemunha.

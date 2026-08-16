@@ -6,7 +6,7 @@ visibility: public
 status: draft
 lang: pt-BR
 tags: [regras, dnd-5e-2024]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:55:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Regras da Casa

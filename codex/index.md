@@ -7,7 +7,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [campanha, dnd-5e-2024, apenas-mestre]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:40:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Mansão Valmorian
@@ -45,6 +45,8 @@ sobre o livro.
 | [items/](/items/index.md) | Artefatos e tesouro notável. |
 | [rules/](/rules/index.md) | Regras da casa e decisões de mesa. |
 | [bestiary/](/bestiary/index.md) | Blocos de estatísticas caseiros e reskins. |
+| [rulebooks/](/rulebooks/index.md) | Referências de regras usadas pela campanha; texto comercial integral permanece local. |
+| [homebrew/](/homebrew/index.md) | Espécies, subsistemas e outras regras não-core adotadas ou avaliadas para a campanha. |
 
 ## Trabalhando aqui
 
@@ -61,12 +63,7 @@ Peça ao companheiro o que você precisa em vez de abrir arquivos na mão:
 
 ## Status
 
-Isto é um **scaffold**. Os conceitos abaixo são exemplos de trabalho que mostram o formato
-de cada tipo — coerentes o bastante para demonstrar os links cruzados, mas **não são a sua
-campanha**. Eu inventei todos eles. Substitua conforme importar material real.
-
-Todo exemplo tem `status: draft` e a tag `scaffold-example`:
-
-```bash
-grep -rl "scaffold-example" codex/
-```
+O scaffold fictício foi removido. O codex está em importação e reconciliação: `draft`
+significa que o material ainda precisa da revisão de Rafael, não que seja um exemplo.
+Consulte `scripts/import_status.py` para distinguir fontes completas, parciais, catalogadas
+e adiadas.

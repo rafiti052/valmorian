@@ -10,7 +10,10 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §23, §67"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:55:00Z }
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§23, §67"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Arte como Interface

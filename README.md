@@ -29,6 +29,16 @@ markdown with `qmd update`.
 
 Claude Code picks up `.mcp.json` automatically, exposing QMD search as MCP tools.
 
+## Battlemap hexagonal
+
+O gerador da grade hexagonal requer Node 20.9 ou superior. Instale as dependências do
+repositório e informe os caminhos de entrada e saída:
+
+```bash
+npm ci
+npm run battlemap:hex -- caminho/entrada.png caminho/saida.png
+```
+
 ## Layout
 
 | Path | What it is |
@@ -38,11 +48,12 @@ Claude Code picks up `.mcp.json` automatically, exposing QMD search as MCP tools
 | `docs/IDIOMA.md` | Language policy: pt-BR prose, English identifiers, ASCII filenames. |
 | `docs/GLOSSARIO-DND-2024.md` | pt-BR D&D 2024 terminology, confirmed vs. unverified. |
 | `sources/` | Raw material as Rafael wrote it. Tracked, searchable, **not canon** — the provenance target for `sources:` links. |
+| `local-corpus/rulebooks/` | Gitignored full-text rulebook extraction for local QMD search; tracked metadata remains in `codex/rulebooks/`. |
 | `scripts/okf_validate.py` | Conformance and link-graph validator. |
 | `.claude/` | Skills, subagents, and slash commands. |
 
 Inside `codex/`: `world/`, `arcs/`, `threads/`, `factions/`, `npcs/`, `locations/`,
-`sessions/`, `party/`, `items/`, `rules/`, `bestiary/`.
+`sessions/`, `party/`, `items/`, `rules/`, `bestiary/`, `rulebooks/`, `homebrew/`.
 
 Start at [`codex/arcs/index.md`](codex/arcs/index.md) — the narrative spine, and the
 document to open when you have lost the plot.
@@ -85,12 +96,8 @@ Checks required frontmatter, enum values, type/directory agreement, the cross-li
 directory indexes, provenance honesty (agents cannot self-`verify`), and secrecy leaks
 where a `public` concept links a `secret` one outside a `> [!secret]` block.
 
-## Scaffold status
+## Import status
 
-The codex currently holds **worked examples**, tagged `scaffold-example` and marked
-`status: draft`. They exist to show the shape of each concept type and to exercise the
-cross-linking. Replace them as real material is imported:
-
-```bash
-grep -rl "scaffold-example" codex/
-```
+The fictional scaffold concepts have been removed. Real imported material remains
+`status: draft` until Rafael reviews it. `scripts/import_status.py` reads the source-level
+manifest and distinguishes full, partial, catalog-only, deferred, and pending sources.

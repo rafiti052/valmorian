@@ -11,7 +11,10 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §17"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:56:00Z }
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§17"
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Elfos de Lethariel
@@ -36,7 +39,7 @@ O que aponta nessa direção:
 
 - foi encontrada bebê às margens da [Lagoa Nymrath](/locations/lagoa-nymrath.md), um lugar
   onde as barreiras entre planos são frágeis;
-- o [Selo da Lua Refletida](/items/selo-da-lua-refletida.md) aparece sozinho quando a magia
+- o [Selo da Lua Refletida](/world/selo-da-lua-refletida.md) aparece sozinho quando a magia
   dela se manifesta forte;
 - a Silena Pouca Sombra, na feira: *"Há correntes que prendem. Há correntes que sustentam. A
   sua magia, criança, toca as duas sem pedir licença."*

@@ -11,8 +11,11 @@ sources:
   - resource: "/sources/sessao_3_estrutura_narrativa.md"
     title: "Sessão 3 — Estrutura Narrativa (§7 Cripta)"
     author: "human:rafael"
+    sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
+    coverage: partial
+    locator: "§7 Cripta"
 tags: [local, cripta, fenda, clímax]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:10:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # Cripta Ancestral
@@ -58,13 +61,14 @@ Não é o portal do subsolo. **É um rasgo, não uma porta.** A pedra deixa de e
 da cripta: não há buraco, há uma ausência com bordas, e as bordas ficam de perfil de qualquer
 ângulo que se olhe.
 
-Abriu quando o [Vhaelyr](/npcs/vhaelyr.md) interferiu na contenção lá embaixo. A luz de
+Abriu quando [Milara](/npcs/milara.md) interferiu na contenção lá embaixo. A luz de
 Lathander desceu até aqui e está segurando a borda sozinha.
 
 ## Quem está aqui
 
-Seis [necromantes-esqueleto do coro](/bestiary/necromante-esqueleto-do-coro.md) — que na sua
-mesa **já subiram para a igreja**.
+> [!secret]
+> Seis [necromantes-esqueleto do coro](/bestiary/necromante-esqueleto-do-coro.md) — que na sua
+> mesa **já subiram para a igreja**.
 
 ## A regra da contenção
 

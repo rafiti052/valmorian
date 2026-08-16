@@ -10,10 +10,16 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §5, §13, §47, §49"
     author: "human:rafael"
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§5, §13, §47, §49"
   - resource: "/sources/sessao_3_estrutura_narrativa.md"
     title: "Sessão 3 — falas do Espirro Dourado"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:55:00Z }
+    sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
+    coverage: partial
+    locator: "§5 — Feira, falas do Espirro Dourado"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Lathander, Guardião do Domínio

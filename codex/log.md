@@ -5,7 +5,7 @@ description: Registro cronológico das mudanças significativas no codex da Mans
 visibility: secret
 status: stable
 lang: pt-BR
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:40:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Registro de Mudanças
@@ -18,6 +18,16 @@ gostaria de *narrar* para si mesmo daqui a seis meses.
 Formato: `## AAAA-MM-DD — resumo`, depois bullets, cada um linkando os conceitos tocados.
 
 ---
+
+## 2026-08-15 — Primeiro lote estrutural do manifesto aprovado
+
+- Conceitos de origem de Líria: [Lagoa Nymrath](/locations/lagoa-nymrath.md),
+  [Marea](/npcs/marea.md), [M. Valmorian](/npcs/m-valmorian.md) e
+  [Selo da Lua Refletida](/world/selo-da-lua-refletida.md).
+- Lacunas ligadas à mansão: [Chef Espectral](/npcs/chef-espectral.md) e
+  [Valthar](/npcs/valthar.md), sem resolver suas identidades ou destinos.
+- Princípio de preparação [O que não se revela cedo demais](/sessions/o-que-nao-se-revela.md)
+  registrado a partir do handover.
 
 ## 2026-08-15 — Idioma definido como pt-BR; exemplos retematizados
 

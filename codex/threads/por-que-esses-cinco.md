@@ -11,7 +11,10 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §7, §52, §54, §74"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:10:00Z }
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§7, §52, §54, §74"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # Por que esses cinco?
@@ -56,7 +59,7 @@ tempo deles.
 ## O que não responder ainda
 
 Motivo exato dos convites, quem os emitiu, e o que a casa pretende fazer com eles depois.
-Ver [o que não se revela](/threads/index.md).
+Ver [O que não se revela cedo demais](/sessions/o-que-nao-se-revela.md).
 
 A resposta grande, quando vier, deve levar à escolha final da campanha: **função, dever,
 liberdade, e o destino da própria Mansão** — não a um vilão escondido no porão.
