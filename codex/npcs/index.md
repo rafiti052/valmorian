@@ -6,7 +6,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [npcs, apenas-mestre]
-generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # NPCs
@@ -14,10 +14,10 @@ generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 | Quem | Disposição | Visto por último | Visibilidade |
 |------|------------|------------------|--------------|
 | [Chef Espectral](/npcs/chef-espectral.md) | `hostile` | — | `rumored` |
-| [Crispim Catraca](/npcs/crispim-catraca.md) | `friendly` | — | `public` |
+| [Crispim Catraca](/npcs/crispim-catraca.md) | `friendly` | [Sessão 4](/sessions/sessao-04.md) | `public` |
 | [Doutor Fini](/npcs/doutor-fini.md) | `neutral` | — | `secret` |
 | [Espirro Dourado](/npcs/espirro-dourado.md) | `friendly` | — | `public` |
-| [Irmão Aurélio](/npcs/irmao-aurelio.md) | `friendly` | — | `public` |
+| [Irmão Aurélio](/npcs/irmao-aurelio.md) | `friendly` | [Sessão 4](/sessions/sessao-04.md) | `public` |
 | [Leôncio Mirtilo](/npcs/leoncio-mirtilo.md) | `friendly` | — | `public` |
 | [Mordecai](/npcs/mordecai.md) | `friendly` | — | `public` |
 | [M. Valmorian](/npcs/m-valmorian.md) | `neutral` | — | `secret` |

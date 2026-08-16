@@ -14,7 +14,12 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§7, §52, §54, §74"
-generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "reação da pedra de Enna e chegada de Crispim"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Por que esses cinco?
@@ -40,6 +45,10 @@ Cada um dos quatro feirantes entregou uma peça, e nenhum deles entregou a mesma
 
 E o [Crispim Catraca](/npcs/crispim-catraca.md) fechou a feira com a suspeita explícita:
 *"a mansão também está começando a chamar vocês por função, linhagem ou nome verdadeiro."*
+
+Na [sessão 4](/sessions/sessao-04.md), a pedra de Enna voltou a reagir durante a
+canalização, Bob tornou-se a peça decisiva por meio da música e Crispim pediu para falar
+com cada integrante do grupo individualmente. As conversas ficaram para a próxima sessão.
 
 > [!secret]
 > **Bob e Yara estão atrás dos outros três.** Enna, Bri e Líria receberam reconhecimento

@@ -6,6 +6,7 @@ visibility: public
 status: draft
 lang: pt-BR
 disposition: friendly
+last_seen: /sessions/sessao-04.md
 tags: [npc, gnomo, artífice, construtos, humor]
 sources:
   - resource: "/sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md"
@@ -20,7 +21,12 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§29"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "cliffhanger final"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Crispim Catraca
@@ -86,8 +92,10 @@ o impede de virar um NPC que explica a campanha inteira.
 
 ## Estado
 
-Apareceu no fim da feira, com a feira já se desmontando sozinha, carregando papéis e
-ferramentas demais. **O gancho dele está pendurado e ainda não foi puxado.**
+Apareceu ao fim da [sessão 4](/sessions/sessao-04.md), quando o grupo saía da igreja,
+carregando ferramentas e objetos demais. Aurélio o reconheceu. Crispim disse que quer
+conversar com **cada integrante do grupo individualmente**; as cinco conversas ficaram para
+a próxima sessão.
 
 > [!secret]
 > **Conflito a resolver.** O Rafael mencionou um **"doutor Fini"** — um gnomo que explicaria

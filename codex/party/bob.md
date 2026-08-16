@@ -19,13 +19,21 @@ sources:
     sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
     coverage: partial
     locator: "Bob, pp. 7-8"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "avanço do grupo para o nível 5"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Bob, o Bardo
 
-**Amphitari · Bardo 4 (Colégio dos Romani) · Antecedente: Artista — Músico Viajante**
+**Amphitari · Bardo 5 (Colégio dos Romani) · Antecedente: Artista — Músico Viajante**
 CA 14 · PV 23 · CD de magia 15 (com o tambor) · Ataque mágico +6
+
+> [!warning]
+> O nível 5 foi estabelecido na sessão 4; os números e a lista abaixo ainda vêm da ficha de nível 4.
 
 > [!note]
 > **Amphitari** e **Colégio dos Romani** são material caseiro seu — não existe nada sobre

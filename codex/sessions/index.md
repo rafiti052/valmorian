@@ -6,13 +6,14 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [sessões, apenas-mestre]
-generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Sessões
 
 | # | Conceito | Tipo | Jogada em |
 |---|----------|------|-----------|
+| 4 | [Sessão 4 — O Coro e a Esfera Necrótica](/sessions/sessao-04.md) | Session Recap | 2026-08-15 |
 | 4 | [Sessão 4 — A Igreja e a Cripta](/sessions/sessao-04-plano.md) | Session Plan | — |
 
 ## Guia de preparação
@@ -22,10 +23,7 @@ generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 
 > [!warning]
 > **Faltam as sessões 1, 2, 2.5 e 3 de verdade.** Foram jogadas e não têm conceito Session
-> Recap —
-> o material cru está em `sources/`, não no codex. A sessão 3 (laboratório → feira → igreja)
-> é a que acabou de parar no meio, e o plano da sessão 4 continua exatamente de onde ela
-> parou.
+> Recap; o material cru está em `sources/`, não no codex.
 
 ## Nomenclatura
 

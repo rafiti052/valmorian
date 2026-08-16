@@ -13,7 +13,12 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§23, §67"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "flauta de Bob na canalização contra a esfera"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Arte como Interface
@@ -26,6 +31,10 @@ funcionam como registros, chaves, ressonâncias, gatilhos e interfaces.
 
 A tinta dos quadros da Drawing Room guarda **memória**, não ilusão. Foi assim que a mesa
 encontrou o primeiro fio disso.
+
+Na [sessão 4](/sessions/sessao-04.md), a flauta de Bob conectou a energia do grupo depois
+de uma tentativa coletiva falhar. A música permitiu que a canalização de Lathander
+dissipasse a esfera necrótica. É o primeiro uso musical da interface estabelecido em mesa.
 
 ## O que a arte pode fazer
 

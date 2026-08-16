@@ -1,7 +1,7 @@
 ---
 type: Item
 title: Selo de Ametista
-description: Relíquia da Casa Valerius que sintoniza apenas com o sangue Valerius; valida autorizações no sistema da mansão e, na cripta, funciona como interface ritual e não como chave.
+description: Relíquia da Casa Valerius que sintoniza apenas com o sangue Valerius; o plano a tratava como interface ritual, mas a pedra vista na cripta ainda precisa ser identificada.
 visibility: public
 status: draft
 lang: pt-BR
@@ -27,8 +27,13 @@ sources:
     sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
     coverage: partial
     locator: "§§1 e 7 — validação por ametista e ritual da cripta"
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "pedra de Enna durante a canalização"
 tags: [item, relíquia, valerius, ametista]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:12:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Selo de Ametista
@@ -60,9 +65,13 @@ carrega**. A Enna o transformou em ferramenta de fuga porque passou a vida fugin
 
 ## Na cripta
 
-Na [sessão 4](/sessions/sessao-04-plano.md) ele deixa de ser chave e vira **interface
-ritual** — e sozinho não basta. Precisa da fé da [Bri](/party/bri.md) e da harmonização do
-[Aurélio](/npcs/irmao-aurelio.md).
+Na [sessão 4](/sessions/sessao-04.md), a pedra carregada por Enna vibrou durante a
+canalização de Lathander e foi percebida como catalisador. A transcrição não a chama de
+Selo de Ametista nessa cena, portanto a identificação permanece pendente.
+
+> [!warning]
+> O plano previa o Selo como uma das três peças de um ritual com Bri e Aurélio. A resolução
+> jogada foi coletiva, contra uma esfera necrótica, e não confirmou essa mecânica de três.
 
 > [!secret]
 > **Caçadores de recompensa ainda procuram este objeto**, e não sabem que a Enna está viva.
@@ -70,5 +79,5 @@ ritual** — e sozinho não basta. Precisa da fé da [Bri](/party/bri.md) e da h
 
 ## Ainda não decidido
 
-- Se ele ganha uma função nova depois da cripta. **Um item que se molda a quem o carrega
-  deveria mudar depois de ser usado como âncora ritual.** Vale decidir antes da sessão.
+- [ ] Confirmar se a pedra que reagiu na sessão 4 era este Selo.
+- [ ] Se confirmada, decidir se a canalização mudou alguma função do item.

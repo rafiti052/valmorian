@@ -5,8 +5,8 @@ description: A casa lê arte como entrada válida e o Bob é a primeira pessoa e
 visibility: rumored
 status: draft
 lang: pt-BR
-pressure: dormant
-tags: [fio, bob, arte, memória, dívida-de-cena]
+pressure: simmering
+tags: [fio, bob, arte, memória, evidência-em-mesa]
 sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §23, §67, §68"
@@ -14,7 +14,12 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§23, §67, §68"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "flauta de Bob na canalização contra a esfera"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Por que a arte responde
@@ -26,6 +31,13 @@ generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 - **Quem eram os artistas da casa?**
 
 Ver [arte como interface](/world/arte-como-interface.md).
+
+## Avanço na sessão 4
+
+Quando a primeira canalização coletiva falhou, Bob tocou a flauta. As notas ligaram a
+energia do grupo e permitiram que a força de Lathander dissipasse a esfera necrótica. A
+mesa ainda não nomeou isso como “arte enquanto interface”, mas viu a performance alterar
+diretamente um sistema mágico da mansão.
 
 ## O problema real deste fio
 
@@ -62,10 +74,10 @@ Três caminhos que não quebram a regra:
 peça existente ([M. Valmorian](/npcs/m-valmorian.md) e os artistas da casa) em vez de
 inventar linhagem nova, que é a regra de ouro de continuidade.
 
-## Pressão — `dormant`, e não deveria ficar
+## Pressão — `simmering`
 
-Nenhum relógio, mas há **dívida de cena**. Um espaço que responda a uma performance dele, na
-frente dos outros quatro, resolve metade do problema numa sessão.
+Nenhum relógio. O primeiro sinal público aconteceu, mas ainda falta transformar a função do
+Bob em história pessoal e descobrir por que a casa reconhece justamente a música dele.
 
 ## Falta decidir
 
