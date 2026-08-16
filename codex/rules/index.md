@@ -6,7 +6,7 @@ visibility: public
 status: draft
 lang: pt-BR
 tags: [regras, dnd-5e-2024]
-generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Regras da Casa
@@ -14,9 +14,7 @@ generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
 A base é **D&D 5e, regras de 2024**. Qualquer coisa aqui tem precedência sobre o livro.
 Terminologia em [docs/GLOSSARIO-DND-2024.md](../../docs/GLOSSARIO-DND-2024.md).
 
-| Regra | Estado | Visibilidade |
-|-------|--------|--------------|
-| [O que não se revela cedo demais](/rules/o-que-nao-se-revela.md) | `draft` | `public` |
+*Nenhuma regra da casa registrada ainda.*
 
 ## Por que registrar decisões
 

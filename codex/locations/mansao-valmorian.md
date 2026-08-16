@@ -26,7 +26,7 @@ sources:
     coverage: partial
     locator: "Visão Geral; §§1-7; Fechamento esperado"
 tags: [local, mansão, contenção]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Mansão Valmorian
@@ -60,7 +60,7 @@ esteja começando a chamar os personagens por função, linhagem ou nome verdade
 
 ## A gramática de acesso
 
-Das anotações do [Vhaelyr](/npcs/vhaelyr.md) no laboratório:
+Das anotações de [Milara](/npcs/milara.md) no laboratório:
 
 - **"Ametista valida."** — o [Selo](/items/selo-de-ametista.md)
 - **"Ônix contém."** — o [Ônix Negro](/items/onix-negro.md)

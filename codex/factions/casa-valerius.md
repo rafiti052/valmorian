@@ -14,7 +14,7 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§10, §11, §12, §35"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
 # Casa Valerius
@@ -69,4 +69,4 @@ pressão vem de dentro, não de fora — até alguém de fora reparar.
       apagar uma chave da mansão?
 
 Ver [a linhagem Valerius](/threads/a-linhagem-valerius.md) e
-[quem mandou o drow](/threads/quem-mandou-o-drow.md).
+[quem mandou a drow](/threads/quem-mandou-a-drow.md).

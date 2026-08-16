@@ -14,7 +14,7 @@ sources:
     coverage: partial
     locator: "§4 Ônix Negro"
 tags: [item, mistério, contenção, subsolo]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
 # Ônix Negro
@@ -33,11 +33,11 @@ e perigoso demais para ser compreendido agora.
 
 ## O que se sabe
 
-**"Ônix contém."** — das anotações do [Vhaelyr](/npcs/vhaelyr.md). Ele é a metade de
+**"Ônix contém."** — das anotações de [Milara](/npcs/milara.md). Ele é a metade de
 contenção do sistema cujo outro lado é o [Selo de Ametista](/items/selo-de-ametista.md), que
 valida.
 
-O drow mexeu numa **prisão**, não numa porta. O Ônix é parte do que mantém essa prisão
+[Milara](/npcs/milara.md) mexeu numa **prisão**, não numa porta. O Ônix é parte do que mantém essa prisão
 fechada.
 
 ## Como usar sem explicar

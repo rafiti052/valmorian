@@ -1,11 +1,11 @@
 ---
-type: House Rule
+type: Session Plan
 title: O que não se revela cedo demais
 description: Princípio de preparação que faz cada resposta avançar o mistério em uma camada sem encerrar as perguntas centrais da campanha.
 visibility: public
 status: draft
 lang: pt-BR
-tags: [regra, preparação, mistério, revelação]
+tags: [preparação, mistério, revelação]
 sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §53"
@@ -13,7 +13,7 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§53 — Não revelar cedo demais"
-generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # O que não se revela cedo demais

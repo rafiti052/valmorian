@@ -1,11 +1,11 @@
 ---
-type: Item
+type: World Concept
 title: Selo da Lua Refletida
 description: Símbolo ligado a Líria, formado por círculo incompleto, meia-lua invertida e três ondas paralelas, que pode surgir durante manifestações mágicas intensas.
 visibility: rumored
 status: draft
 lang: pt-BR
-tags: [item, símbolo, liria, nymrath, magia-espiritual]
+tags: [símbolo, liria, nymrath, magia-espiritual]
 sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §18"
@@ -13,7 +13,7 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§18 — Selo da Lua Refletida"
-generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Selo da Lua Refletida

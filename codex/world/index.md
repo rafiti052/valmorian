@@ -6,7 +6,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [cenário, apenas-mestre]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # O Mundo
@@ -17,6 +17,7 @@ generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 | [As Leis da Casa](/world/as-leis-da-casa.md) | Comportamentos conhecidos da mansão | `secret` |
 | [Lathander, Guardião do Domínio](/world/lathander-guardiao.md) | Papel do templo e da luz de Lathander | `rumored` |
 | [Arte como Interface](/world/arte-como-interface.md) | Arte, selos e representação como mecanismos | `secret` |
+| [Selo da Lua Refletida](/world/selo-da-lua-refletida.md) | Símbolo não físico ligado às manifestações de Líria | `rumored` |
 
 Use os conceitos acima como fatos e hipóteses documentados. Perguntas ainda abertas ficam
 nos [fios vivos](/threads/index.md), sem uma resposta inventada neste índice.

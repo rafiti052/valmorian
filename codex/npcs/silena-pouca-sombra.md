@@ -20,7 +20,7 @@ sources:
     coverage: partial
     locator: "Feira da mansão — tabela das barracas e falas rápidas"
 tags: [npc, feérico, feira, lagoa-nymrath]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:05:00Z }
 ---
 
 # Silena Pouca Sombra

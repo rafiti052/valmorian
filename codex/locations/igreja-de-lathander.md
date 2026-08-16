@@ -14,7 +14,7 @@ sources:
     coverage: partial
     locator: "§6 Igreja"
 tags: [local, templo, lathander]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:10:00Z }
 ---
 
 # Igreja de Lathander

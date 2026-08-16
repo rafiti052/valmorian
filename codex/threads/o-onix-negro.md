@@ -14,7 +14,7 @@ sources:
     sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
     coverage: partial
     locator: "§§3-4 — Sala do Portal e Ônix Negro"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # O Ônix Negro
@@ -40,7 +40,7 @@ olhos:
 
 ## Pressão — `urgent`
 
-O Vhaelyr mexeu numa contenção que dependia disso, e a consequência subiu: a fenda sob a
+Milara mexeu numa contenção que dependia disso, e a consequência subiu: a fenda sob a
 cripta abriu, os seis do coro acordaram, e a luz de Lathander está segurando a borda
 sozinha e cansando.
 
@@ -54,7 +54,7 @@ continua pressionando. Isso não é um relógio que o grupo pode ignorar por mui
 | O Ônix existe e está no subsolo | O que ele contém |
 | Ele é peça de contenção | Se ele *deveria* estar no cajado |
 | O cajado tem o encaixe vazio | Quem o removeu, quando, e por quê |
-| O Vhaelyr era invasor, não dono | Se o Valthar é carcereiro ou prisioneiro |
+| Milara era invasora, não dona | Se o Valthar é carcereiro ou prisioneiro |
 
 ## A regra de progressão
 

@@ -13,7 +13,7 @@ sources:
     sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
     coverage: partial
     locator: "§5, §6, §7"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
 # O Demiplano
@@ -76,5 +76,5 @@ O passo 1 e o 2 já aconteceram, com o Espirro Dourado na feira.
 
 ## O que muda se o grupo não fizer nada
 
-A contenção continua degradando. O que o drow mexeu no subsolo não voltou ao lugar — apenas
+A contenção continua degradando. O que [Milara](/npcs/milara.md) alterou no subsolo não voltou ao lugar — apenas
 parou de piorar rápido. Ver [as leis da casa](/world/as-leis-da-casa.md).

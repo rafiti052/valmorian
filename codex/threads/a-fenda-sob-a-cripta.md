@@ -1,7 +1,7 @@
 ---
 type: Plot Thread
 title: A fenda sob a cripta
-description: A interferência do drow na contenção do subsolo rasgou o plano sob a cripta da igreja, acordou o coro de seis e está consumindo a luz de Lathander que segura a borda.
+description: A interferência de Milara na contenção do subsolo rasgou o plano sob a cripta da igreja, acordou o coro de seis e está consumindo a luz de Lathander que segura a borda.
 visibility: public
 status: draft
 lang: pt-BR
@@ -14,14 +14,14 @@ sources:
     coverage: partial
     locator: "§6, §7"
 tags: [fio, cripta, urgente]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
 # A fenda sob a cripta
 
 ## A pergunta
 
-**Dá para fechar o que o Vhaelyr abriu — e o que passa por ali enquanto está aberto?**
+**Dá para fechar o que Milara abriu — e o que passa por ali enquanto está aberto?**
 
 ## De quem é o problema
 

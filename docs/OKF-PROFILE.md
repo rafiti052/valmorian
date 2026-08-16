@@ -201,8 +201,12 @@ Every concept records where it came from. This matters most for imported materia
 Actor strings follow the spec convention:
 
 - `human:rafael` — you, at the keyboard
-- `claude-opus-5/gm-companion` — an agent in this repo
+- `gpt-5/codex` — Codex acting in this repo
+- `claude-opus-5/gm-companion` — a Claude-based companion, when it actually made the write
 - `process:okf-import` — the import pipeline
+
+Use the actor that actually made the write; these examples are not a required producer
+list and must not be used to backdate or misattribute a change.
 
 ```yaml
 generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T19:30:00Z }

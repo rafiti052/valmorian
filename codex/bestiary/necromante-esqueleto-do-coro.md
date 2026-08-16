@@ -13,7 +13,7 @@ sources:
     sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
     coverage: partial
     locator: "§7 Cripta"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:58:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # Necromante-Esqueleto do Coro
@@ -38,7 +38,7 @@ cantando. É por isso que a igreja soa errada antes de qualquer um entender o po
 
 **FOR** 12 (+1) · **DES** 14 (+2) · **CON** 14 (+2) · **INT** 10 (+0) · **SAB** 12 (+1) · **CAR** 8 (−1)
 
-- **Salvaguardas:** **sem proficiência em nenhuma** — use os modificadores acima direto.
+- **Testes de resistência:** **sem proficiência em nenhum** — use os modificadores acima direto.
   É o que você vai consultar toda vez que alguém conjurar alguma coisa.
 - **Vulnerabilidade a dano:** concussão
 - **Imunidade a dano:** veneno
@@ -63,7 +63,7 @@ funcionar. Não alcança pilha já destruída de vez.
 
 **Fim verdadeiro.** Uma pilha para de remontar de vez se sofrer **dano radiante** — ou se a
 fenda na [cripta](/locations/cripta.md) for estabilizada, o que derruba os seis de uma vez,
-sem salvaguarda.
+sem teste de resistência.
 
 ### A pilha, em regras
 
@@ -71,9 +71,9 @@ Isto é o que a mesa mais vai perguntar no meio da luta:
 
 - Ocupa o espaço dela e conta como **terreno difícil** (+5 pés para atravessar).
 - É **alvo inerte**: ataques contra ela **acertam automaticamente** e ela não faz
-  salvaguardas.
+  testes de resistência.
 - **Qualquer quantidade de dano radiante** destrói a pilha de vez. Não há limiar, não há
-  salvaguarda. **1 ponto basta** — é por isso que a Rapieira de Prata da Yara resolve.
+  teste de resistência. **1 ponto basta** — é por isso que a Rapieira de Prata da Yara resolve.
 - Nada mais destrói uma pilha. Bater nela com dano físico não adianta, e a mesa precisa
   sentir isso uma vez.
 
@@ -114,11 +114,11 @@ Modificadores e CDs prontos, para você não parar a luta procurando:
 
 | O que a mesa faz | Como resolve |
 |---|---|
-| **Empurrar um para a brasa** | Salvaguarda de **FOR +1** ou **DES +2** contra a CD de Empurrar de quem empurra (8 + FOR + PB, na ficha) |
+| **Empurrar um para a brasa** | Teste de resistência de **FOR +1** ou **DES +2** contra a CD de Empurrar de quem empurra (8 + FOR + PB, na ficha) |
 | **Agarrar com a Língua do Bob** | Escapar: **Atletismo +1** ou **Acrobacia +2** contra a CD de agarrar do Bob |
-| **Aquecer Metal** (Bob, CD 15) | Turíbulo e gola de metal. 2d8 de fogo, e salvaguarda de **CON +2** — na falha, desvantagem em ataques e testes. **Ele não consegue largar a gola**, então come o dano toda rodada |
-| **Esconjurar Inimigo** (Bri, CD 13) | Salvaguarda de **SAB +1**. Amedrontado: deslocamento 0 e desvantagem. Um fugindo quebra o coro de 3 — é a jogada mais subestimada da mesa |
-| **Sussurros Dissonantes** (Bob, CD 15) | Salvaguarda de **SAB +1** |
+| **Aquecer Metal** (Bob, CD 15) | Turíbulo e gola de metal. 2d8 de fogo, e teste de resistência de **CON +2** — na falha, desvantagem em ataques e testes. **Ele não consegue largar a gola**, então come o dano toda rodada |
+| **Esconjurar Inimigo** (Bri, CD 13) | Teste de resistência de **SAB +1**. Amedrontado: deslocamento 0 e desvantagem. Um fugindo quebra o coro de 3 — é a jogada mais subestimada da mesa |
+| **Sussurros Dissonantes** (Bob, CD 15) | Teste de resistência de **SAB +1** |
 | **Divine Smite** (Bri) | +2d8 radiante **+1d8 contra morto-vivo**. Se sobrar radiante quando a pilha cair, ela não remonta |
 | **Rapieira de Prata +1** (Yara) | +1 radiante. Um ponto é suficiente para matar uma pilha de vez |
 | **Talhar** (maestria da Bri) | No acerto, um segundo ataque contra outro alvo a 5 pés do primeiro, 1×/turno. Contra seis em fileira, é muito — *confira o texto exato na ficha dela* |

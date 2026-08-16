@@ -15,7 +15,7 @@ sources:
     coverage: partial
     locator: "§7 Cripta"
 tags: [local, cripta, fenda, clímax]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # Cripta Ancestral
@@ -61,7 +61,7 @@ Não é o portal do subsolo. **É um rasgo, não uma porta.** A pedra deixa de e
 da cripta: não há buraco, há uma ausência com bordas, e as bordas ficam de perfil de qualquer
 ângulo que se olhe.
 
-Abriu quando o [Vhaelyr](/npcs/vhaelyr.md) interferiu na contenção lá embaixo. A luz de
+Abriu quando [Milara](/npcs/milara.md) interferiu na contenção lá embaixo. A luz de
 Lathander desceu até aqui e está segurando a borda sozinha.
 
 ## Quem está aqui

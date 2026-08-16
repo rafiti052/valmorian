@@ -28,7 +28,7 @@ sources:
     coverage: partial
     locator: "§§1 e 7 — validação por ametista e ritual da cripta"
 tags: [item, relíquia, valerius, ametista]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:12:00Z }
 ---
 
 # Selo de Ametista

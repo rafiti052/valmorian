@@ -20,7 +20,7 @@ sources:
     sha256: cb83d87b7cb6c8c062aabf347ae2f8caf8526aa18d9cecd7dfd3d21220599cb8
     coverage: partial
     locator: "Feira da mansão — NPC extra — Irmão Aurélio"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:58:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # Irmão Aurélio
@@ -87,11 +87,11 @@ sobre o assunto.
 |---|---|---|---|---|---|
 | 12 (+1) | 16 (+3) | 16 (+3) | 10 (+0) | 15 (+2) | 14 (+2) |
 
-- **Salvaguardas:** FOR +3, DES +5, CON +5, SAB +4
+- **Testes de resistência:** FOR +3, DES +5, CON +5, SAB +4
 - **Perícias:** Acrobacia +5, Atletismo +3, Intuição +4, Percepção +4, Religião +2
 - **Sentidos:** Percepção passiva 14 · **Iniciativa:** +3
 - **Idiomas:** Comum, Silvano
-- **CD de salvaguarda dele:** 12 (8 + PB + SAB), se alguma coisa dele pedir
+- **CD de teste de resistência dele:** 12 (8 + PB + SAB), se alguma coisa dele pedir
 - **Ki:** 3 pontos, recuperados em descanso curto
 
 ### A economia de turno dele — leia antes das ações
@@ -110,22 +110,22 @@ não dele.
 
 **Harmonização.** *Ação. Concentração, até 10 minutos.* Ele entoa a linha de Lathander
 contra o canto. Ele e cada criatura à escolha dele a até **30 pés** ganham **+1d4 em
-salvaguardas contra dano necrótico e contra efeitos de mortos-vivos**. Quem começar o turno
+testes de resistência contra dano necrótico e contra efeitos de mortos-vivos**. Quem começar o turno
 fora dos 30 pés perde o benefício até voltar. Retomar depois de perder custa a ação dele.
 
 > [!warning]
 > **Ele perde a concentração ao sofrer qualquer dano, automaticamente.** Isso é mais duro do
-> que a regra padrão de propósito — pela RAW seria salvaguarda de Constituição CD 10 ou
+> que a regra padrão de propósito — pela RAW seria teste de resistência de Constituição CD 10 ou
 > metade do dano, e com **+5** ele passaria quase sempre, o que apagaria a decisão inteira.
 > A decisão é: *a mesa protege o velho ou continua atacando?* Se você quiser suavizar, use a
-> salvaguarda RAW e aceite que ele quase nunca cai fora.
+> um teste de resistência RAW e aceite que ele quase nunca cai fora.
 
 ### Ações bônus — 1 ponto de ki cada
 
 **Rajada de Golpes.** Dois golpes desarmados: **+5**, **6 (1d4+3) de concussão** cada.
 
 **Defesa Paciente.** Ele faz a ação Esquivar — ataques contra ele com desvantagem, e ele com
-vantagem em salvaguardas de Destreza até o próximo turno dele.
+vantagem em testes de resistência de Destreza até o próximo turno dele.
 
 **Passo do Vento.** Ele faz Desengajar e Correr, e o deslocamento dele dobra (**80 pés**)
 neste turno.
@@ -139,7 +139,7 @@ ataque é feito **com desvantagem**.
 
 ### Se ele cair
 
-A 0 PV: caído e inconsciente, salvaguardas de morte normais. **A Harmonização acaba na
+A 0 PV: caído e inconsciente, testes de resistência contra a morte normais. **A Harmonização acaba na
 hora.** Estabilizá-lo custa uma ação — Medicina **CD 10** ou qualquer cura. Na cripta, isso
 é uma ação que sai do ritual, e essa é exatamente a escolha que você quer que exista.
 

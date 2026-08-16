@@ -19,7 +19,7 @@ sources:
     sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
     coverage: partial
     locator: "Líria, pp. 9-11"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # Líria Valenwe
@@ -42,7 +42,7 @@ CA 13 (15 com Armadura Arcana) · PV 22 · CD de magia 15
 
 Gato espiritual ligado à Lagoa Nymrath, com ela desde a infância. Mecanicamente: 1×/descanso
 longo, quando a Líria sofre dano, Nox reduz em 1d6 + Carisma. Os dois têm que cair juntos
-para desmaiar, e rolam salvaguardas de morte juntos.
+para desmaiar, e fazem testes de resistência contra a morte juntos.
 
 **Narrativamente ele vale mais que isso:** Nox **enxerga fendas entre planos**, some em
 sombras naturais e às vezes parece saber de coisas que ainda não aconteceram. É a sua

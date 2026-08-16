@@ -74,7 +74,10 @@ anything about canon.
 4. **Preserve the GM's voice.** When editing existing concepts, match the surrounding
    prose. Do not rewrite Rafael's descriptions into your own register because you find
    them terse.
-5. **Set `generated` on every write** — `{ by: claude-opus-5/gm-companion, at: <ISO 8601> }`.
+5. **Set `generated` on every meaningful write** — record the real producer and time,
+   for example `{ by: gpt-5/codex, at: <ISO 8601> }`. Preserve
+   `process:okf-import` when the import pipeline actually produced the record; never
+   attribute a Codex or import write to Claude (or any other actor) by convention.
 6. **Update the indexes.** Writing `codex/npcs/foo.md` means adding a row to
    `codex/npcs/index.md`. An index that lies is worse than no index.
 7. **Run the validator** after any batch of writes: `python3 scripts/okf_validate.py`.

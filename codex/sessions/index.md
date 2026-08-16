@@ -6,7 +6,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [sessões, apenas-mestre]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # Sessões
@@ -14,6 +14,11 @@ generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 | # | Conceito | Tipo | Jogada em |
 |---|----------|------|-----------|
 | 4 | [Sessão 4 — A Igreja e a Cripta](/sessions/sessao-04-plano.md) | Session Plan | — |
+
+## Guia de preparação
+
+- [O que não se revela cedo demais](/sessions/o-que-nao-se-revela.md) — princípio para
+  dosar revelações de mistério sem criar uma regra da casa.
 
 > [!warning]
 > **Faltam as sessões 1, 2, 2.5 e 3 de verdade.** Foram jogadas e não têm conceito Session

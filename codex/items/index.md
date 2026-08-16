@@ -6,7 +6,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [itens, apenas-mestre]
-generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Itens
@@ -15,7 +15,6 @@ generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
 |------|-----------|--------------|
 | [Selo de Ametista](/items/selo-de-ametista.md) | Com a [Enna](/party/enna.md) | `public` |
 | [Ônix Negro](/items/onix-negro.md) | Subsolo da mansão | `public` |
-| [Selo da Lua Refletida](/items/selo-da-lua-refletida.md) | Manifestações mágicas de [Líria](/party/liria.md) | `rumored` |
 
 > [!warning]
 > **Três itens sem ficha.** Botas, braçadeira e cinto, da sala do tesouro do subsolo. O grupo

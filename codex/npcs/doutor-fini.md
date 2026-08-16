@@ -11,7 +11,7 @@ sources:
   - resource: "conversa com Rafael, 2026-08-15"
     title: "Menção em chat — sessão 4"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:57:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
 ---
 
 # Doutor Fini
@@ -49,4 +49,4 @@ mestre e ela muda o roteiro de hoje.
 - [ ] Mesmo personagem ou dois?
 - [ ] "Doutor" de quê? Acadêmico, médico, título vazio?
 - [ ] O que exatamente ele explica — e o que ele **não** pode explicar, para o mistério não
-      colapsar de uma vez? Ver [não revelar cedo demais](/rules/o-que-nao-se-revela.md).
+      colapsar de uma vez? Ver [não revelar cedo demais](/sessions/o-que-nao-se-revela.md).

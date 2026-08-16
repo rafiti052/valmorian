@@ -1,6 +1,6 @@
 ---
 type: NPC
-title: Vhaelyr
+title: Milara
 description: Drow tecnocrata que invadiu o subsolo da mansão para recalibrar a contenção, tratou o núcleo como máquina obsoleta e abriu a fenda que agora sangra na cripta.
 visibility: public
 status: draft
@@ -21,23 +21,24 @@ sources:
     coverage: partial
     locator: "p. 3 — Gloem Protector, Guardian Protocol"
 tags: [npc, drow, antagonista, subsolo]
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:34:46Z }
 ---
 
-# Vhaelyr
+# Milara
 
 > [!note]
-> O nome aparece **só uma vez** nas suas fontes: no traço *Guardian Protocol* do Gloem
-> Protector, em `npc_fichas.pdf`, que protege "Brinna/Vhaelyr". Todo o resto do material
-> chama ele apenas de "o drow". **Confirme que é ele mesmo antes de usar o nome na mesa.**
+> A fonte `npc_fichas.pdf` traz o rótulo **"Brinna/Vhaelyr"** uma única vez, no traço
+> *Guardian Protocol* do Gloem Protector. O nome canônico da drow é **Milara**; o rótulo
+> original fica registrado aqui apenas como proveniência. Todo o restante do material a
+> chama apenas de "a drow".
 
 ## Interpretando
 
-Não é o vilão que quer explodir tudo. É o técnico que acha que você é o problema.
+Não é a vilã que quer explodir tudo. É a técnica que acha que você é o problema.
 
 - **Voz:** paciente do jeito errado. Explica enquanto trabalha.
-- **O que o define:** ele acha que a contenção **já estava falhando** antes de ele chegar.
-  E ele pode estar certo. Isso é o que faz dele mais interessante que um saqueador.
+- **O que a define:** ela acha que a contenção **já estava falhando** antes de chegar.
+  E ela pode estar certa. Isso é o que a faz mais interessante que uma saqueadora.
 
 ## Falas prontas
 
@@ -45,9 +46,9 @@ Não é o vilão que quer explodir tudo. É o técnico que acha que você é o p
 - "Vocês chamam isto de coração. Eu chamo de máquina de contenção obsoleta."
 - "Se me interromperem sem compreender o fluxo, derrubam a contenção."
 
-## O que ele queria
+## O que ela queria
 
-Controlar, recalibrar ou violar a contenção. As anotações dele no laboratório mostram
+Controlar, recalibrar ou violar a contenção. As anotações dela no laboratório mostram
 alguém que entendeu parte do sistema e esbarrou repetidamente no que faltava:
 
 - "Ametista valida."
@@ -76,9 +77,9 @@ alguém que entendeu parte do sistema e esbarrou repetidamente no que faltava:
 > parecidos demais para uma mesa em voz alta.
 
 > [!secret]
-> **O que ninguém decidiu ainda:** quem mandou ele. As anotações mostram alguém que *sabia
+> **O que ninguém decidiu ainda:** quem a mandou. As anotações mostram alguém que *sabia
 > o que procurar* — sabia que o nome Valerius autoriza, e que o Ônix contém. Isso é
-> informação de dentro. Ver [quem mandou o drow](/threads/quem-mandou-o-drow.md).
+> informação de dentro. Ver [quem mandou a drow](/threads/quem-mandou-a-drow.md).
 
 ## Estado atual
 

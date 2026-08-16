@@ -6,7 +6,7 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [npcs, apenas-mestre]
-generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
 ---
 
 # NPCs
@@ -25,7 +25,7 @@ generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
 | [Silena Pouca Sombra](/npcs/silena-pouca-sombra.md) | `friendly` | — | `public` |
 | [Valério Veraneio](/npcs/valerio-veraneio.md) | `friendly` | — | `public` |
 | [Valthar](/npcs/valthar.md) | `neutral` | — | `secret` |
-| [Vhaelyr](/npcs/vhaelyr.md) | `hostile` | — | `public` |
+| [Milara](/npcs/milara.md) | `hostile` | — | `public` |
 
 ## NPC mínimo viável
 
