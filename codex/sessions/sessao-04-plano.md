@@ -19,11 +19,17 @@ sources:
   - resource: "/sources/sessao_3_estrutura_narrativa.md"
     title: "Sessão 3 — Estrutura Narrativa"
     author: "human:rafael"
+    sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
+    coverage: partial
+    locator: "§§6-7 — Igreja e Cripta; Fechamento esperado"
   - resource: "/sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md"
     title: "Sessão 2.5 — Apoio de Mesa"
     author: "human:rafael"
+    sha256: cb83d87b7cb6c8c062aabf347ae2f8caf8526aa18d9cecd7dfd3d21220599cb8
+    coverage: partial
+    locator: "Subsolo; Feira; NPC extra — Irmão Aurélio"
 tags: [plano, igreja, cripta, combate]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:45:00Z }
+generated: { by: claude-opus-5/gm-companion, at: 2026-08-16T00:12:00Z }
 ---
 
 # Sessão 4 — A Igreja e a Cripta
@@ -180,15 +186,16 @@ Três saídas, e **as três importam**:
 **A cripta é isolada do resto do subsolo.** Não se liga ao laboratório, ao portal nem à
 Ritual Room. Quem estiver lá embaixo não tem como fugir para o terreno já conhecido.
 
-> [!secret]
-> **A cripta é o túnel que liga a igreja à mansão.** É literalmente o arranjo antigo de que o
-> Aurélio fala — templo, casa de guarda e casa não são três lugares, são três construções do
-> mesmo terreno, costuradas por baixo.
->
-> E isso quer dizer que **a fenda já tem caminho aberto para dentro da casa**, saindo na Sala
-> de Oração Privada, parede com parede com a sala dos quadros da lagoa da
-> [Líria](/party/liria.md). Se a sessão terminar em fecho parcial, é por ali que a próxima
-> coisa entra. **Não diga isso na mesa.** Deixe alguém olhar o mapa e perceber.
+### Verdade do mestre
+
+**A cripta é o túnel que liga a igreja à mansão.** É literalmente o arranjo antigo de que o
+Aurélio fala — templo, casa de guarda e casa não são três lugares, são três construções do
+mesmo terreno, costuradas por baixo.
+
+Isso quer dizer que **a fenda já tem caminho aberto para dentro da casa**, saindo na Sala
+de Oração Privada, parede com parede com a sala dos quadros da lagoa da
+[Líria](/party/liria.md). Se a sessão terminar em fecho parcial, é por ali que a próxima
+coisa entra. **Não diga isso na mesa.** Deixe alguém olhar o mapa e perceber.
 
 Os túmulos são **da família**. O mapa chama a sala de *Ancestral Crypt*.
 

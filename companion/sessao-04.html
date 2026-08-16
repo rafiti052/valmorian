@@ -1,0 +1,1482 @@
+<title>A Igreja e a Cripta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+
+<style>
+/* ─────────────────────────────────────────────────────────────
+   Tokens — dark-first. A tela de mestre é usada em sala baixa.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --bg:        #141019;
+  --bg-deep:   #0D0A11;
+  --surface:   #1E1826;
+  --surface-2: #271F31;
+  --line:      #362C44;
+  --line-soft: #2B2335;
+
+  --text:      #EAE2D4;
+  --text-dim:  #A79BB2;
+  --text-faint:#7A6E87;
+
+  --gold:      #E0AC45;
+  --gold-deep: #8A6417;
+  --gold-wash: #2A2113;
+
+  --amethyst:  #A683DE;
+  --amethyst-wash: #241A35;
+
+  --necro:     #C9615A;
+  --necro-wash:#2C1719;
+
+  --ok:        #6FAE86;
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-body: "Avenir Next", Avenir, "Segoe UI", "Noto Sans", system-ui, sans-serif;
+  --font-mono: "SF Mono", SFMono-Regular, Menlo, "DejaVu Sans Mono", monospace;
+
+  --r: 3px;
+  --shadow: 0 1px 0 rgba(255,255,255,.03) inset, 0 6px 24px -12px rgba(0,0,0,.7);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg:        #EFEAE2;
+    --bg-deep:   #E3DDD2;
+    --surface:   #FAF7F1;
+    --surface-2: #F2ECE2;
+    --line:      #D6CCBE;
+    --line-soft: #E2DACE;
+
+    --text:      #241F2B;
+    --text-dim:  #5C5368;
+    --text-faint:#867C92;
+
+    --gold:      #8A6110;
+    --gold-deep: #C79733;
+    --gold-wash: #F6EBD2;
+
+    --amethyst:  #5F42A0;
+    --amethyst-wash: #EEE8F8;
+
+    --necro:     #A3372F;
+    --necro-wash:#F8E7E4;
+
+    --ok:        #2F7A52;
+    --shadow: 0 1px 2px rgba(60,50,40,.06), 0 8px 24px -16px rgba(60,50,40,.35);
+  }
+}
+:root[data-theme="light"] {
+  --bg:#EFEAE2; --bg-deep:#E3DDD2; --surface:#FAF7F1; --surface-2:#F2ECE2;
+  --line:#D6CCBE; --line-soft:#E2DACE;
+  --text:#241F2B; --text-dim:#5C5368; --text-faint:#867C92;
+  --gold:#8A6110; --gold-deep:#C79733; --gold-wash:#F6EBD2;
+  --amethyst:#5F42A0; --amethyst-wash:#EEE8F8;
+  --necro:#A3372F; --necro-wash:#F8E7E4;
+  --ok:#2F7A52;
+  --shadow: 0 1px 2px rgba(60,50,40,.06), 0 8px 24px -16px rgba(60,50,40,.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+
+/* ─────────────────────────────────────────────────────────────
+   Chassi
+   ───────────────────────────────────────────────────────────── */
+.chassi {
+  display: grid;
+  grid-template-columns: 232px minmax(0, 1fr) 292px;
+  min-height: 100vh;
+  align-items: start;
+}
+
+/* ── Trilho de navegação: a sessão é uma descida. ── */
+.trilho {
+  position: sticky; top: 0;
+  height: 100vh; overflow-y: auto;
+  background: var(--bg-deep);
+  border-right: 1px solid var(--line);
+  padding: 22px 0 40px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+
+.marca { padding: 0 20px 18px; border-bottom: 1px solid var(--line-soft); margin-bottom: 14px; }
+.marca .kicker {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--text-faint); display: block; margin-bottom: 6px;
+}
+.marca h1 {
+  font-family: var(--font-display); font-weight: 400; font-size: 21px;
+  line-height: 1.15; margin: 0; text-wrap: balance; color: var(--text);
+}
+.marca .sub { font-size: 11.5px; color: var(--text-dim); margin-top: 7px; line-height: 1.4; }
+
+.grupo-label {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--text-faint);
+  padding: 16px 20px 7px;
+}
+
+.nav-item {
+  display: grid; grid-template-columns: 26px 1fr; align-items: baseline;
+  gap: 8px; width: 100%;
+  padding: 7px 20px; background: none; border: 0; border-left: 2px solid transparent;
+  text-align: left; cursor: pointer; color: var(--text-dim);
+  font-size: 13.5px; line-height: 1.35;
+  transition: color .12s, border-color .12s, background .12s;
+}
+.nav-item:hover { color: var(--text); background: color-mix(in srgb, var(--surface) 60%, transparent); }
+.nav-item[aria-current="true"] {
+  color: var(--gold); border-left-color: var(--gold);
+  background: color-mix(in srgb, var(--gold-wash) 70%, transparent);
+}
+.nav-item .n {
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--text-faint);
+  letter-spacing: .04em;
+}
+.nav-item[aria-current="true"] .n { color: var(--gold); }
+
+/* profundidade — encode a descida real da sessão */
+.prof { display: flex; align-items: center; gap: 8px; padding: 12px 20px 4px; }
+.prof span {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--text-faint); white-space: nowrap;
+}
+.prof i { flex: 1; height: 1px; background: var(--line); display: block; }
+
+/* ── Coluna central ── */
+.palco { padding: 40px 46px 120px; max-width: 860px; }
+.cena { display: none; animation: entra .22s ease-out; }
+.cena.on { display: block; }
+@keyframes entra { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .cena { animation: none; } }
+
+.eyebrow {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+}
+h2.cena-titulo {
+  font-family: var(--font-display); font-weight: 400; font-size: 38px;
+  line-height: 1.08; margin: 0 0 6px; text-wrap: balance; letter-spacing: -.01em;
+}
+.cena-desc { color: var(--text-dim); font-size: 15px; max-width: 62ch; margin: 0 0 30px; }
+
+h3 {
+  font-family: var(--font-display); font-weight: 400; font-size: 22px;
+  margin: 40px 0 12px; text-wrap: balance;
+}
+h4 {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--text-faint);
+  margin: 30px 0 10px; font-weight: 500;
+}
+p { max-width: 64ch; margin: 0 0 14px; }
+strong { color: var(--text); font-weight: 600; }
+em { color: var(--text-dim); }
+ul { max-width: 64ch; padding-left: 18px; margin: 0 0 16px; }
+li { margin-bottom: 7px; }
+li::marker { color: var(--text-faint); }
+a { color: var(--amethyst); text-underline-offset: 2px; }
+
+.mono { font-family: var(--font-mono); font-size: .88em; }
+.cd {
+  font-family: var(--font-mono); font-size: .84em; font-weight: 600;
+  color: var(--gold); background: var(--gold-wash);
+  padding: 1px 5px; border-radius: 2px; white-space: nowrap;
+  border: 1px solid color-mix(in srgb, var(--gold) 28%, transparent);
+}
+
+/* ── Blocos ── */
+.leitura {
+  font-family: var(--font-display); font-size: 17.5px; line-height: 1.58;
+  background: var(--surface); border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  padding: 20px 24px; border-radius: var(--r);
+  margin: 22px 0; max-width: 66ch; box-shadow: var(--shadow);
+}
+.leitura::before {
+  content: "ler em voz alta";
+  display: block; font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 11px;
+}
+.leitura p { max-width: none; margin: 0 0 10px; }
+.leitura p:last-child { margin: 0; }
+
+.aviso, .nota {
+  border: 1px solid var(--line); border-radius: var(--r);
+  padding: 15px 18px; margin: 20px 0; max-width: 66ch; font-size: 14px;
+}
+.aviso { background: var(--necro-wash); border-color: color-mix(in srgb, var(--necro) 34%, transparent); }
+.nota  { background: var(--surface-2); }
+.aviso p:last-child, .nota p:last-child { margin-bottom: 0; }
+.aviso .tag, .nota .tag {
+  display: block; font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px;
+}
+.aviso .tag { color: var(--necro); }
+.nota .tag { color: var(--text-faint); }
+
+/* segredo — fechado por padrão, para não vazar por cima do ombro */
+details.segredo {
+  background: var(--amethyst-wash);
+  border: 1px solid color-mix(in srgb, var(--amethyst) 34%, transparent);
+  border-radius: var(--r); margin: 20px 0; max-width: 66ch;
+}
+details.segredo > summary {
+  cursor: pointer; list-style: none; padding: 12px 18px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--amethyst);
+  display: flex; align-items: center; gap: 8px;
+}
+details.segredo > summary::-webkit-details-marker { display: none; }
+details.segredo > summary::before { content: "▸"; font-size: 11px; letter-spacing: 0; }
+details.segredo[open] > summary::before { content: "▾"; }
+details.segredo[open] > summary { border-bottom: 1px solid color-mix(in srgb, var(--amethyst) 24%, transparent); }
+.segredo-corpo { padding: 15px 18px; font-size: 14px; }
+.segredo-corpo p:last-child { margin-bottom: 0; }
+
+/* ── Tabelas ── */
+.tabela-wrap { overflow-x: auto; margin: 18px 0 24px; border: 1px solid var(--line); border-radius: var(--r); }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+thead th {
+  text-align: left; font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--text-faint);
+  padding: 11px 14px; background: var(--surface-2); font-weight: 500;
+  border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+tbody td { padding: 11px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface) 45%, transparent); }
+td:first-child { color: var(--text); }
+.num { font-variant-numeric: tabular-nums; font-family: var(--font-mono); }
+
+/* ── Fichas ── */
+.ficha-topo {
+  display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: baseline;
+  padding-bottom: 16px; margin-bottom: 4px; border-bottom: 1px solid var(--line);
+}
+.pill {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase; padding: 3px 9px; border-radius: 100px;
+  border: 1px solid var(--line); color: var(--text-dim); background: var(--surface);
+}
+.pill.aliado { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, transparent); }
+.pill.inimigo { color: var(--necro); border-color: color-mix(in srgb, var(--necro) 40%, transparent); }
+.pill.pj { color: var(--amethyst); border-color: color-mix(in srgb, var(--amethyst) 40%, transparent); }
+
+.stats {
+  display: flex; flex-wrap: wrap; gap: 0; margin: 20px 0 26px;
+  border: 1px solid var(--line); border-radius: var(--r); overflow: hidden;
+  background: var(--surface);
+}
+.stat { flex: 1 1 78px; padding: 11px 14px; border-right: 1px solid var(--line-soft); }
+.stat:last-child { border-right: 0; }
+.stat b {
+  display: block; font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--text-faint);
+  font-weight: 500; margin-bottom: 3px;
+}
+.stat span { font-family: var(--font-display); font-size: 20px; font-variant-numeric: tabular-nums; }
+
+.abilities {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px;
+  background: var(--line-soft); border: 1px solid var(--line);
+  border-radius: var(--r); overflow: hidden; margin: 0 0 26px; max-width: 560px;
+}
+.ab { background: var(--surface); padding: 9px 6px; text-align: center; }
+.ab b { display: block; font-family: var(--font-mono); font-size: 9px; letter-spacing: .1em; color: var(--text-faint); font-weight: 500; }
+.ab span { font-family: var(--font-mono); font-size: 14px; font-variant-numeric: tabular-nums; }
+
+/* entrada de ação — convenção de bloco de criatura */
+.acao {
+  max-width: 66ch; margin: 0 0 15px; padding-left: 14px;
+  border-left: 2px solid var(--line);
+}
+.acao > b {
+  font-family: var(--font-display); font-size: 16.5px; font-weight: 600;
+  display: block; margin-bottom: 1px;
+}
+.acao .uso {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-faint); display: block; margin-bottom: 5px;
+}
+.acao p { margin: 0; font-size: 14px; max-width: none; }
+.acao + .acao { margin-top: 0; }
+
+/* linha de defesas — perícias, salvaguardas, sentidos */
+.defesas {
+  max-width: 66ch; margin: 0 0 26px; padding: 0; list-style: none;
+  font-size: 13px; display: flex; flex-direction: column; gap: 5px;
+}
+.defesas li { margin: 0; padding-left: 0; }
+.defesas b {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-faint); font-weight: 500;
+  margin-right: 7px;
+}
+
+.falas { display: flex; flex-direction: column; gap: 10px; margin: 16px 0 24px; max-width: 66ch; }
+.fala {
+  font-family: var(--font-display); font-size: 16px; font-style: italic;
+  color: var(--text); border-left: 2px solid var(--line);
+  padding: 4px 0 4px 16px;
+}
+.fala small { display: block; font-family: var(--font-body); font-style: normal; font-size: 11px; color: var(--text-faint); margin-top: 4px; letter-spacing: .04em; }
+
+/* ── Painel de mesa (direita) ── */
+.mesa {
+  position: sticky; top: 0; height: 100vh; overflow-y: auto;
+  background: var(--bg-deep); border-left: 1px solid var(--line);
+  padding: 22px 18px 60px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.mesa-bloco { flex: none; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); overflow: hidden; }
+.mesa-bloco > header {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 9px 12px; background: var(--surface-2); border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.mesa-corpo { padding: 12px; }
+
+.rodada { display: flex; align-items: center; gap: 12px; justify-content: center; padding: 6px 0 10px; }
+.rodada .n { font-family: var(--font-display); font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; min-width: 46px; text-align: center; }
+.btn {
+  background: var(--surface-2); border: 1px solid var(--line); color: var(--text-dim);
+  border-radius: var(--r); padding: 4px 10px; cursor: pointer; font-family: var(--font-mono);
+  font-size: 13px; line-height: 1.4; transition: border-color .12s, color .12s, background .12s;
+}
+.btn:hover { color: var(--gold); border-color: var(--gold); }
+.btn.mini { font-size: 10px; padding: 2px 7px; letter-spacing: .1em; text-transform: uppercase; }
+
+.alerta {
+  font-size: 11.5px; line-height: 1.45; padding: 8px 10px; border-radius: var(--r);
+  background: var(--gold-wash); color: var(--gold);
+  border: 1px solid color-mix(in srgb, var(--gold) 30%, transparent);
+}
+.alerta.frio { background: var(--surface-2); color: var(--text-faint); border-color: var(--line); }
+.alerta.quente { background: var(--necro-wash); color: var(--necro); border-color: color-mix(in srgb, var(--necro) 34%, transparent); }
+
+.coro-linha {
+  display: grid; grid-template-columns: 1fr 44px auto auto; align-items: center;
+  gap: 6px; padding: 5px 0; border-bottom: 1px solid var(--line-soft);
+}
+.coro-linha:last-child { border-bottom: 0; }
+.coro-linha .nome { font-size: 12px; line-height: 1.25; color: var(--text); }
+.coro-linha .estado { display: block; font-family: var(--font-mono); font-size: 8.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+.coro-linha input {
+  width: 100%; background: var(--bg); border: 1px solid var(--line); border-radius: 2px;
+  padding: 3px 4px; text-align: center; font-family: var(--font-mono); font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.coro-linha[data-estado="pilha"] { opacity: .72; }
+.coro-linha[data-estado="pilha"] .estado { color: var(--amethyst); }
+.coro-linha[data-estado="findo"] { opacity: .38; }
+.coro-linha[data-estado="findo"] .nome { text-decoration: line-through; }
+.coro-linha[data-estado="findo"] .estado { color: var(--ok); text-decoration: none; }
+.icone {
+  background: none; border: 1px solid var(--line); border-radius: 2px;
+  width: 24px; height: 24px; cursor: pointer; color: var(--text-faint);
+  font-size: 12px; line-height: 1; display: grid; place-items: center;
+}
+.icone:hover { color: var(--gold); border-color: var(--gold); }
+
+.barra { height: 6px; background: var(--bg); border: 1px solid var(--line); border-radius: 100px; overflow: hidden; margin: 8px 0 4px; }
+.barra i { display: block; height: 100%; background: var(--gold); transition: width .2s; }
+
+.toggle-linha { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px; padding: 6px 0; }
+.sw {
+  width: 34px; height: 19px; border-radius: 100px; border: 1px solid var(--line);
+  background: var(--bg); position: relative; cursor: pointer; flex: none; padding: 0;
+}
+.sw::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 13px; height: 13px;
+  border-radius: 50%; background: var(--text-faint); transition: transform .15s, background .15s;
+}
+.sw[aria-pressed="true"] { border-color: var(--gold); background: var(--gold-wash); }
+.sw[aria-pressed="true"]::after { transform: translateX(15px); background: var(--gold); }
+
+.selo { display: flex; gap: 6px; margin: 4px 0 10px; }
+.selo button {
+  flex: 1; height: 34px; border-radius: var(--r); cursor: pointer;
+  border: 1px solid var(--line); background: var(--bg);
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.selo button[aria-pressed="true"] {
+  background: var(--amethyst-wash); border-color: var(--amethyst); color: var(--amethyst);
+}
+
+.rodape-mesa { font-size: 10.5px; color: var(--text-faint); line-height: 1.5; }
+
+/* ── Responsivo ── */
+.topo-movel { display: none; }
+@media (max-width: 1180px) {
+  .chassi { grid-template-columns: 210px minmax(0,1fr); }
+  /* o painel sobe para o topo: numa tela estreita ele é a primeira coisa que a mão procura */
+  .mesa {
+    grid-column: 1 / -1; grid-row: 1;
+    position: static; height: auto;
+    border-left: 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); align-items: start;
+  }
+}
+@media (max-width: 760px) {
+  .chassi { grid-template-columns: 1fr; }
+  .trilho {
+    position: static; height: auto; flex-direction: row; flex-wrap: wrap;
+    border-right: 0; border-bottom: 1px solid var(--line); padding: 16px 14px 14px; gap: 3px;
+  }
+  .marca { flex: 1 0 100%; padding: 0 0 14px; }
+  .grupo-label, .prof { display: none; }
+  .nav-item { width: auto; padding: 5px 10px; border-left: 0; border-bottom: 2px solid transparent; grid-template-columns: auto auto; }
+  .nav-item[aria-current="true"] { border-left-color: transparent; border-bottom-color: var(--gold); }
+  .palco { padding: 26px 18px 80px; }
+  h2.cena-titulo { font-size: 29px; }
+  .mesa { grid-template-columns: 1fr; padding: 16px 14px 50px; }
+}
+</style>
+
+<div class="chassi">
+
+  <!-- ══ TRILHO ══ -->
+  <nav class="trilho" aria-label="Navegação da sessão">
+    <div class="marca">
+      <span class="kicker">Valmorian · Sessão 4</span>
+      <h1>A Igreja e a Cripta</h1>
+      <p class="sub">Cinco PJs de nível 4. Manhã. Seis no coro.</p>
+    </div>
+
+    <button class="nav-item" data-alvo="setup" aria-current="true"><span class="n">00</span><span>Antes de começar</span></button>
+
+    <div class="prof"><span>Superfície</span><i></i></div>
+    <button class="nav-item" data-alvo="nave"><span class="n">01</span><span>A nave</span></button>
+    <button class="nav-item" data-alvo="descida"><span class="n">02</span><span>A descida</span></button>
+    <div class="prof"><span>Cripta</span><i></i></div>
+    <button class="nav-item" data-alvo="fenda"><span class="n">03</span><span>A fenda</span></button>
+    <button class="nav-item" data-alvo="ritual"><span class="n">04</span><span>O ritual dos três</span></button>
+    <button class="nav-item" data-alvo="pessoais"><span class="n">05</span><span>Cenas devidas</span></button>
+    <button class="nav-item" data-alvo="rescaldo"><span class="n">06</span><span>Rescaldo e ganchos</span></button>
+
+    <div class="grupo-label">Fichas — NPCs</div>
+    <button class="nav-item" data-alvo="f-aurelio"><span class="n">☙</span><span>Irmão Aurélio</span></button>
+    <button class="nav-item" data-alvo="f-coro"><span class="n">☙</span><span>Necromante do Coro</span></button>
+    <button class="nav-item" data-alvo="f-crispim"><span class="n">☙</span><span>Crispim Catraca</span></button>
+
+    <div class="grupo-label">Fichas — o grupo</div>
+    <button class="nav-item" data-alvo="f-bri"><span class="n">◇</span><span>Bri</span></button>
+    <button class="nav-item" data-alvo="f-yara"><span class="n">◇</span><span>Yara</span></button>
+    <button class="nav-item" data-alvo="f-enna"><span class="n">◇</span><span>Enna</span></button>
+    <button class="nav-item" data-alvo="f-bob"><span class="n">◇</span><span>Bob</span></button>
+    <button class="nav-item" data-alvo="f-liria"><span class="n">◇</span><span>Líria</span></button>
+  </nav>
+
+  <!-- ══ PALCO ══ -->
+  <main class="palco">
+
+    <!-- ─────────── 00 SETUP ─────────── -->
+    <section class="cena on" id="setup">
+      <p class="eyebrow">Antes de começar</p>
+      <h2 class="cena-titulo">Onde paramos</h2>
+      <p class="cena-desc">Iniciativa rolada, ninguém caiu ainda. O grupo foi à igreja com o Irmão Aurélio atrás das pistas que os feirantes deram — mansão, templo e casa de guarda como um arranjo só — e os esqueletos subiram da cripta no meio da conversa. O subsolo já está fechado: laboratório, sala do tesouro, sala do portal e o Ônix Negro.</p>
+
+      <h3>A única coisa</h3>
+      <div class="leitura" style="font-style: normal;">
+        <p><strong>O grupo entende que não dá para vencer os ossos aqui em cima, e desce.</strong></p>
+        <p style="font-size: 15px; font-family: var(--font-body); color: var(--text-dim);">Tudo abaixo serve a isso. Se a sessão só entregar isso e a descida, foi uma boa sessão.</p>
+      </div>
+
+      <h3>Tempos</h3>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Tempo</th><th>Serve para</th><th>Cortar?</th></tr></thead>
+          <tbody>
+            <tr><td>Nave — rodadas 1 e 2</td><td>Deixar o grupo achar que está ganhando</td><td>Não</td></tr>
+            <tr><td>Nave — a verdade dos ossos</td><td>Eles remontam. O coro se ajuda. Atrito não resolve</td><td>Não</td></tr>
+            <tr><td>A descida</td><td>Aurélio nomeia a cripta; a pressão empurra escada abaixo</td><td>Não</td></tr>
+            <tr><td>A fenda</td><td>A imagem. O que o Vhaelyr causou lá embaixo chegou aqui</td><td>Não</td></tr>
+            <tr><td>O ritual dos três</td><td>O clímax, com cargo para os cinco</td><td>Não</td></tr>
+            <tr><td>Rescaldo e gancho</td><td>O que sobrou, e o nome certo</td><td>Sim, vira uma fala solta</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Preparado, não planejado</h3>
+      <ul>
+        <li><strong>Bloco:</strong> Necromante-Esqueleto do Coro — seis. Ficha no trilho.</li>
+        <li><strong>Bloco de apoio:</strong> Aurélio. Ficha no trilho.</li>
+        <li><strong>Mapas:</strong> <span class="mono">sources/Mapas/1. final/F1final.jpg</span> (igreja) e <span class="mono">B1final.jpg</span> (cripta). Existe variante diurna do F1 em <span class="mono">sources/Mapas/2. day/F1_day.jpg</span> — a sessão é de manhã.</li>
+        <li><strong>Nomes dos seis</strong>, se alguém perguntar: Dom Nesteu, Irmã Valquina, o Cantor Sem Nome, Dom Ferrez, Irmã Odila, o Menino do Turíbulo. <em>Inventados.</em></li>
+      </ul>
+
+      <h3>Se o grupo sair do trilho</h3>
+      <p>Vão sair. Os dois fatos que precisam pousar por qualquer caminho:</p>
+      <ul>
+        <li><strong>Os ossos não são o problema — são o sintoma.</strong> A origem está na cripta e está aberta.</li>
+        <li><strong>Nenhuma das três peças resolve sozinha.</strong> Selo, fé e o Aurélio. Se o grupo fechar a fenda por um caminho que você improvisou, tudo bem — desde que precise de mais de uma pessoa.</li>
+      </ul>
+
+      <div class="aviso">
+        <span class="tag">O que você ainda decide</span>
+        <ul style="margin-bottom:0">
+          <li><strong>Os itens da sala do tesouro</strong> — botas, braçadeira e cinto. As suas fontes não dizem o que são e o grupo está com eles desde a sessão passada. Isso vai aparecer nesta sessão.</li>
+          <li><strong>A regra do radiante</strong> fica de pé? É invenção da companion e é o eixo do encontro.</li>
+          <li><strong>Lathander ou Lethander?</strong> A backstory da Bri escreve <em>Lethander</em>, o doc da feira escreve <em>Lathander</em>. O codex inteiro usa Lathander.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─────────── 01 NAVE ─────────── -->
+    <section class="cena" id="nave">
+      <p class="eyebrow">Cena 01 · superfície</p>
+      <h2 class="cena-titulo">A nave</h2>
+      <p class="cena-desc">Quatro na nave agora. Os outros dois sobem a escada da cripta no início da rodada 3 — isso ensina de onde vem o problema sem ninguém precisar dizer.</p>
+
+      <div class="leitura">
+        <p>A luz de dentro das lamparinas está mais baixa do que devia, e ela pulsa — não como chama tremendo com vento, mas como alguém respirando com dificuldade. O canto vem de baixo, e vem afinado. É essa a parte errada. É um coro que ainda sabe cantar bem.</p>
+      </div>
+
+      <h3>O terreno é metade do encontro</h3>
+      <p><strong>Mapa:</strong> <span class="mono">F1final.jpg</span>, extremo oeste do terreno. A igreja é o <span class="mono">Church Hall</span> — nave retangular, fileiras de bancos, tapete vermelho pelo corredor central, altar ao sul. O <span class="mono">Church Back Room</span> fica atrás do altar. A escada da cripta é o anexo <span class="mono">Crypt</span> ao norte, marcado <span class="mono">Down</span>.</p>
+      <p>Ela está acesa. Deixe isso à mão desde a primeira descrição, porque é a única via de dano radiante que não depende da Bri:</p>
+      <ul>
+        <li><strong>Braseiros de vigília</strong> em pé, ao longo da nave — pesados, acesos, tombáveis.</li>
+        <li><strong>A pia batismal</strong>, água parada. A Líria vai olhar para ela.</li>
+        <li><strong>Bancos longos</strong> em fileira, entulho, e o altar ao fundo com a aurora gravada.</li>
+        <li><strong>O corredor central</strong> é o eixo de tiro da Yara. Os bancos quebram linha de visão dos dois lados — quem sair do corredor perde o ângulo dela.</li>
+      </ul>
+
+      <h3>Rodadas 1 e 2 — deixe eles ganharem</h3>
+      <p>Não segure nada. A <strong>Yara</strong> com o arco +1 acerta com <span class="cd">+8</span> e tem Ataque Selvagem; a <strong>Bri</strong> com o machado <span class="cd">+7</span> e 2d6+5 derruba um por rodada. Deixe caírem. Descreva como destruição mesmo — ossos se espalhando, o paramento caindo no chão de pedra.</p>
+
+      <h3>A virada — a verdade dos ossos</h3>
+      <p>No início do turno de cada pilha, ela remonta com <strong>11 PV</strong>. Na primeira vez, descreva devagar: os ossos voltando ao lugar sem pressa nenhuma, como quem se ajeita na cadeira. E o canto não parou em nenhum momento.</p>
+
+      <h4>Quando entregar a regra, e para quem</h4>
+      <ul>
+        <li><strong>Yara</strong> — Inimigo Favorito (mortos-vivos) dá vantagem em testes de conhecimento sobre eles. <strong>Dê de graça se ela perguntar qualquer coisa.</strong> Ela é a especialista do grupo e a sessão é dela; não cobre CD por isso.</li>
+        <li><strong>Bri</strong> — Sentido Divino (3/descanso longo) mostra os seis <em>e</em> mostra que a fonte está abaixo do chão. Se ela usar, entregue os dois fatos.</li>
+        <li><strong>Aurélio</strong> — se ninguém chegar lá até a rodada 3, ele diz.</li>
+      </ul>
+
+      <h3>O que a mesa vai tentar, e o que acontece</h3>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Se</th><th>Então</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Bri</strong> gastar espaço em Divine Smite</td><td>+2d8 radiante <strong>+1d8 extra contra morto-vivo</strong>. Se sobrar radiante na pilha, ela <strong>não</strong> remonta. É assim que a mesa descobre a regra sozinha</td></tr>
+            <tr><td><strong>Bri</strong> usar Abjurar Inimigo</td><td>Amedronta um. Funciona, e é ótimo — um esqueleto fugindo quebra o coro de 3</td></tr>
+            <tr><td><strong>Yara</strong> sacar a Rapieira de Prata +1</td><td>+1 radiante contra morto-vivo. Ela vai perceber sozinha o que isso significa. Deixe</td></tr>
+            <tr><td><strong>Líria</strong> conjurar Segurar Pessoa</td><td><strong>Não funciona.</strong> Morto-vivo não é humanoide. Avise <em>antes</em> de ela gastar o espaço</td></tr>
+            <tr><td><strong>Bob</strong> usar Aquecer Metal</td><td>Funciona: cada um carrega um turíbulo e uma gola de metal. Vantagem em derrubar</td></tr>
+            <tr><td><strong>Bob</strong> usar a Língua (15 pés, agarra)</td><td>Puxar um esqueleto para cima de um braseiro tombado. <strong>Diga sim.</strong> É exatamente o que a mesa deveria estar fazendo</td></tr>
+            <tr><td><strong>Enna</strong> usar Mãos Rápidas</td><td>Ação bônus para tombar um braseiro. Uma ladina de nível 4 resolvendo isso com ação bônus é bom jogo</td></tr>
+            <tr><td>Alguém tombar um braseiro</td><td>Quadrado de brasa consagrada. Pilha que cair ali não remonta. <strong>Essa é a segunda via, e é a que abre o encontro</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Aurélio na luta</h3>
+      <p>Ele apoia, ele não resolve. <strong>Se o Aurélio resolver a cena, a cena estava mal desenhada.</strong></p>
+      <div class="nota">
+        <span class="tag">Invenção desta sessão</span>
+        <p><strong>Harmonização</strong> (ação, mantida como concentração): aliados a até 30 pés ganham +1d4 em salvaguardas contra necrótico. <strong>Ele perde a concentração se sofrer dano</strong> — e é isso que faz a mesa decidir se protege o velho ou continua atacando.</p>
+        <p>Se ele cair, <strong>a cripta fica mais difícil, não impossível.</strong></p>
+      </div>
+      <div class="leitura">
+        <p>"Não adianta. Eles não estão de pé por causa de nada que exista nesta nave." Ele aponta o chão com o queixo, sem tirar os olhos deles. "O que os segura de pé está embaixo de nós. E está aberto."</p>
+      </div>
+
+      <h3>Quando cortar para a descida</h3>
+      <p><strong>Assim que a mesa entender.</strong> Não estenda. No instante em que alguém disser "temos que descer", os dois retardatários da escada abrem o caminho e a sessão anda. Um combate que existe para ensinar uma coisa acaba quando a coisa foi ensinada.</p>
+      <p>Se a mesa insistir em limpar a nave inteira com radiante: <strong>deixe.</strong> Custa recurso, e eles descem sem espaço de magia. Isso é uma escolha legítima e o preço dela já é o suficiente.</p>
+    </section>
+
+    <!-- ─────────── 02 DESCIDA ─────────── -->
+    <section class="cena" id="descida">
+      <p class="eyebrow">Cena 02 · a escada</p>
+      <h2 class="cena-titulo">A descida</h2>
+      <p class="cena-desc">Escada estreita, pedra molhada, e o canto ficando mais alto em vez de mais baixo.</p>
+
+      <h3>Duas coisas para plantar, ambas de graça</h3>
+      <ul>
+        <li><strong>Líria</strong> — a água escorre pelos degraus <em>para cima</em>. Nox arrepia e para. O gato enxerga fendas entre planos; ele já viu o que tem lá embaixo.</li>
+        <li><strong>Yara</strong> — a escada tem um degrau a mais do que deveria, e ela conta. Isso é exatamente o que ela sentiu no dia em que perdeu o Eron. <strong>Não explique.</strong> Só dê o detalhe e passe adiante.</li>
+      </ul>
+    </section>
+
+    <!-- ─────────── 03 FENDA ─────────── -->
+    <section class="cena" id="fenda">
+      <p class="eyebrow">Cena 03 · cripta</p>
+      <h2 class="cena-titulo">A fenda</h2>
+      <p class="cena-desc"><span class="mono">B1final.jpg</span>, ala oeste — a <span class="mono">Ancestral Crypt</span>. Salão comprido no eixo leste-oeste, nichos funerários nos dois lados, tapete pelo corredor do meio.</p>
+
+      <h3>Três saídas, e as três importam</h3>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Saída</th><th>Onde dá</th><th>Por que importa</th></tr></thead>
+          <tbody>
+            <tr><td>Oeste — <span class="mono">Up to Surface</span></td><td>O anexo da igreja, por onde eles desceram</td><td>A retirada</td></tr>
+            <tr><td>Leste — <span class="mono">Up to Private Prayer Room</span></td><td><strong>Dentro da mansão</strong>, ao lado da Drawing Room</td><td>A porta dos fundos</td></tr>
+            <tr><td>Leste — <span class="mono">Hidden Passageway</span></td><td>Não mapeado</td><td>Sua carta na manga</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>A cripta é isolada do resto do subsolo.</strong> Não se liga ao laboratório, ao portal nem à Ritual Room. Quem estiver lá embaixo não tem como fugir para o terreno já conhecido.</p>
+
+      <details class="segredo">
+        <summary>Segredo — não diga na mesa</summary>
+        <div class="segredo-corpo">
+          <p><strong>A cripta é o túnel que liga a igreja à mansão.</strong> É literalmente o arranjo antigo de que o Aurélio fala — templo, casa de guarda e casa não são três lugares, são três construções do mesmo terreno, costuradas por baixo.</p>
+          <p>E isso quer dizer que <strong>a fenda já tem caminho aberto para dentro da casa</strong>, saindo na Sala de Oração Privada, parede com parede com a sala dos quadros da lagoa da Líria. Se a sessão terminar em fecho parcial, é por ali que a próxima coisa entra. Deixe alguém olhar o mapa e perceber.</p>
+        </div>
+      </details>
+
+      <p>Os túmulos são <strong>da família</strong>. O mapa chama a sala de <em>Ancestral Crypt</em>.</p>
+
+      <div class="leitura">
+        <p>Os túmulos estão rachados de dentro para fora. No fundo da cripta a pedra simplesmente deixa de existir — não há buraco, há uma ausência com bordas, e as bordas estão de perfil para vocês de qualquer ângulo que se olhe. O frio que sai dali não é frio de porão. É frio de coisa aberta. E a luz de Lathander, que devia acabar na escada, chegou até aqui e está tentando fechar a borda sozinha — dourada, fina, cansada.</p>
+      </div>
+
+      <h4>O que a mesa pode ler, sem CD, só perguntando</h4>
+      <ul>
+        <li>Isto <strong>não</strong> é o portal do subsolo. É um rasgo, não uma porta.</li>
+        <li>É recente. Abriu quando o Vhaelyr mexeu na contenção lá embaixo.</li>
+        <li>A luz de Lathander está segurando a borda há tempo demais e está perdendo.</li>
+      </ul>
+    </section>
+
+    <!-- ─────────── 04 RITUAL ─────────── -->
+    <section class="cena" id="ritual">
+      <p class="eyebrow">Cena 04 · clímax</p>
+      <h2 class="cena-titulo">O ritual dos três</h2>
+      <p class="cena-desc">O selo sozinho não basta. Precisa da Enna portando o Selo de Ametista, da Bri canalizando a devoção a Lathander, e do Aurélio sustentando a harmonização.</p>
+
+      <div class="aviso">
+        <span class="tag">Invenção</span>
+        <p><strong>A estrutura abaixo é invenção da companion.</strong> A sua fonte diz quem precisa estar presente e nada sobre como resolver. Se a mecânica não te agradar, o único pedaço que importa preservar é: <em>três funções distintas, e ninguém consegue fazer sozinho.</em></p>
+      </div>
+
+      <h3>Onde todo mundo fica</h3>
+      <p>A fenda está na <strong>ponta leste</strong> do salão, em cima das duas saídas que levam para dentro da mansão. O grupo desce pela ponta oeste. Isso dá o desenho tático de graça:</p>
+      <ul>
+        <li><strong>Corredor único, comprido, com nichos funerários dos dois lados.</strong> A Bri tampa o meio com CA 20 e o coro não passa por ela sem gastar rodada.</li>
+        <li><strong>A Yara tem linha de tiro do fundo oeste até a fenda.</strong> Sem penalidade por distância longa nem por cobertura. É a melhor posição de mesa que ela vai ter na campanha inteira.</li>
+        <li><strong>A Enna tem que ir até a ponta leste</strong>, à frente da linha da Bri, sozinha, com 27 PV. Isso é a tensão do ritual inteiro: a peça mais frágil no ponto mais exposto.</li>
+        <li>Os nichos são <strong>cobertura e terreno difícil</strong> — e é de onde os que ainda estiverem de pé saem, se você quiser pressão extra.</li>
+      </ul>
+
+      <h3>Três rodadas, e todo mundo tem cargo</h3>
+      <p>O problema do jeito como a fonte está escrita: <strong>Líria, Bob e Yara viram plateia no clímax da campanha deles.</strong> Cada um ganha um trabalho concreto por rodada.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Quem</th><th>O trabalho</th><th>Como resolve</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Enna</strong></td><td>Assentar o Selo no encaixe da borda — e o encaixe está do lado errado da fenda</td><td>Ferramentas de Ladrão <span class="cd">+5</span> · <span class="cd">CD 14</span> · 1×/rodada. Ela tem que ficar no pior lugar da sala</td></tr>
+            <tr><td><strong>Bri</strong></td><td>Ancorar a luz. Um espaço de magia por rodada como âncora radiante</td><td>Sem teste. Custa recurso, e ela vai chegar aqui com pouco</td></tr>
+            <tr><td><strong>Aurélio</strong></td><td>Sustentar a harmonização</td><td>Automático <strong>enquanto ninguém o alcançar</strong></td></tr>
+            <tr><td><strong>Yara</strong></td><td>Ler a geometria quebrada: onde o chão ainda é chão</td><td>Sobrevivência <span class="cd">+5</span> ou Percepção <span class="cd">+7</span> · <span class="cd">CD 13</span>. Sucesso: um aliado ignora o terreno falso nesta rodada</td></tr>
+            <tr><td><strong>Líria</strong></td><td>A água da cripta ainda reflete. Fazer ela lembrar da forma certa da sala</td><td>Arcanismo ou Carisma <span class="cd">CD 13</span>. Ela tem Moldar Água como truque — <strong>se ela pensar nisso, sucesso automático</strong></td></tr>
+            <tr><td><strong>Bob</strong></td><td>Segurar o compasso contra o coro</td><td>Atuação <span class="cd">+7</span> · <span class="cd">CD 13</span>. Sucesso: o coro perde a ação bônus de remontar nesta rodada. Palavras Cortantes serve como reação</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Três sucessos de Enna em três rodadas fecha.</strong> Cada rodada em que ela falha, ou em que Aurélio é derrubado, a fenda cobra:</p>
+      <div class="aviso">
+        <span class="tag">Rodada perdida</span>
+        <p>Todos na cripta fazem salvaguarda de Constituição <span class="cd">CD 13</span> — 2d6 de necrótico na falha, metade no sucesso. <strong>A borda avança 5 pés.</strong></p>
+      </div>
+
+      <div class="nota">
+        <span class="tag">Se o Aurélio caiu na nave</span>
+        <p>A Enna faz os testes <strong>com desvantagem</strong>. Continua possível. Alguém pode gastar a ação para estabilizá-lo e trazê-lo de volta — o que é uma escolha real, porque essa ação sai do ritual.</p>
+      </div>
+
+      <h3>Fecho parcial — o resultado mais provável, e o melhor</h3>
+      <p>Se acabarem as três rodadas sem os três sucessos, <strong>não é fracasso e não é TPK.</strong> A fenda fecha o suficiente para os seis do coro caírem de uma vez, todos, no mesmo instante — e deixa uma cicatriz: uma linha de ausência do tamanho de um braço, no fundo da cripta, que não fecha e não cresce.</p>
+      <p>Isso é melhor do que o sucesso limpo. Vira o fio da próxima sessão.</p>
+    </section>
+
+    <!-- ─────────── 05 PESSOAIS ─────────── -->
+    <section class="cena" id="pessoais">
+      <p class="eyebrow">Cena 05 · o que você deve a eles</p>
+      <h2 class="cena-titulo">Cenas devidas</h2>
+      <p class="cena-desc">Todo o grupo tem cargo, mas duas cenas são para acontecer de verdade. Yara e Bob estão devendo há três sessões; a Yara cobra aqui.</p>
+
+      <h3>Yara — a dívida do Eron</h3>
+      <p>Ela perdeu o primo num lugar onde o espaço parou de obedecer, e a culpa que sobrou foi de não ter sido suficiente. Aqui ela está de novo dentro de uma falha espacial, com pessoas sob a proteção dela, e desta vez ela é a única que sabe ler o terreno. <strong>Não diga o nome do Eron.</strong> Deixe o momento em que o trabalho dela mantém alguém de pé e siga em frente. Se ela tocar no assunto, pare a mesa e dê espaço.</p>
+
+      <h3>Bri — a aurora que já a alcançou uma vez</h3>
+      <p>Ela morreu no Refúgio do Carvalho e viu o Amanhecer. Agora a luz de Lathander está aqui, cansada, tentando segurar uma borda sozinha — e ela é a única pessoa nesta cripta que já esteve do outro lado disso. Quando ela gastar o primeiro espaço como âncora, a luz responde antes de ela terminar.</p>
+      <div class="leitura">
+        <p>A luz não vem para a sua mão. Ela vem para o seu rosto primeiro, como quem confere. E você reconhece o calor — é o mesmo daquela manhã em que não devia ter acordado.</p>
+      </div>
+
+      <h3>Enna — se sobrar espaço</h3>
+      <p>O Selo aceita o encaixe rápido demais, como se a fechadura já a conhecesse — o mesmo que a biblioteca fez na sessão 2.5.</p>
+
+      <div class="nota">
+        <span class="tag">Livro-caixa de ganchos</span>
+        <p><strong>Bob continua sem gancho próprio na mansão.</strong> É o único dos cinco sem mistério pessoal ligado à casa. Isso precisa ser plantado, não improvisado na hora.</p>
+      </div>
+    </section>
+
+    <!-- ─────────── 06 RESCALDO ─────────── -->
+    <section class="cena" id="rescaldo">
+      <p class="eyebrow">Cena 06 · saída</p>
+      <h2 class="cena-titulo">Rescaldo e ganchos</h2>
+
+      <ul>
+        <li>O canto para. <strong>O silêncio depois é a coisa mais alta da sessão.</strong></li>
+        <li>As lamparinas de Lathander sobem sozinhas de volta ao normal. Aurélio percebe antes de todo mundo e não comenta.</li>
+      </ul>
+
+      <h3>Gancho de saída</h3>
+      <p>A fala do Crispim Catraca que ficou pendurada, agora com contexto:</p>
+      <div class="leitura">
+        <p>"Se eu estiver certo, e infelizmente costumo estar quando estou apavorado, a próxima porta vai abrir para quem foi chamado pelo nome certo."</p>
+      </div>
+
+      <h3>Se quiser fechar com pergunta em vez de resposta</h3>
+      <p>O <strong>Ônix Negro</strong> lá embaixo no subsolo <strong>está mais quente</strong> do que quando o grupo o deixou. Ninguém precisa estar lá para saber. A casa conta.</p>
+
+      <div class="nota">
+        <span class="tag">Anotar depois da sessão</span>
+        <p>Se o fecho for parcial, a cicatriz vira o fio da próxima sessão — registre em <em>a fenda sob a cripta</em>. E atualize o livro-caixa de ganchos: a Yara sai desta sessão paga.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ FICHAS — NPCs ═══════════ -->
+
+    <section class="cena" id="f-aurelio">
+      <p class="eyebrow">Ficha de NPC</p>
+      <h2 class="cena-titulo">Irmão Aurélio</h2>
+      <div class="ficha-topo">
+        <span class="pill aliado">Aliado</span>
+        <span class="pill">Monge</span>
+        <span class="pill">Devoto de Lathander</span>
+        <span class="pill">Uma das três peças do ritual</span>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>CA</b><span>16</span></div>
+        <div class="stat"><b>PV</b><span>45</span></div>
+        <div class="stat"><b>Desloc.</b><span>40 pés</span></div>
+        <div class="stat"><b>Bônus prof.</b><span>+2</span></div>
+        <div class="stat"><b>Ki</b><span>~3</span></div>
+      </div>
+      <div class="abilities">
+        <div class="ab"><b>FOR</b><span>12</span></div>
+        <div class="ab"><b>DES</b><span>16</span></div>
+        <div class="ab"><b>CON</b><span>16</span></div>
+        <div class="ab"><b>INT</b><span>10</span></div>
+        <div class="ab"><b>SAB</b><span>15</span></div>
+        <div class="ab"><b>CAR</b><span>14</span></div>
+      </div>
+
+      <ul class="defesas">
+        <li><b>Salvaguardas</b> FOR +3 · DES +5 · CON +5 · SAB +4</li>
+        <li><b>Perícias</b> Acrobacia +5 · Atletismo +3 · Intuição +4 · Percepção +4 · Religião +2</li>
+        <li><b>Sentidos</b> Percepção passiva 14 · Iniciativa +3 · Idiomas: Comum, Silvano</li>
+        <li><b>CD dele</b> 12 (8 + PB + SAB), se alguma coisa dele pedir salvaguarda</li>
+        <li><b>Ki</b> 3 pontos, recuperados em descanso curto</li>
+      </ul>
+
+      <h3>A economia de turno dele — leia antes das ações</h3>
+      <p>Na rodada 1 ele gasta <strong>a ação</strong> na Harmonização e a mantém pelo resto da luta. Dali em diante sobram <strong>uma ação bônus e uma reação por rodada</strong>, e é só isso.</p>
+      <p><strong>Ele não rouba protagonismo porque o desenho não deixa, não porque você vai se segurar.</strong> Ele só volta a atacar de verdade se largar a Harmonização — e largar é uma decisão de mesa, não dele.</p>
+
+      <h4>Ação</h4>
+      <div class="acao">
+        <b>Golpe Desarmado</b>
+        <span class="uso">ação · corpo a corpo</span>
+        <p><span class="cd">+5</span> para acertar, alcance 5 pés, um alvo. <em>Acerto:</em> <strong>6 (1d4+3) de concussão.</strong></p>
+      </div>
+      <div class="acao">
+        <b>Harmonização</b>
+        <span class="uso">ação · concentração, até 10 min</span>
+        <p>Ele entoa a linha de Lathander contra o canto. Ele e cada criatura à escolha dele a até <strong>30 pés</strong> ganham <strong>+1d4 em salvaguardas contra dano necrótico e contra efeitos de mortos-vivos</strong>. Quem começar o turno fora dos 30 pés perde o benefício até voltar. Retomar depois de perder custa a ação dele.</p>
+      </div>
+
+      <div class="aviso">
+        <span class="tag">A concentração dele é mais dura que a RAW, de propósito</span>
+        <p><strong>Ele perde a concentração ao sofrer qualquer dano, automaticamente.</strong> Pela regra padrão seria salvaguarda de Constituição <span class="cd">CD 10</span> ou metade do dano, e com <span class="cd">+5</span> ele passaria quase sempre — o que apagaria a decisão inteira.</p>
+        <p>A decisão é: <em>a mesa protege o velho ou continua atacando?</em> Se quiser suavizar, use a salvaguarda RAW e aceite que ele quase nunca cai fora.</p>
+      </div>
+
+      <h4>Ações bônus — 1 ponto de ki cada</h4>
+      <div class="acao">
+        <b>Rajada de Golpes</b>
+        <span class="uso">ação bônus · 1 ki</span>
+        <p>Dois golpes desarmados: <span class="cd">+5</span>, <strong>6 (1d4+3) de concussão</strong> cada.</p>
+      </div>
+      <div class="acao">
+        <b>Defesa Paciente</b>
+        <span class="uso">ação bônus · 1 ki</span>
+        <p>Ele faz a ação Esquivar — ataques contra ele com desvantagem, e ele com vantagem em salvaguardas de Destreza até o próximo turno dele.</p>
+      </div>
+      <div class="acao">
+        <b>Passo do Vento</b>
+        <span class="uso">ação bônus · 1 ki</span>
+        <p>Ele faz Desengajar e Correr, e o deslocamento dele dobra (<strong>80 pés</strong>) neste turno.</p>
+      </div>
+      <div class="acao">
+        <b>Mão da Cura</b>
+        <span class="uso">ação bônus · 1 ki</span>
+        <p>Toca uma criatura a 5 pés e cura <strong>9 (2d6+2)</strong> pontos de vida. Cura de emergência. Nunca a solução.</p>
+      </div>
+
+      <h4>Reação</h4>
+      <div class="acao">
+        <b>Proteção</b>
+        <span class="uso">reação</span>
+        <p>Quando uma criatura que ele enxerga ataca um aliado a até <strong>5 pés</strong> dele, o ataque é feito <strong>com desvantagem</strong>.</p>
+      </div>
+
+      <h4>Se ele cair</h4>
+      <p>A 0 PV: caído e inconsciente, salvaguardas de morte normais. <strong>A Harmonização acaba na hora.</strong> Estabilizá-lo custa uma ação — Medicina <span class="cd">CD 10</span> ou qualquer cura. Na cripta, essa é uma ação que sai do ritual, e é exatamente a escolha que você quer que exista.</p>
+
+      <div class="aviso">
+        <span class="tag">Cuidado com a vulnerabilidade a concussão</span>
+        <p>O golpe desarmado dele é concussão, e o coro tem vulnerabilidade — uma <strong>Rajada de Golpes com dois acertos faz ~22 e derruba um sozinha</strong>. Joga a favor do tema (ele derruba, e a coisa remonta na frente dele), mas é dano alto para um NPC de apoio. <strong>Os 3 pontos de ki são o limite natural; não os aumente.</strong></p>
+      </div>
+
+      <div class="nota">
+        <span class="tag">Regra de ouro deste NPC</span>
+        <p><strong>Ele não rouba protagonismo.</strong> Se o Aurélio resolver a cena, a cena estava mal desenhada. Papel em combate, nesta ordem: criar espaço, defender, curar em emergência, explicar o lado espiritual, sustentar o ritual.</p>
+      </div>
+
+      <h3>Interpretando</h3>
+      <ul>
+        <li><strong>Voz:</strong> calma, direta, curta. Ele responde perguntas difíceis sem enrolar, o que o torna o NPC mais útil da região.</li>
+        <li><strong>Postura:</strong> não lidera, não decide pelo grupo, não resolve o problema. Ele <strong>sustenta</strong> — em combate e em conversa.</li>
+        <li>Trata o sobrenatural com naturalidade profissional. Já viu coisa pior.</li>
+      </ul>
+
+      <div class="falas">
+        <p class="fala">"Achei que a casa me observava. Depois percebi que ela escutava."</p>
+        <p class="fala">"O templo guardava a luz. A casa de guarda, os limites. A mansão, a contenção. Não foram erguidos juntos por acaso."</p>
+        <p class="fala">"Justiça e vingança se parecem muito no escuro."<small>para a Bri</small></p>
+        <p class="fala">"Não adianta. Eles não estão de pé por causa de nada que exista nesta nave. O que os segura de pé está embaixo de nós. E está aberto."<small>na rodada 3, se ninguém entendeu</small></p>
+      </div>
+
+      <h3>Aparência</h3>
+      <p>Meio-humano / meio-sátiro. Da cintura para cima é essencialmente humano: homem adulto, careca, rosto humano, corpo com pelos, robe longo. Corpo relativamente <strong>alongado — não baixinho</strong>. Pernas de bode e patas. Chifres <strong>pequenos e discretos</strong>, cinza quase prateado, espiralados, curvando para os lados e para baixo.</p>
+      <div class="aviso"><span class="tag">Não desenhar como tiefling</span><p>Os chifres não apontam agressivamente para cima. Esse erro já foi cometido antes.</p></div>
+
+      <h3>O que ele sabe · o que não sabe</h3>
+      <ul>
+        <li>Templo, casa de guarda e mansão pertencem ao <strong>mesmo desenho antigo</strong>.</li>
+        <li>A casa de guarda fazia <strong>triagem, quarentena e observação</strong>.</li>
+        <li>Lathander é guardião deste domínio — e ele reconhece a marca disso na Bri.</li>
+        <li>Como sustentar uma harmonização ritual.</li>
+        <li><strong>Não sabe:</strong> a história completa dos fundadores, o que é o Ônix Negro, quem é Valthar.</li>
+      </ul>
+    </section>
+
+    <section class="cena" id="f-coro">
+      <p class="eyebrow">Bloco de criatura · seis deles</p>
+      <h2 class="cena-titulo">Necromante-Esqueleto do Coro</h2>
+      <div class="ficha-topo">
+        <span class="pill inimigo">Morto-vivo</span>
+        <span class="pill">Médio</span>
+        <span class="pill">ND 1 · 200 XP</span>
+        <span class="pill">Seis</span>
+      </div>
+
+      <p class="cena-desc">Não são guardas da cripta: são o que sobrou de quem cantava nela. Continuam cantando. É por isso que a igreja soa errada antes de qualquer um entender o porquê.</p>
+
+      <div class="stats">
+        <div class="stat"><b>CA</b><span>13</span></div>
+        <div class="stat"><b>PV</b><span>22</span></div>
+        <div class="stat"><b>Remonta com</b><span>11</span></div>
+        <div class="stat"><b>Desloc.</b><span>30 pés</span></div>
+        <div class="stat"><b>Prof.</b><span>+2</span></div>
+      </div>
+      <div class="abilities">
+        <div class="ab"><b>FOR</b><span>+1</span></div>
+        <div class="ab"><b>DES</b><span>+2</span></div>
+        <div class="ab"><b>CON</b><span>+2</span></div>
+        <div class="ab"><b>INT</b><span>+0</span></div>
+        <div class="ab"><b>SAB</b><span>+1</span></div>
+        <div class="ab"><b>CAR</b><span>−1</span></div>
+      </div>
+
+      <ul class="defesas">
+        <li><b>Salvaguardas</b> <strong>sem proficiência em nenhuma</strong> — FOR +1 · DES +2 · CON +2 · INT +0 · SAB +1 · CAR −1</li>
+        <li><b>Vulnerabilidade</b> concussão</li>
+        <li><b>Imunidades</b> dano: veneno · condição: envenenado, exausto</li>
+        <li><b>Sentidos</b> visão no escuro 60 pés · Percepção passiva 11 · Iniciativa +2</li>
+        <li><b>Idiomas</b> entende Comum e a língua litúrgica da cripta, mas só canta</li>
+      </ul>
+
+      <div class="nota">
+        <span class="tag">Iniciativa</span>
+        <p>Role <strong>uma</strong> para os quatro da nave e <strong>outra</strong> para os dois da escada, que entram na rodada 3. Seis iniciativas separadas transformam o combate numa fila.</p>
+      </div>
+
+      <h3>Traços</h3>
+      <div class="acao">
+        <b>Desmontar</b>
+        <p>Quando cai a 0 PV, ele <strong>não é destruído</strong>. Desaba numa pilha de ossos e paramentos no espaço dele. No <strong>início do próximo turno dele</strong>, remonta em pé, no mesmo espaço, com <strong>11 PV</strong> — e perde aquele turno inteiro.</p>
+      </div>
+      <div class="acao">
+        <b>O Coro</b>
+        <span class="uso">ação bônus coletiva · 1×/rodada</span>
+        <p>Na contagem de iniciativa do primeiro esqueleto ainda ativo, se <strong>3 ou mais</strong> estiverem de pé, o coro gasta a ação bônus coletiva e <strong>uma pilha remonta imediatamente com 11 PV</strong>. Com dois ou menos de pé, o canto se desfaz e isso deixa de funcionar. Não alcança pilha já destruída de vez.</p>
+      </div>
+      <div class="acao">
+        <b>Fim verdadeiro</b>
+        <p>Uma pilha para de remontar de vez se sofrer <strong>dano radiante</strong> — ou se a fenda for estabilizada, o que derruba os seis de uma vez, <strong>sem salvaguarda</strong>.</p>
+      </div>
+
+      <h4>A pilha, em regras</h4>
+      <p>Isto é o que a mesa mais vai perguntar no meio da luta:</p>
+      <ul>
+        <li>Ocupa o espaço dela e conta como <strong>terreno difícil</strong> (+5 pés para atravessar).</li>
+        <li>É <strong>alvo inerte</strong>: ataques contra ela <strong>acertam automaticamente</strong> e ela não faz salvaguardas.</li>
+        <li><strong>Qualquer quantidade de dano radiante</strong> destrói a pilha de vez. Não há limiar, não há salvaguarda. <strong>1 ponto basta</strong> — é por isso que a Rapieira de Prata da Yara resolve.</li>
+        <li>Nada mais destrói uma pilha. Bater nela com dano físico não adianta, e a mesa precisa sentir isso uma vez.</li>
+      </ul>
+
+      <h3>Ações</h3>
+      <div class="acao">
+        <b>Cajado de Ossos</b>
+        <span class="uso">ação · corpo a corpo</span>
+        <p><span class="cd">+4</span> para acertar, alcance 5 pés, um alvo. <em>Acerto:</em> <strong>5 (1d6+2) de concussão</strong> mais <strong>2 (1d4) de necrótico</strong>.</p>
+      </div>
+      <div class="acao">
+        <b>Verso Necrótico</b>
+        <span class="uso">ação · mágico à distância</span>
+        <p><span class="cd">+3</span> para acertar, alcance 60 pés, um alvo. <em>Acerto:</em> <strong>5 (2d4) de necrótico</strong>, e o alvo <strong>não recupera PV</strong> até o fim do próximo turno dele.</p>
+      </div>
+
+      <details class="segredo">
+        <summary>Segredo — a mesa descobre, você não anuncia</summary>
+        <div class="segredo-corpo">
+          <p>Deixe as duas primeiras rodadas serem só frustração. As duas vias de resolução são <strong>radiante numa pilha caída</strong> e <strong>brasa consagrada de um braseiro tombado</strong>. A segunda existe justamente para não depender da Bri.</p>
+        </div>
+      </details>
+
+      <h3>A brasa consagrada — a segunda via, com números</h3>
+      <p>O braseiro tombado é o caminho de vitória que <strong>não depende da Bri</strong>, e é o que abre o encontro. Ele precisava de mecânica; esta é invenção da companion:</p>
+      <ul>
+        <li><strong>Tombar um braseiro:</strong> ação de Usar um Objeto. Se estiver disputado, Força (Atletismo) <span class="cd">CD 10</span>. A <strong>Enna</strong> faz com <strong>ação bônus</strong> por Mãos Rápidas; a Língua do <strong>Bob</strong> derruba um a 15 pés.</li>
+        <li>Cria um <strong>quadrado de 5 pés de brasa consagrada</strong>, que dura o resto do combate.</li>
+        <li>Criatura que <strong>entra</strong> no quadrado pela primeira vez no turno, ou <strong>termina o turno</strong> nele: <strong>1d6 de fogo</strong>. Morto-vivo sofre <strong>mais 1d6 radiante</strong>.</li>
+        <li><strong>Pilha que cai dentro de um quadrado de brasa é destruída de vez.</strong> A brasa é radiante e não para de queimar.</li>
+        <li><strong>Quantos braseiros:</strong> quatro na nave, dois de cada lado do corredor central. <em>Número inventado</em> — a igreja não dizia quantos.</li>
+      </ul>
+
+      <h3>As interações que a mesa vai forçar</h3>
+      <p>Modificadores e CDs prontos, para você não parar a luta procurando:</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>O que a mesa faz</th><th>Como resolve</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Empurrar um para a brasa</strong></td><td>Salvaguarda de <span class="cd">FOR +1</span> ou <span class="cd">DES +2</span> contra a CD de Empurrar de quem empurra (8 + FOR + PB, na ficha)</td></tr>
+            <tr><td><strong>Agarrar com a Língua do Bob</strong></td><td>Escapar: Atletismo <span class="cd">+1</span> ou Acrobacia <span class="cd">+2</span> contra a CD de agarrar do Bob</td></tr>
+            <tr><td><strong>Aquecer Metal</strong> (Bob, <span class="cd">CD 15</span>)</td><td>Turíbulo e gola de metal. 2d8 de fogo, e salvaguarda de <span class="cd">CON +2</span> — na falha, desvantagem em ataques e testes. <strong>Ele não consegue largar a gola</strong>, então come o dano toda rodada</td></tr>
+            <tr><td><strong>Esconjurar Inimigo</strong> (Bri, <span class="cd">CD 13</span>)</td><td>Salvaguarda de <span class="cd">SAB +1</span>. Amedrontado: deslocamento 0 e desvantagem. Um fugindo quebra o coro de 3 — é a jogada mais subestimada da mesa</td></tr>
+            <tr><td><strong>Sussurros Dissonantes</strong> (Bob, <span class="cd">CD 15</span>)</td><td>Salvaguarda de <span class="cd">SAB +1</span></td></tr>
+            <tr><td><strong>Divine Smite</strong> (Bri)</td><td>+2d8 radiante <strong>+1d8 contra morto-vivo</strong>. Se sobrar radiante quando a pilha cair, ela não remonta</td></tr>
+            <tr><td><strong>Rapieira de Prata +1</strong> (Yara)</td><td>+1 radiante. Um ponto é suficiente para matar uma pilha de vez</td></tr>
+            <tr><td><strong>Talhar</strong> (maestria da Bri)</td><td>No acerto, um segundo ataque contra outro alvo a 5 pés do primeiro, 1×/turno. Contra seis em fileira, é muito — <em>confira o texto exato na ficha dela</em></td></tr>
+            <tr><td><strong>Segurar Pessoa</strong> (Líria)</td><td><strong>Não funciona.</strong> Morto-vivo não é humanoide. Avise antes de ela gastar o espaço de 2º</td></tr>
+            <tr><td><strong>Orbe Cromático</strong> (Líria)</td><td>Funciona, mas <strong>ela não tem opção radiante</strong> — derruba, não resolve</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Notas de mesa</h3>
+      <ul>
+        <li><strong>Vulnerabilidade a concussão:</strong> um banco arremessado, o desarmado do Aurélio, a Língua do Bob puxando um para a parede.</li>
+        <li><strong>Vantagem da Yara</strong> vale aqui. Uma pergunta dela sobre por que eles se levantam é resposta grátis.</li>
+        <li><strong>Economia de ações:</strong> seis contra cinco já é pesado. Por isso os PV são baixos. <strong>Não aumente</strong> — a pressão vem da remontagem, não do saco de PV.</li>
+      </ul>
+
+      <div class="nota">
+        <span class="tag">Calibragem</span>
+        <p>Cinco PJs de nível 4. Seis de ND 1 = 1.200 XP no papel; a remontagem quase dobra o custo efetivo, o que põe o encontro perto do <strong>moderado</strong> — de propósito. Este combate não é para ser vencido por atrito; é para ensinar que atrito não resolve.</p>
+      </div>
+
+      <div class="aviso">
+        <span class="tag">Bloco inventado</span>
+        <p>A sua fonte enuncia três coisas — <em>desmontam ao cair</em>, <em>se 3 ou mais estiverem ativos o coro remonta um por ação bônus</em>, e <em>são seis</em>. Números, ataques e a regra do radiante são invenção. Nada aqui é canon até você usar na mesa.</p>
+      </div>
+    </section>
+
+    <section class="cena" id="f-crispim">
+      <p class="eyebrow">Ficha de NPC · fora de cena</p>
+      <h2 class="cena-titulo">Crispim Catraca</h2>
+      <div class="ficha-topo">
+        <span class="pill aliado">Amistoso</span>
+        <span class="pill">Gnomo artífice</span>
+        <span class="pill">Só o gancho de saída</span>
+      </div>
+      <p class="cena-desc">Não está na igreja. Está aqui porque a fala dele fecha a sessão — e porque, se a mesa perguntar por ele, você precisa da voz na mão.</p>
+
+      <h3>Interpretando</h3>
+      <ul>
+        <li><strong>Voz:</strong> rápida quando nervoso, e ele está quase sempre nervoso.</li>
+        <li>Muito capaz, muito reclamão. Tem orgulho do próprio trabalho <strong>mesmo odiando ser convocado</strong>.</li>
+        <li>Trata construtos como colegas de serviço difíceis, não como máquinas.</li>
+        <li><strong>Aparência:</strong> pequeno, rápido, exausto. Óculos grossos com uma lente trincada. Cinto lotado de ferramentas, giz rúnico, chaves minúsculas e peças. Roupa boa arruinada por graxa, fuligem e faísca arcana.</li>
+      </ul>
+
+      <div class="falas">
+        <p class="fala">"O porão não era o problema. Era o sintoma."</p>
+        <p class="fala">"Agora que o coração parou de chiar, outra coisa começou a responder."</p>
+        <p class="fala">"Se eu estiver certo, e infelizmente costumo estar quando estou apavorado, a próxima porta vai abrir para quem foi chamado pelo nome certo."<small>o gancho de saída da sessão 4</small></p>
+      </div>
+
+      <h4>Testes, se a mesa insistir</h4>
+      <ul>
+        <li><strong>Intuição</strong> <span class="cd">CD 12</span> — ele está assustado de verdade, tentando manter compostura profissional.</li>
+        <li><strong>Arcanismo ou ferramentas de artífice</strong> <span class="cd">CD 13</span> — ele sabe do que fala.</li>
+        <li><strong>Persuasão</strong> <span class="cd">CD 12</span> — entrega mais contexto sobre setores da casa e manutenção atrasada.</li>
+      </ul>
+      <p><strong>Não sabe</strong> a história da mansão. Ele é técnico, não historiador — e essa distinção é o que o impede de virar um NPC que explica a campanha inteira.</p>
+
+      <details class="segredo">
+        <summary>Segredo — conflito a resolver antes da mesa</summary>
+        <div class="segredo-corpo">
+          <p>Você mencionou um <strong>"doutor Fini"</strong> — um gnomo que explicaria as coisas ao grupo e abriria a narrativa para fora da mansão na sessão 4. <strong>Não está claro se é o Crispim com outro nome ou um segundo gnomo.</strong> Decida antes de jogar, porque a fala de saída é dele.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ═══════════ FICHAS — GRUPO ═══════════ -->
+
+    <section class="cena" id="f-bri">
+      <p class="eyebrow">Ficha rápida do grupo</p>
+      <h2 class="cena-titulo">Bri</h2>
+      <div class="ficha-topo">
+        <span class="pill pj">Humana · Paladina 4</span>
+        <span class="pill">Juramento da Vingança</span>
+        <span class="pill">Lathander</span>
+        <span class="pill">A parede</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>CA</b><span>20</span></div>
+        <div class="stat"><b>PV</b><span>31</span></div>
+        <div class="stat"><b>Desloc.</b><span>30 pés</span></div>
+        <div class="stat"><b>CD magia</b><span>13</span></div>
+      </div>
+      <h4>O que ela resolve nesta sessão</h4>
+      <ul>
+        <li><strong>Divine Smite</strong> — +2d8 radiante, <strong>+1d8 extra contra morto-vivo</strong>. A principal fonte de radiante do grupo, e o caminho pelo qual a mesa descobre a regra.</li>
+        <li><strong>Machado Grande +1 "Juramento Caído"</strong> — <span class="cd">+7</span>, 2d6+5 cortante. +1 radiante contra quem a atacar. Maestria: Talhar.</li>
+        <li><strong>Sentido Divino</strong> 3/descanso longo — mostra os seis <em>e</em> que a fonte está abaixo do chão.</li>
+        <li><strong>Canalizar Divindade</strong> 1/descanso curto — Voto de Inimizade ou Esconjurar Inimigo (amedronta: quebra o coro de 3).</li>
+        <li><strong>Imposição das Mãos</strong> — reserva de 15 PV.</li>
+        <li><strong>No ritual:</strong> gasta um espaço por rodada como âncora radiante. Sem teste. Ela vai chegar lá com pouco.</li>
+      </ul>
+      <div class="nota"><span class="tag">Alavanca</span><p>O juramento antigo, o de antes da vingança: <em>"eu sou a defesa, eu sou o farol."</em> Um inocente em risco na frente dela vence qualquer alvo que ela esteja caçando.</p></div>
+      <details class="segredo">
+        <summary>Segredo — a cena devida a ela</summary>
+        <div class="segredo-corpo"><p>Ela já morreu uma vez, no Refúgio do Carvalho, e viu a luz dourada no limiar. Por isso Espirro Dourado disse que a luz em volta dela é <strong>reconhecimento</strong>, não devoção. Quando ela ancorar a luz na cripta, a luz responde antes de ela terminar.</p></div>
+      </details>
+    </section>
+
+    <section class="cena" id="f-yara">
+      <p class="eyebrow">Ficha rápida do grupo</p>
+      <h2 class="cena-titulo">Yara</h2>
+      <div class="ficha-topo">
+        <span class="pill pj">Elfa da floresta · Patrulheira 4</span>
+        <span class="pill">Andarilha Feérica</span>
+        <span class="pill aliado">A sessão é dela</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>CA</b><span>15</span></div>
+        <div class="stat"><b>PV</b><span>32</span></div>
+        <div class="stat"><b>Desloc.</b><span>35 pés</span></div>
+        <div class="stat"><b>CD magia</b><span>13</span></div>
+      </div>
+      <h4>O que ela resolve nesta sessão</h4>
+      <ul>
+        <li><strong>Inimigo Favorito: mortos-vivos</strong> — vantagem em saber coisas sobre eles. <strong>Dê de graça.</strong> Não cobre CD.</li>
+        <li><strong>Arco Longo Feywood +1</strong> — <span class="cd">+8</span>, 1d8+4. Arquearia + Atirador de Elite: sem penalidade por cobertura, distância longa ou tiro em corpo a corpo. Ela atira de qualquer lugar.</li>
+        <li><strong>Ataque Selvagem</strong> 1×/turno · <strong>Golpes Pavorosos</strong> +1d4 psíquico 1×/turno.</li>
+        <li><strong>Rapieira de Prata +1</strong> — <span class="cd">+6</span>, 1d8+4, <strong>+1 radiante contra morto-vivo</strong>. Deixe ela descobrir sozinha o que isso significa.</li>
+        <li><strong>No ritual:</strong> ler a geometria quebrada. Sobrevivência <span class="cd">+5</span> ou Percepção <span class="cd">+7</span>, <span class="cd">CD 13</span>.</li>
+      </ul>
+      <details class="segredo">
+        <summary>Segredo — a dívida que vence hoje</summary>
+        <div class="segredo-corpo"><p><strong>Eron.</strong> Ela perdeu o primo num território onde o espaço deixou de obedecer regras. A morte não foi heroica, foi caótica e silenciosa, e o que sobrou não foi luto: foi a sensação de não ter sido suficiente. <strong>Não diga o nome.</strong> Dê o degrau a mais na escada e siga.</p></div>
+      </details>
+    </section>
+
+    <section class="cena" id="f-enna">
+      <p class="eyebrow">Ficha rápida do grupo</p>
+      <h2 class="cena-titulo">Enna</h2>
+      <div class="ficha-topo">
+        <span class="pill pj">Elfa alta · Ladina 4</span>
+        <span class="pill">Ladra</span>
+        <span class="pill">Porta o Selo de Ametista</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>CA</b><span>16</span></div>
+        <div class="stat"><b>PV</b><span>27</span></div>
+        <div class="stat"><b>Desloc.</b><span>30 pés</span></div>
+        <div class="stat"><b>Ferr. de Ladrão</b><span>+5</span></div>
+      </div>
+      <h4>O que ela resolve nesta sessão</h4>
+      <ul>
+        <li><strong>Mãos Rápidas</strong> — ação bônus para Usar um Objeto ou Ferramentas. É por aqui que ela tomba um braseiro sem gastar a ação.</li>
+        <li><strong>Ação Ardilosa</strong> — Disparar, Desengajar ou Esconder como ação bônus. É como ela chega viva à ponta leste.</li>
+        <li><strong>Fio de Ametista (Rapieira +1)</strong> — <span class="cd">+7</span>, 1d8+5, Ataque Furtivo 2d6.</li>
+        <li><strong>No ritual:</strong> assentar o Selo. Ferramentas de Ladrão <span class="cd">+5</span>, <span class="cd">CD 14</span>, 1×/rodada. <strong>Três sucessos fecham a fenda.</strong></li>
+      </ul>
+      <div class="aviso"><span class="tag">Cuidado</span><p>INT +1 e SAB +0. <strong>Não peça testes de Arcanismo, História ou Religião a ela.</strong> Ela interage com mecanismo por ferramentas, não por conhecimento.</p></div>
+      <div class="nota"><span class="tag">A tensão do clímax</span><p>Ela tem que ir até a ponta leste, à frente da linha da Bri, sozinha, com 27 PV. A peça mais frágil no ponto mais exposto — isso é o ritual inteiro.</p></div>
+      <details class="segredo">
+        <summary>Segredo — Casa Valerius</summary>
+        <div class="segredo-corpo"><p>Última sobrevivente da Casa Valerius. O pai lhe entregou o verdadeiro Selo na noite do Banquete das Máscaras e mandou correr. <strong>Caçadores de recompensa ainda procuram o objeto</strong> e não sabem que ela está viva. Ela ainda não contou ao grupo quem é — <strong>isso é uma cena inteira e ela é dona da hora.</strong></p></div>
+      </details>
+    </section>
+
+    <section class="cena" id="f-bob">
+      <p class="eyebrow">Ficha rápida do grupo</p>
+      <h2 class="cena-titulo">Bob, o Bardo</h2>
+      <div class="ficha-topo">
+        <span class="pill pj">Amphitari · Bardo 4</span>
+        <span class="pill">Colégio dos Romani</span>
+        <span class="pill inimigo">Devendo cena há 3 sessões</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>CA</b><span>14</span></div>
+        <div class="stat"><b>PV</b><span>23</span></div>
+        <div class="stat"><b>CD magia</b><span>15</span></div>
+        <div class="stat"><b>Ataque mágico</b><span>+6</span></div>
+      </div>
+      <h4>O que ele resolve nesta sessão</h4>
+      <ul>
+        <li><strong>Língua</strong> — alcance <strong>15 pés</strong>, 1d6+2, e no acerto pode <strong>agarrar</strong>. Puxar um esqueleto para cima de um braseiro tombado é exatamente o que a mesa deveria estar fazendo. <strong>Diga sim.</strong></li>
+        <li><strong>Aquecer Metal</strong> — cada um dos seis carrega um turíbulo e uma gola de metal. Vantagem em derrubar.</li>
+        <li><strong>Palavras Cortantes</strong> — reação, 60 pés, −1d6 num ataque, teste ou dano inimigo. A melhor ferramenta defensiva do grupo e a que a mesa mais esquece.</li>
+        <li><strong>Inspiração de Bardo</strong> 3× 1d6 · <strong>Sortudo</strong> 3 pontos.</li>
+        <li><strong>No ritual:</strong> segurar o compasso contra o coro. Atuação <span class="cd">+7</span>, <span class="cd">CD 13</span> — sucesso tira a ação bônus de remontar do coro nesta rodada.</li>
+      </ul>
+      <div class="aviso"><span class="tag">Buraco a tapar</span><p>Ele é o único dos cinco sem mistério pessoal ligado à mansão. O presente silencioso que a casa deu a ele na sessão 2.5 foi <strong>um objeto sonoro</strong> e você nunca disse qual. <strong>Diga.</strong></p></div>
+    </section>
+
+    <section class="cena" id="f-liria">
+      <p class="eyebrow">Ficha rápida do grupo</p>
+      <h2 class="cena-titulo">Líria Valenwe</h2>
+      <div class="ficha-topo">
+        <span class="pill pj">Meio-elfa · Feiticeira 4</span>
+        <span class="pill">Magia Selvagem</span>
+        <span class="pill">Nox enxerga a fenda</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>CA</b><span>13</span></div>
+        <div class="stat"><b>com Arm. Arcana</b><span>15</span></div>
+        <div class="stat"><b>PV</b><span>22</span></div>
+        <div class="stat"><b>CD magia</b><span>15</span></div>
+      </div>
+      <h4>O que ela resolve nesta sessão</h4>
+      <ul>
+        <li><strong>Moldar Água</strong> — truque. A pia batismal na nave, a água que escorre para cima na escada, o reflexo na cripta. <strong>Ela resolve mais coisa com truque do que com espaço, e a mesa esquece disso.</strong></li>
+        <li><strong>Orbe Cromático</strong> 3d8, escolhe o tipo — <strong>mas não tem opção radiante.</strong></li>
+        <li><strong>Segurar Pessoa</strong> — <strong>não funciona.</strong> Avise antes de ela gastar o espaço de 2º.</li>
+        <li><strong>Surto de Magia Selvagem.</strong> Role. Sempre.</li>
+        <li><strong>No ritual:</strong> fazer a água lembrar a forma certa da sala. Arcanismo ou Carisma <span class="cd">CD 13</span> — <strong>se ela pensar em Moldar Água, sucesso automático.</strong></li>
+      </ul>
+      <div class="nota"><span class="tag">Nox</span><p>O gato enxerga fendas entre planos. É a sua ferramenta grátis de sinalização: na escada ele arrepia e para, antes de qualquer teste. O grupo aprende a ler o gato.</p></div>
+      <details class="segredo">
+        <summary>Segredo — o eco que ela ainda não ligou</summary>
+        <div class="segredo-corpo"><p>Marea desapareceu tentando impedir o colapso de um portal natural ligado à Lagoa Nymrath. <strong>Isto é a mesma categoria de evento</strong> e a mesa ainda não fez a conta. A Sala de Oração Privada, para onde a fenda tem caminho aberto, é parede com parede com a sala dos quadros da lagoa.</p></div>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- ══ PAINEL DE MESA ══ -->
+  <aside class="mesa" aria-label="Painel de acompanhamento">
+
+    <div class="mesa-bloco">
+      <header><span>Rodada</span><button class="btn mini" id="zerar">Zerar tudo</button></header>
+      <div class="mesa-corpo">
+        <div class="rodada">
+          <button class="btn" id="r-menos" aria-label="Rodada anterior">−</button>
+          <span class="n num" id="r-num">1</span>
+          <button class="btn" id="r-mais" aria-label="Próxima rodada">+</button>
+        </div>
+        <div class="alerta frio" id="r-alerta">Rodadas 1 e 2 — deixe eles ganharem.</div>
+      </div>
+    </div>
+
+    <div class="mesa-bloco">
+      <header><span>O Coro — seis</span><span id="coro-count" class="num">6 de pé</span></header>
+      <div class="mesa-corpo">
+        <div id="coro-lista"></div>
+        <div class="alerta" id="coro-alerta" style="margin-top:10px">Canta. Remonta uma pilha por ação bônus, 1×/rodada.</div>
+        <p class="rodape-mesa" style="margin-top:10px">Digite o PV. <strong>↺</strong> remonta com 11. <strong>✕</strong> marca fim verdadeiro — radiante na pilha ou brasa consagrada.</p>
+      </div>
+    </div>
+
+    <div class="mesa-bloco">
+      <header><span>Irmão Aurélio</span><span class="num" id="au-hp-label">45 / 45</span></header>
+      <div class="mesa-corpo">
+        <div class="barra"><i id="au-barra" style="width:100%"></i></div>
+        <div style="display:flex;gap:6px;align-items:center;margin:8px 0 4px">
+          <input id="au-hp" type="number" value="45" min="0" max="45"
+                 style="flex:1;background:var(--bg);border:1px solid var(--line);border-radius:2px;padding:4px 6px;text-align:center;font-family:var(--font-mono);font-variant-numeric:tabular-nums">
+          <button class="btn mini" id="au-full">Cheio</button>
+        </div>
+        <div class="toggle-linha">
+          <span>Harmonização (concentração)</span>
+          <button class="sw" id="au-conc" aria-pressed="true" aria-label="Alternar concentração"></button>
+        </div>
+        <div class="alerta frio" id="au-alerta">+1d4 em salvaguardas contra necrótico, 30 pés.</div>
+      </div>
+    </div>
+
+    <div class="mesa-bloco">
+      <header><span>Ritual — Selo da Enna</span><span class="num" id="selo-count">0 / 3</span></header>
+      <div class="mesa-corpo">
+        <div class="selo">
+          <button data-selo="0" aria-pressed="false">R1</button>
+          <button data-selo="1" aria-pressed="false">R2</button>
+          <button data-selo="2" aria-pressed="false">R3</button>
+        </div>
+        <div class="alerta frio" id="selo-alerta">Ferramentas de Ladrão +5 · CD 14 · 1×/rodada.</div>
+        <p class="rodape-mesa" style="margin-top:10px">Rodada perdida: <strong>salvaguarda de CON CD 13</strong>, 2d6 necrótico na falha, metade no sucesso. A borda avança 5 pés.</p>
+      </div>
+    </div>
+
+    <div class="mesa-bloco">
+      <header><span>Tela</span></header>
+      <div class="mesa-corpo">
+        <div class="toggle-linha">
+          <span>Forçar tema escuro</span>
+          <button class="sw" id="tema" aria-pressed="false" aria-label="Alternar tema escuro"></button>
+        </div>
+        <p class="rodape-mesa" style="margin-top:6px">Navegação: <strong>←</strong> e <strong>→</strong> entre cenas. O painel guarda o estado no navegador.</p>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ── Navegação ─────────────────────────────────────────── */
+  var itens = Array.prototype.slice.call(document.querySelectorAll(".nav-item"));
+  var cenas = Array.prototype.slice.call(document.querySelectorAll(".cena"));
+
+  function ir(alvo) {
+    itens.forEach(function (b) { b.setAttribute("aria-current", String(b.dataset.alvo === alvo)); });
+    cenas.forEach(function (s) { s.classList.toggle("on", s.id === alvo); });
+    window.scrollTo(0, 0);
+    salvar("cena", alvo);
+  }
+  itens.forEach(function (b) { b.addEventListener("click", function () { ir(b.dataset.alvo); }); });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.target.tagName === "INPUT" || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    var atual = itens.findIndex(function (b) { return b.getAttribute("aria-current") === "true"; });
+    var prox = atual + (e.key === "ArrowRight" ? 1 : -1);
+    if (prox >= 0 && prox < itens.length) { ir(itens[prox].dataset.alvo); e.preventDefault(); }
+  });
+
+  /* ── Estado persistido ─────────────────────────────────── */
+  var CHAVE = "valmorian-s4";
+  var estado = { cena: "setup", rodada: 1, coro: null, aurelio: 45, conc: true, selo: [false, false, false], tema: false };
+  try {
+    var bruto = localStorage.getItem(CHAVE);
+    if (bruto) { var lido = JSON.parse(bruto); for (var k in lido) if (k in estado) estado[k] = lido[k]; }
+  } catch (err) { /* sem localStorage: o painel funciona, só não lembra */ }
+
+  function salvar(campo, valor) {
+    if (campo) estado[campo] = valor;
+    try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (err) {}
+  }
+
+  /* ── Rodada ────────────────────────────────────────────── */
+  var rNum = document.getElementById("r-num");
+  var rAlerta = document.getElementById("r-alerta");
+
+  function pintaRodada() {
+    rNum.textContent = estado.rodada;
+    var t, cls;
+    if (estado.rodada <= 2) { t = "Rodadas 1 e 2 — deixe eles ganharem. Não segure nada."; cls = "alerta frio"; }
+    else if (estado.rodada === 3) { t = "Os outros dois sobem a escada da cripta agora. Se ninguém entendeu ainda, o Aurélio diz."; cls = "alerta quente"; }
+    else { t = "Corte assim que a mesa entender. No instante em que alguém disser “temos que descer”, a sessão anda."; cls = "alerta"; }
+    rAlerta.textContent = t; rAlerta.className = cls;
+    pintaSelo();
+  }
+  document.getElementById("r-mais").addEventListener("click", function () { estado.rodada++; salvar(); pintaRodada(); });
+  document.getElementById("r-menos").addEventListener("click", function () { if (estado.rodada > 1) estado.rodada--; salvar(); pintaRodada(); });
+
+  /* ── O Coro ────────────────────────────────────────────── */
+  var NOMES = ["Dom Nesteu", "Irmã Valquina", "O Cantor Sem Nome", "Dom Ferrez", "Irmã Odila", "O Menino do Turíbulo"];
+  var ROTULO = { ativo: "de pé", pilha: "pilha — remonta", findo: "fim verdadeiro" };
+  if (!estado.coro || estado.coro.length !== 6) {
+    estado.coro = NOMES.map(function () { return { pv: 22, estado: "ativo" }; });
+  }
+
+  var lista = document.getElementById("coro-lista");
+  var contador = document.getElementById("coro-count");
+  var coroAlerta = document.getElementById("coro-alerta");
+
+  function pintaCoro() {
+    var dePe = estado.coro.filter(function (c) { return c.estado === "ativo"; }).length;
+    var findos = estado.coro.filter(function (c) { return c.estado === "findo"; }).length;
+    contador.textContent = dePe + " de pé";
+    if (findos === 6) {
+      coroAlerta.className = "alerta"; coroAlerta.textContent = "Os seis acabaram. O canto para — e o silêncio depois é a coisa mais alta da sessão.";
+    } else if (dePe >= 3) {
+      coroAlerta.className = "alerta quente";
+      coroAlerta.textContent = "O Coro canta. Ação bônus coletiva, 1×/rodada: remonta uma pilha com 11 PV.";
+    } else {
+      coroAlerta.className = "alerta frio";
+      coroAlerta.textContent = "Dois ou menos de pé — o canto se desfez. A remontagem coletiva parou.";
+    }
+    Array.prototype.forEach.call(lista.children, function (linha, i) {
+      linha.dataset.estado = estado.coro[i].estado;
+      linha.querySelector(".estado").textContent = ROTULO[estado.coro[i].estado];
+      var campo = linha.querySelector("input");
+      if (document.activeElement !== campo) campo.value = estado.coro[i].pv;
+    });
+    salvar();
+  }
+
+  NOMES.forEach(function (nome, i) {
+    var linha = document.createElement("div");
+    linha.className = "coro-linha";
+    linha.innerHTML =
+      '<span><span class="nome"></span><span class="estado"></span></span>' +
+      '<input type="number" min="0" aria-label="Pontos de vida">' +
+      '<button class="icone" title="Remonta com 11 PV">↺</button>' +
+      '<button class="icone" title="Fim verdadeiro — radiante ou brasa">✕</button>';
+    linha.querySelector(".nome").textContent = nome;
+
+    var campo = linha.querySelector("input");
+    campo.addEventListener("input", function () {
+      var v = parseInt(campo.value, 10);
+      estado.coro[i].pv = isNaN(v) ? 0 : Math.max(0, v);
+      if (estado.coro[i].pv === 0 && estado.coro[i].estado === "ativo") estado.coro[i].estado = "pilha";
+      if (estado.coro[i].pv > 0 && estado.coro[i].estado === "pilha") estado.coro[i].estado = "ativo";
+      pintaCoro();
+    });
+
+    var botoes = linha.querySelectorAll(".icone");
+    botoes[0].addEventListener("click", function () {
+      estado.coro[i].pv = 11; estado.coro[i].estado = "ativo"; pintaCoro();
+    });
+    botoes[1].addEventListener("click", function () {
+      estado.coro[i].estado = estado.coro[i].estado === "findo" ? "pilha" : "findo";
+      if (estado.coro[i].estado === "findo") estado.coro[i].pv = 0;
+      pintaCoro();
+    });
+
+    lista.appendChild(linha);
+  });
+
+  /* ── Aurélio ───────────────────────────────────────────── */
+  var auHp = document.getElementById("au-hp");
+  var auBarra = document.getElementById("au-barra");
+  var auLabel = document.getElementById("au-hp-label");
+  var auConc = document.getElementById("au-conc");
+  var auAlerta = document.getElementById("au-alerta");
+
+  function pintaAurelio() {
+    var pv = Math.max(0, Math.min(45, estado.aurelio));
+    auLabel.textContent = pv + " / 45";
+    auBarra.style.width = (pv / 45 * 100) + "%";
+    auBarra.style.background = pv === 0 ? "var(--necro)" : (pv <= 15 ? "var(--necro)" : "var(--gold)");
+    if (document.activeElement !== auHp) auHp.value = pv;
+    auConc.setAttribute("aria-pressed", String(!!estado.conc));
+    if (pv === 0) {
+      auAlerta.className = "alerta quente";
+      auAlerta.textContent = "Aurélio caído: a Enna faz os testes do Selo com desvantagem. Estabilizá-lo custa uma ação que sai do ritual.";
+    } else if (!estado.conc) {
+      auAlerta.className = "alerta quente";
+      auAlerta.textContent = "Concentração perdida. Sem +1d4 contra necrótico — e o ritual perde a terceira peça até ele retomar.";
+    } else {
+      auAlerta.className = "alerta frio";
+      auAlerta.textContent = "+1d4 em salvaguardas contra necrótico, 30 pés. Ele perde isso se sofrer dano.";
+    }
+    salvar();
+    pintaSelo();
+  }
+  auHp.addEventListener("input", function () {
+    var v = parseInt(auHp.value, 10);
+    estado.aurelio = isNaN(v) ? 0 : Math.max(0, Math.min(45, v));
+    pintaAurelio();
+  });
+  document.getElementById("au-full").addEventListener("click", function () {
+    estado.aurelio = 45; estado.conc = true; pintaAurelio();
+  });
+  auConc.addEventListener("click", function () { estado.conc = !estado.conc; pintaAurelio(); });
+
+  /* ── Selo ──────────────────────────────────────────────── */
+  var seloBtns = Array.prototype.slice.call(document.querySelectorAll("[data-selo]"));
+  var seloCount = document.getElementById("selo-count");
+  var seloAlerta = document.getElementById("selo-alerta");
+
+  function pintaSelo() {
+    var n = estado.selo.filter(Boolean).length;
+    seloCount.textContent = n + " / 3";
+    seloBtns.forEach(function (b, i) { b.setAttribute("aria-pressed", String(!!estado.selo[i])); });
+    if (n === 3) {
+      seloAlerta.className = "alerta";
+      seloAlerta.textContent = "Fenda estabilizada. Os seis caem de uma vez, no mesmo instante.";
+    } else if (estado.rodada > 3) {
+      seloAlerta.className = "alerta quente";
+      seloAlerta.textContent = "Fecho parcial: uma cicatriz do tamanho de um braço, que não fecha e não cresce. É o fio da próxima sessão.";
+    } else {
+      seloAlerta.className = "alerta frio";
+      seloAlerta.textContent = "Ferramentas de Ladrão +5 · CD 14 · 1×/rodada." + (estado.aurelio === 0 ? " Com desvantagem — Aurélio caiu." : "");
+    }
+    salvar();
+  }
+  seloBtns.forEach(function (b, i) {
+    b.addEventListener("click", function () { estado.selo[i] = !estado.selo[i]; pintaSelo(); });
+  });
+
+  /* ── Tema ──────────────────────────────────────────────── */
+  var tema = document.getElementById("tema");
+  function pintaTema() {
+    tema.setAttribute("aria-pressed", String(!!estado.tema));
+    if (estado.tema) document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    salvar();
+  }
+  tema.addEventListener("click", function () { estado.tema = !estado.tema; pintaTema(); });
+
+  /* ── Zerar ─────────────────────────────────────────────── */
+  document.getElementById("zerar").addEventListener("click", function () {
+    estado.rodada = 1;
+    estado.coro = NOMES.map(function () { return { pv: 22, estado: "ativo" }; });
+    estado.aurelio = 45; estado.conc = true; estado.selo = [false, false, false];
+    pintaRodada(); pintaCoro(); pintaAurelio(); pintaSelo();
+  });
+
+  /* ── Primeira pintura ──────────────────────────────────── */
+  pintaTema();
+  pintaRodada();
+  pintaCoro();
+  pintaAurelio();
+  pintaSelo();
+  ir(document.getElementById(estado.cena) ? estado.cena : "setup");
+})();
+</script>
