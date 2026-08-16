@@ -5,7 +5,7 @@ description: Registro cronológico das mudanças significativas no codex da Mans
 visibility: secret
 status: stable
 lang: pt-BR
-generated: { by: gpt-5/codex, at: 2026-08-16T03:55:46Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Registro de Mudanças
@@ -18,6 +18,14 @@ gostaria de *narrar* para si mesmo daqui a seis meses.
 Formato: `## AAAA-MM-DD — resumo`, depois bullets, cada um linkando os conceitos tocados.
 
 ---
+
+## 2026-08-16 — Sessão 4 importada da transcrição do Granola
+
+- O [resumo da sessão 4](/sessions/sessao-04.md) registra o coro de seis, a esfera
+  necrótica, a canalização coletiva e a chegada de Crispim.
+- O uso da música de Bob avançou [Por que a arte responde](/threads/por-que-a-arte-responde.md).
+- A diferença entre a fenda planejada e a esfera jogada ficou registrada como conflito de
+  fontes em [A fenda sob a cripta](/threads/a-fenda-sob-a-cripta.md), sem resolução inventada.
 
 ## 2026-08-15 — Primeiro lote estrutural do manifesto aprovado
 

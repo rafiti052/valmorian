@@ -1,7 +1,7 @@
 ---
 type: Site
 title: Igreja de Lathander
-description: Capela da aurora no extremo oeste do terreno da mansão, com escada própria para a cripta ancestral; a luz dela está segurando sozinha a borda da fenda lá embaixo.
+description: Capela da aurora no extremo oeste do terreno, onde o grupo enfrentou o coro de seis e canalizou Lathander para dissipar a força necrótica da cripta.
 visibility: public
 status: draft
 lang: pt-BR
@@ -13,8 +13,13 @@ sources:
     sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
     coverage: partial
     locator: "§6 Igreja"
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "combate junto à igreja e descida à cripta"
 tags: [local, templo, lathander]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:10:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Igreja de Lathander
@@ -43,10 +48,17 @@ O bloco precisa parecer errado **antes** de qualquer combate:
 - A luz de Lathander febril e cansada — pulsa como respiração difícil, não como chama ao vento.
 - Todos os sinais apontando para baixo, para a [cripta](/locations/cripta.md).
 
-## O que existe na nave, e serve de arma
+## O que aconteceu aqui
 
-Isto não é cenário: é a segunda via de resolver o combate da
-[sessão 4](/sessions/sessao-04-plano.md).
+- O grupo chegou para depositar as cinzas de um servo de Lathander.
+- Seis integrantes mortos de um antigo coro saíram das criptas e atacaram.
+- Bri, Aurélio e o restante do grupo canalizaram a força de Lathander contra a esfera
+  necrótica que alimentava os mortos.
+
+## Preparação anterior — não confirmada em jogo
+
+Os elementos abaixo foram preparados como segunda via para resolver o combate no
+[plano da sessão 4](/sessions/sessao-04-plano.md), mas a transcrição não registra seu uso.
 
 - **Braseiros de vigília** — pesados, acesos, tombáveis. Brasa consagrada no chão impede
   que uma pilha de ossos remonte.

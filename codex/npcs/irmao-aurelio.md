@@ -6,6 +6,7 @@ visibility: public
 status: draft
 lang: pt-BR
 disposition: friendly
+last_seen: /sessions/sessao-04.md
 tags: [npc, monge, lathander, aliado, ritual]
 sources:
   - resource: "/sources/handover-campanha-valmorian.md"
@@ -20,7 +21,12 @@ sources:
     sha256: cb83d87b7cb6c8c062aabf347ae2f8caf8526aa18d9cecd7dfd3d21220599cb8
     coverage: partial
     locator: "Feira da mansão — NPC extra — Irmão Aurélio"
-generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "combate, canalização de Lathander e reconhecimento de Crispim"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Irmão Aurélio
@@ -73,6 +79,12 @@ sobre o assunto.
   [ritual da cripta](/threads/a-fenda-sob-a-cripta.md).
 
 **Não sabe:** a história completa dos fundadores, o que é o Ônix Negro, quem é Valthar.
+
+## O que fez na sessão 4
+
+- Lutou com chutes, usou Esquiva e sustentou uma bênção de Lathander que acrescentava 1d4.
+- Participou da canalização coletiva que dissipou a esfera necrótica.
+- Reconheceu Crispim Catraca quando o gnomo chegou carregado de ferramentas.
 
 ## Bloco de apoio — [WORKING]
 

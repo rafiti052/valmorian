@@ -19,13 +19,21 @@ sources:
     sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
     coverage: partial
     locator: "Bri, pp. 4-6"
-generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "avanço do grupo para o nível 5"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Bri
 
-**Humana · Paladina 4 (Juramento da Vingança) · Divindade: Lathander**
+**Humana · Paladina 5 (Juramento da Vingança) · Divindade: Lathander**
 CA 20 · PV 31 · Deslocamento 30 pés · CD de magia 13
+
+> [!warning]
+> O nível 5 foi estabelecido na sessão 4; os números e a lista abaixo ainda vêm da ficha de nível 4.
 
 > [!note]
 > A ficha marca o antecedente como **Soldado**; a backstory descreve **Heroína do Povo**.

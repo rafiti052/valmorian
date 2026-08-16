@@ -6,12 +6,14 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [grupo, planejamento, apenas-mestre]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:55:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # O Grupo
 
-Cinco PJs, todos de **nível 4**.
+Cinco PJs, todos de **nível 5** desde o fim da
+[sessão 4](/sessions/sessao-04.md). CA, PV e listas de habilidades abaixo ainda refletem
+as fichas anteriores até a atualização mecânica de cada personagem.
 
 | PJ | Espécie / Classe | CA | PV | O que ela ou ele resolve |
 |----|------------------|----|----|--------------------------|
@@ -27,27 +29,27 @@ A tabela mais útil deste codex. Atualize a cada resumo; leia a cada preparaçã
 
 | PJ | Gancho pessoal | Última cena pessoal | Sessões desde |
 |----|----------------|---------------------|---------------|
-| [Enna](/party/enna.md) | A Casa Valerius caiu e ela carrega o Selo | Biblioteca, sessão 2.5 | 1 |
-| [Líria](/party/liria.md) | Foi colocada na Lagoa Nymrath, não perdida | Sala de pintura, sessão 2.5 | 1 |
-| [Bri](/party/bri.md) | Morreu no Refúgio do Carvalho e viu o Amanhecer | Feira, Espirro Dourado, sessão 3 | 0 |
-| [Yara](/party/yara.md) | Perdeu o primo Eron num espaço que falhou | **Nenhuma ainda** | 3+ |
-| [Bob](/party/bob.md) | *Sem mistério pessoal ligado à mansão* | **Nenhuma ainda** | 3+ |
+| [Enna](/party/enna.md) | A Casa Valerius caiu e ela carrega o Selo | Pedra catalisou a canalização, sessão 4 | 0 |
+| [Líria](/party/liria.md) | Foi colocada na Lagoa Nymrath, não perdida | Sala de pintura, sessão 2.5 | 2 |
+| [Bri](/party/bri.md) | Morreu no Refúgio do Carvalho e viu o Amanhecer | Canalização com Aurélio, sessão 4 | 0 |
+| [Yara](/party/yara.md) | Perdeu o primo Eron num espaço que falhou | **Nenhuma ainda** | 4+ |
+| [Bob](/party/bob.md) | *Sem mistério pessoal ligado à mansão* | Flauta decidiu a canalização, sessão 4 | 0 |
 
 **Regra prática:** ninguém passa mais de três sessões sem uma cena que seja *dele*. Em caso
 de empate, dê para o jogador mais quieto.
 
 > [!warning]
-> **Yara e Bob estão devendo há três sessões.** A Yara cobra na
-> [sessão 4](/sessions/sessao-04-plano.md) — a cripta é literalmente o tipo de falha espacial
-> que matou o Eron, e ela é a especialista em mortos-vivos do grupo. O Bob continua sem
-> gancho próprio na mansão; isso precisa ser plantado, não improvisado na hora.
+> **Yara está devendo há quatro sessões.** A sessão 4 usou a especialidade dela contra
+> mortos-vivos, mas não entregou a cena pessoal ligada a Eron que o plano previa. Bob ganhou
+> protagonismo funcional com a flauta, embora continue sem mistério pessoal ligado à mansão.
 
 ## Estado do grupo
 
 - **Posse da mansão:** pendente do inventário.
-- **Aliado em campo:** [Irmão Aurélio](/npcs/irmao-aurelio.md), no templo, agora mesmo.
-- **Devem ao grupo:** [Crispim Catraca](/npcs/crispim-catraca.md) chamou por ajuda e ainda não
-  foi respondido.
+- **Aliado em campo:** [Irmão Aurélio](/npcs/irmao-aurelio.md), depois de ajudar a dissipar
+  a esfera na cripta.
+- **Próxima conversa:** [Crispim Catraca](/npcs/crispim-catraca.md) quer falar com cada PJ
+  individualmente.
 - **Itens não identificados:** botas, braçadeira e cinto da sala do tesouro do subsolo.
   **Você ainda não decidiu o que são.**
 

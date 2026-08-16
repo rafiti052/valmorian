@@ -1,7 +1,7 @@
 ---
 type: Stat Block
 title: Necromante-Esqueleto do Coro
-description: Morto-vivo cantor da cripta sob a igreja; desmonta ao cair e se remonta no turno seguinte, e só para de verdade com dano radiante ou com a fenda estabilizada.
+description: Morto-vivo do coro da igreja; três em formação triangular conseguiam recompor os caídos enquanto uma esfera necrótica alimentava o conjunto.
 visibility: secret
 status: draft
 lang: pt-BR
@@ -13,16 +13,21 @@ sources:
     sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
     coverage: partial
     locator: "§7 Cripta"
-generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "combate do coro e revelação dos seis nomes"
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Necromante-Esqueleto do Coro
 
 > [!warning]
-> **Bloco inventado por mim.** A sua fonte enuncia três coisas — *"desmontam ao cair, se
-> remontam depois de um turno"*, *"se 3 ou mais estiverem ativos, o coro remonta um dos seis
-> por ação bônus conjunta"* e *"são seis"* — e nada mais. Números, ataques e a regra do
-> radiante são meus. Nada aqui é canon até você usar na mesa.
+> **Parte do bloco continua inventada.** A sessão estabeleceu seis mortos-vivos, a formação
+> triangular de três com escudos, a recomposição dos caídos, a destruição de um deles por
+> Divine Smite e o colapso do conjunto quando a esfera necrótica foi dissipada. CA, PV,
+> ataques e a economia exata de ações abaixo continuam como material operacional de mestre.
 
 Seis deles. Não são guardas da cripta: são o que sobrou de quem cantava nela. Continuam
 cantando. É por isso que a igreja soa errada antes de qualquer um entender o porquê.
@@ -52,18 +57,16 @@ cantando. É por isso que a igreja soa errada antes de qualquer um entender o po
 
 ## Traços
 
-**Desmontar.** Quando cai a 0 pontos de vida, ele **não é destruído**. Desaba numa pilha de
-ossos e paramentos no espaço dele. No **início do próximo turno dele**, remonta em pé, no
-mesmo espaço, com **11 pontos de vida** — e perde aquele turno inteiro.
+**Desmontar.** Quando cai a 0 pontos de vida, desaba numa pilha de ossos e paramentos no
+espaço dele. A pilha pode ser recomposta pelo coro; a sessão não estabeleceu remontagem
+individual automática.
 
-**O Coro.** Na contagem de iniciativa do primeiro esqueleto ainda ativo, se **3 ou mais**
-estiverem de pé, o coro gasta a **ação bônus coletiva** e **uma pilha remonta imediatamente
-com 11 PV**. Uma vez por rodada. Com dois ou menos de pé, o canto se desfaz e isso deixa de
-funcionar. Não alcança pilha já destruída de vez.
+**O Coro.** Três esqueletos formam um triângulo com os escudos e recompõem um companheiro
+caído. Como implementação operacional: o trio gasta uma ação bônus coletiva e uma pilha
+remonta com **11 PV**, uma vez por rodada. Separar o trio impede o efeito.
 
-**Fim verdadeiro.** Uma pilha para de remontar de vez se sofrer **dano radiante** — ou se a
-fenda na [cripta](/locations/cripta.md) for estabilizada, o que derruba os seis de uma vez,
-sem teste de resistência.
+**Fim verdadeiro.** Divine Smite queimou um dos esqueletos até as cinzas. Dissipar a esfera
+necrótica na [cripta](/locations/cripta.md) derrubou o conjunto de uma vez.
 
 ### A pilha, em regras
 
@@ -144,5 +147,6 @@ vencido por atrito; é para ensinar que atrito não resolve.
 
 ## Os seis
 
-Nomes rápidos, inventados agora, para quando a mesa perguntar quem eles eram: Dom Nesteu,
-Irmã Valquina, o Cantor Sem Nome, Dom Ferrez, Irmã Odila, o Menino do Turíbulo.
+Nomes lidos na cripta durante a sessão 4: **Dom Nesteu, Irmã Valquina, o Cantor Sem Nome,
+Dom Ferrez, Irmã Odila e o Menino do Estábulo**. Sob cada nome havia, em Silvano, a
+inscrição **“um belo artista”**.

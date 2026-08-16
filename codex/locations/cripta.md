@@ -1,12 +1,12 @@
 ---
 type: Site
 title: Cripta Ancestral
-description: Cripta da família na ala oeste do subsolo, que costura a igreja à mansão por baixo do terreno; a ruptura interplanar se abriu aqui e acordou o coro de seis.
+description: Cripta bem cuidada sob a igreja, onde uma esfera necrótica sustentava o coro de seis até o grupo dissipá-la.
 visibility: public
 status: draft
 lang: pt-BR
 threads: [/threads/a-fenda-sob-a-cripta.md]
-first_appeared: /sessions/sessao-04-plano.md
+first_appeared: /sessions/sessao-04.md
 sources:
   - resource: "/sources/sessao_3_estrutura_narrativa.md"
     title: "Sessão 3 — Estrutura Narrativa (§7 Cripta)"
@@ -14,8 +14,13 @@ sources:
     sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
     coverage: partial
     locator: "§7 Cripta"
-tags: [local, cripta, fenda, clímax]
-generated: { by: gpt-5/codex, at: 2026-08-16T04:18:13Z }
+  - resource: "granola://meeting/48be6fe4-502b-46d4-bcc2-405e35859efc"
+    title: "Sessão 4 — transcrição Granola"
+    author: "human:rafael e participantes"
+    coverage: partial
+    locator: "investigação da cripta, esfera necrótica e nomes do coro"
+tags: [local, cripta, fenda, clímax, coro, esfera-necrotica]
+generated: { by: gpt-5/codex, at: 2026-08-16T04:54:06Z }
 ---
 
 # Cripta Ancestral
@@ -48,14 +53,28 @@ Ritual Room — o complexo central do B1 que o grupo já limpou fica longe, a le
 > Oração Privada, parede com parede com os quadros da Lagoa Nymrath. Se o fecho for parcial,
 > é por ali que a próxima coisa entra.
 
-## Clima
+## Estado depois da sessão 4
+
+- A cripta estava bem cuidada, com mármore e túmulos, não decrépita.
+- Uma esfera invisível de energia necrótica sugava força do lugar e mantinha o coro de pé.
+- A canalização conjunta de Lathander, completada pela música de Bob, dissipou a esfera.
+- Os túmulos nomeavam Dom Nesteu, Irmã Valquina, o Cantor Sem Nome, Dom Ferrez, Irmã
+  Odila e o Menino do Estábulo; sob eles estava escrito “um belo artista” em Silvano.
+- Uma Investigação 20 rendeu a promessa de um item ainda não definido.
+
+## Clima planejado
 
 - Túmulos rachados **de dentro para fora**.
 - Ar frio e espesso. Frio de coisa aberta, não frio de porão.
 - Eco ritual — o canto do coro chega mais alto aqui do que na nave.
 - Luz ametista misturada ao dourado de Lathander.
 
-## A fenda
+## A fenda planejada
+
+> [!warning]
+> A fonte de preparação descrevia a fenda abaixo. Na mesa, a ameaça visível foi uma esfera
+> necrótica, que acabou dissipada. Ainda não está decidido se a esfera substituiu a fenda ou
+> se as duas coexistem.
 
 Não é o portal do subsolo. **É um rasgo, não uma porta.** A pedra deixa de existir no fundo
 da cripta: não há buraco, há uma ausência com bordas, e as bordas ficam de perfil de qualquer
@@ -64,13 +83,14 @@ da cripta: não há buraco, há uma ausência com bordas, e as bordas ficam de p
 Abriu quando [Milara](/npcs/milara.md) interferiu na contenção lá embaixo. A luz de
 Lathander desceu até aqui e está segurando a borda sozinha.
 
-## Quem está aqui
+## Quem esteve aqui
 
 > [!secret]
-> Seis [necromantes-esqueleto do coro](/bestiary/necromante-esqueleto-do-coro.md) — que na sua
-> mesa **já subiram para a igreja**.
+> Seis [integrantes mortos do coro](/bestiary/necromante-esqueleto-do-coro.md) subiram para a
+> igreja e foram libertados da força necrótica na sessão 4. O grupo entendeu que os ajudou a
+> descansar.
 
-## A regra da contenção
+## A regra de contenção planejada
 
 O [Selo de Ametista](/items/selo-de-ametista.md) sozinho não basta. Estabilizar exige três:
 
@@ -78,7 +98,8 @@ O [Selo de Ametista](/items/selo-de-ametista.md) sozinho não basta. Estabilizar
 2. [Bri](/party/bri.md) canalizando a devoção a Lathander.
 3. [Irmão Aurélio](/npcs/irmao-aurelio.md) sustentando a harmonização espiritual.
 
-Mecânica completa no [plano da sessão 4](/sessions/sessao-04-plano.md).
+Mecânica completa no [plano da sessão 4](/sessions/sessao-04-plano.md). Ela não foi a
+resolução usada na mesa.
 
 ## Ecos que a mesa pode não ter ligado
 
