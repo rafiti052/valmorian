@@ -101,7 +101,8 @@ This shapes what "good output" means here, so follow it unless told otherwise:
 ```
 codex/        the OKF v0.2 bundle — all campaign canon. Bundle root for absolute links.
 docs/         OKF profile, language policy, pt-BR D&D glossary
-sources/      raw material as Rafael wrote it (tracked — provenance, not canon)
+sources/      raw provenance; cleared campaign text tracked, private/licensed files local
+local-corpus/ local-only QMD text for commercial references; full text is gitignored
 scripts/      okf_validate.py, import_status.py
 .claude/      skills, subagents, slash commands
 .qmd/         local search index config (index.sqlite is gitignored)

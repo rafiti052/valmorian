@@ -41,13 +41,15 @@ VISIBILITY = {"public", "rumored", "secret"}
 STATUS = {"draft", "stable", "deprecated"}
 PRESSURE = {"dormant", "simmering", "urgent", "resolved"}
 DISPOSITION = {"hostile", "wary", "neutral", "friendly", "devoted"}
+SOURCE_COVERAGE = {"full", "partial", "catalog-only", "deferred"}
 
 # type -> directories the type is allowed to live in (relative to bundle root)
 TYPE_DIRS = {
     "Campaign": {""},
     "Change Log": {""},
     "World Concept": {"world", "arcs", "threads", "factions", "npcs", "locations",
-                      "sessions", "party", "items", "rules", "bestiary"},
+                      "sessions", "party", "items", "rules", "bestiary", "rulebooks",
+                      "homebrew"},
     "NPC": {"npcs"},
     "Faction": {"factions"},
     "Region": {"locations"},
@@ -61,6 +63,8 @@ TYPE_DIRS = {
     "Item": {"items"},
     "House Rule": {"rules"},
     "Stat Block": {"bestiary"},
+    "Rulebook": {"rulebooks"},
+    "Homebrew": {"homebrew"},
 }
 
 # frontmatter fields whose values are links into the bundle
@@ -211,9 +215,46 @@ def check_fields(c: Concept) -> list[Finding]:
             out.append(Finding("error", c.rel, "sources must be a list"))
         else:
             for entry in srcs:
-                if not isinstance(entry, dict) or "resource" not in entry:
+                if not isinstance(entry, dict) or not isinstance(entry.get("resource"), str) \
+                        or not entry["resource"].strip():
                     out.append(Finding("error", c.rel,
-                                       "each sources entry needs a 'resource' field"))
+                                       "each sources entry needs a non-empty string "
+                                       "'resource' field"))
+                    continue
+                local_source = entry["resource"].startswith("/sources/")
+                coverage = entry.get("coverage")
+                if local_source and coverage is None:
+                    out.append(Finding(
+                        "error", c.rel,
+                        "local /sources/ entry needs a 'coverage' field",
+                    ))
+                if coverage is not None and coverage not in SOURCE_COVERAGE:
+                    out.append(Finding(
+                        "error", c.rel,
+                        f"sources coverage '{coverage}' not one of "
+                        f"{sorted(SOURCE_COVERAGE)}",
+                    ))
+                digest = entry.get("sha256")
+                if local_source and digest is None:
+                    out.append(Finding(
+                        "error", c.rel,
+                        "local /sources/ entry needs a 'sha256' field",
+                    ))
+                if digest is not None and not re.fullmatch(r"[0-9a-fA-F]{64}", str(digest)):
+                    out.append(Finding(
+                        "error", c.rel,
+                        "sources sha256 must be a 64-character hexadecimal digest",
+                    ))
+                locator = entry.get("locator")
+                if local_source and (not isinstance(locator, str) or not locator.strip()):
+                    out.append(Finding(
+                        "error", c.rel,
+                        "local /sources/ entry needs a non-empty string 'locator' field",
+                    ))
+                elif locator is not None and not isinstance(locator, str):
+                    out.append(Finding(
+                        "error", c.rel, "sources locator must be a string",
+                    ))
 
     tags = m.get("tags")
     if tags is not None and not isinstance(tags, list):

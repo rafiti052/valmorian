@@ -6,12 +6,29 @@
 # QMD models live in ~/.cache/qmd/models, but guard against stray copies
 *.gguf
 
-# sources/ IS tracked on purpose — it is the channel by which raw material
-# reaches the companion, and the provenance target for codex `sources:` links.
-# Only exclude the genuinely unhelpful.
+# Public, campaign-authored material in sources/ is tracked as provenance.
+# Private player material and assets without confirmed publication rights stay local.
+# Add authorized sources by exact filename; never bulk-stage this directory.
 sources/**/*.tmp
 sources/**/~$*
 sources/**/*.lock
+
+# Manifest-classified private or unlicensed campaign inputs. Keep the paths stable so
+# local provenance links continue to resolve, but never publish the binaries.
+sources/Backstories.pdf
+sources/Capa.png
+sources/Cenarios/
+sources/DnD_2024_Character-Sheet - DLTHEDM - Fillable.pdf
+sources/Ficha Bob.pdf
+sources/Ficha Bri.pdf
+sources/Ficha Enna.pdf
+sources/Ficha Liria.pdf
+sources/Ficha Yara.pdf
+sources/Mansao_Valmorian_Sessao_1_Roteiro.pdf
+sources/Mapas/
+sources/Yara/
+sources/npc_fichas.pdf
+sources/updated-my-amphitari-race-to-include-more-amphibians-v0-7y3rw2xa8f2d1.webp
 
 # Third-party copyrighted material. This repo is PUBLIC — committing a
 # commercial rulebook here republishes it. Keep the file on disk (the companion
@@ -20,6 +37,10 @@ sources/**/*.lock
 sources/**/dampd-5e*.pdf
 sources/**/*livro-do-jogador*.pdf
 sources/**/*players-handbook*.pdf
+
+# Full-text extraction of commercial rulebooks is searchable locally through QMD but
+# must never be committed to this public repository. The collection README is tracked.
+local-corpus/rulebooks/extracted/
 
 # Local agent state
 .claude/settings.local.json
