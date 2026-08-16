@@ -10,10 +10,16 @@ sources:
   - resource: "/sources/Ficha Yara.pdf"
     title: "Ficha Yara"
     author: "human:rafael"
+    sha256: 49f5d29fd759dda2313dcfdffaea8b17f39fe705b789cd574cc43da28c58fbc9
+    coverage: partial
+    locator: "campos AcroForm preenchidos de Yara, pp. 1-2"
   - resource: "/sources/Backstories.pdf"
     title: "Backstories — PCs Mansão Valmorian"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:50:00Z }
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Yara, pp. 12-15"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Yara

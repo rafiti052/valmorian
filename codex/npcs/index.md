@@ -6,14 +6,26 @@ visibility: secret
 status: draft
 lang: pt-BR
 tags: [npcs, apenas-mestre]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:48:00Z }
+generated: { by: process:okf-import, at: 2026-08-15T23:12:07Z }
 ---
 
 # NPCs
 
 | Quem | Disposição | Visto por último | Visibilidade |
 |------|------------|------------------|--------------|
-| [Aurélio Bastos](/npcs/aurelio-bastos.md) | `friendly` | [Sessão 1](/sessions/sessao-01.md) | `public` |
+| [Chef Espectral](/npcs/chef-espectral.md) | `hostile` | — | `rumored` |
+| [Crispim Catraca](/npcs/crispim-catraca.md) | `friendly` | — | `public` |
+| [Doutor Fini](/npcs/doutor-fini.md) | `neutral` | — | `secret` |
+| [Espirro Dourado](/npcs/espirro-dourado.md) | `friendly` | — | `public` |
+| [Irmão Aurélio](/npcs/irmao-aurelio.md) | `friendly` | — | `public` |
+| [Leôncio Mirtilo](/npcs/leoncio-mirtilo.md) | `friendly` | — | `public` |
+| [Mordecai](/npcs/mordecai.md) | `friendly` | — | `public` |
+| [M. Valmorian](/npcs/m-valmorian.md) | `neutral` | — | `secret` |
+| [Marea](/npcs/marea.md) | `friendly` | — | `rumored` |
+| [Silena Pouca Sombra](/npcs/silena-pouca-sombra.md) | `friendly` | — | `public` |
+| [Valério Veraneio](/npcs/valerio-veraneio.md) | `friendly` | — | `public` |
+| [Valthar](/npcs/valthar.md) | `neutral` | — | `secret` |
+| [Vhaelyr](/npcs/vhaelyr.md) | `hostile` | — | `public` |
 
 ## NPC mínimo viável
 

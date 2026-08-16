@@ -10,7 +10,10 @@ sources:
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §5, §6, §7"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:55:00Z }
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§5, §6, §7"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # O Demiplano
@@ -38,12 +41,13 @@ Prédio, máquina, ritual e organismo não são camadas separadas. **A arquitetu
 magia.** Quando o grupo mexeu no núcleo do subsolo, a casa inteira respondeu — a feira
 apareceu, e a igreja adoeceu.
 
-> [!secret]
-> **A lista de membros da coalizão não está fechada.** Sabemos de
-> [Lathander](/world/lathander-guardiao.md), dos
-> [Arquitetos Fundadores](/factions/os-arquitetos-fundadores.md) e da
-> [Casa Valerius](/factions/casa-valerius.md) como custódia. Não invente os demais sem
-> necessidade — o buraco é útil.
+### Limite conhecido
+
+**A lista de membros da coalizão não está fechada.** Sabemos de
+[Lathander](/world/lathander-guardiao.md), dos
+[Arquitetos Fundadores](/factions/os-arquitetos-fundadores.md) e da
+[Casa Valerius](/factions/casa-valerius.md) como custódia. Não invente os demais sem
+necessidade — o buraco é útil.
 
 ## O arranjo de três peças
 

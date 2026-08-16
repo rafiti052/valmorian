@@ -10,10 +10,16 @@ sources:
   - resource: "/sources/Ficha Liria.pdf"
     title: "Ficha Liria"
     author: "human:rafael"
+    sha256: 4389096ea154a95243137c61896f5a85ad479c47848e665d092009d339deb610
+    coverage: partial
+    locator: "campos AcroForm preenchidos de Liria, pp. 1-2"
   - resource: "/sources/Backstories.pdf"
     title: "Backstories — PCs Mansão Valmorian"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:50:00Z }
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Líria, pp. 9-11"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Líria Valenwe

@@ -11,10 +11,16 @@ sources:
   - resource: "/sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md"
     title: "Sessão 2.5 — gancho final"
     author: "human:rafael"
+    sha256: cb83d87b7cb6c8c062aabf347ae2f8caf8526aa18d9cecd7dfd3d21220599cb8
+    coverage: partial
+    locator: "Gancho final — Crispim Catraca"
   - resource: "/sources/handover-campanha-valmorian.md"
     title: "Handover de campanha — §29"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T21:57:00Z }
+    sha256: 2cc558ef28032db4382ad7e0fefe1a417c224f7868d73e3f6480395720e2835f
+    coverage: partial
+    locator: "§29"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Crispim Catraca

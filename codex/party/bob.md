@@ -10,10 +10,16 @@ sources:
   - resource: "/sources/Ficha Bob.pdf"
     title: "Ficha Bob"
     author: "human:rafael"
+    sha256: ed2fe86e558c766a3269ba5b7eebbf9095c10bbe9909da28df6adae99369e875
+    coverage: partial
+    locator: "campos AcroForm preenchidos de Bob, pp. 1-2"
   - resource: "/sources/Backstories.pdf"
     title: "Backstories — PCs Mansão Valmorian"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:50:00Z }
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Bob, pp. 7-8"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Bob, o Bardo

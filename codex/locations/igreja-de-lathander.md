@@ -10,8 +10,11 @@ sources:
   - resource: "/sources/sessao_3_estrutura_narrativa.md"
     title: "Sessão 3 — Estrutura Narrativa (§6 Igreja)"
     author: "human:rafael"
+    sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
+    coverage: partial
+    locator: "§6 Igreja"
 tags: [local, templo, lathander]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:10:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Igreja de Lathander

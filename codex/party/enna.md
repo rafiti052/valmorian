@@ -10,10 +10,16 @@ sources:
   - resource: "/sources/Ficha Enna.pdf"
     title: "Ficha Enna"
     author: "human:rafael"
+    sha256: 0c25e212305951117dd9ee78152d1a96664320b116870cff2b588c8f2881fc73
+    coverage: partial
+    locator: "campos AcroForm preenchidos de Enna, pp. 1-2"
   - resource: "/sources/Backstories.pdf"
     title: "Backstories — PCs Mansão Valmorian"
     author: "human:rafael"
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T22:50:00Z }
+    sha256: e3200f29f572423baf07ade254950a7e1c75e784aa6b375385945d6ee8d35777
+    coverage: partial
+    locator: "Enna, pp. 2-3"
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Enna

@@ -6,19 +6,27 @@ visibility: public
 status: draft
 lang: pt-BR
 threads: [/threads/a-fenda-sob-a-cripta.md]
-first_appeared: /sessions/sessao-01.md
 sources:
   - resource: "/sources/Mansao_Valmorian_Sessao_1_Roteiro.pdf"
     title: "Mansão Valmorian — Sessão 1 (roteiro)"
     author: "human:rafael"
+    sha256: 599bca3c37cb045b00e4e5a2acfb58b3bcf0ee481de79dfc04d2d21f52de0ba5
+    coverage: partial
+    locator: "pp. 1-5"
   - resource: "/sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md"
     title: "Sessão 2.5 — Apoio de Mesa"
     author: "human:rafael"
+    sha256: cb83d87b7cb6c8c062aabf347ae2f8caf8526aa18d9cecd7dfd3d21220599cb8
+    coverage: partial
+    locator: "Estrutura rápida; Drawing Room; Biblioteca; Subsolo; Retorno; Feira"
   - resource: "/sources/sessao_3_estrutura_narrativa.md"
     title: "Sessão 3 — Estrutura Narrativa"
     author: "human:rafael"
+    sha256: 64ec6159703e2ed63b139fef35603fccfe208e2c6fac74aee8d279e049bb73e8
+    coverage: partial
+    locator: "Visão Geral; §§1-7; Fechamento esperado"
 tags: [local, mansão, contenção]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:12:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Mansão Valmorian

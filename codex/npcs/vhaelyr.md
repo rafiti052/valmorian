@@ -11,11 +11,17 @@ sources:
   - resource: "/sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md"
     title: "Sessão 2.5 — Apoio de Mesa (Subsolo, Apêndice)"
     author: "human:rafael"
+    sha256: cb83d87b7cb6c8c062aabf347ae2f8caf8526aa18d9cecd7dfd3d21220599cb8
+    coverage: partial
+    locator: "Subsolo — núcleo e drow; Apêndice — Antagonistas do subsolo"
   - resource: "/sources/npc_fichas.pdf"
     title: "Fichas de NPC — antagonistas do subsolo"
     author: "human:rafael"
+    sha256: 635711cbaf9ae56f891d3d37203ea71e828be60f652ce51088e32964451eb8d7
+    coverage: partial
+    locator: "p. 3 — Gloem Protector, Guardian Protocol"
 tags: [npc, drow, antagonista, subsolo]
-generated: { by: claude-opus-5/gm-companion, at: 2026-08-15T23:00:00Z }
+generated: { by: gpt-5/codex, at: 2026-08-15T23:02:07Z }
 ---
 
 # Vhaelyr
