@@ -29,6 +29,16 @@ markdown with `qmd update`.
 
 Claude Code picks up `.mcp.json` automatically, exposing QMD search as MCP tools.
 
+## Battlemap hexagonal
+
+O gerador da grade hexagonal requer Node 20.9 ou superior. Instale as dependências do
+repositório e informe os caminhos de entrada e saída:
+
+```bash
+npm ci
+npm run battlemap:hex -- caminho/entrada.png caminho/saida.png
+```
+
 ## Layout
 
 | Path | What it is |

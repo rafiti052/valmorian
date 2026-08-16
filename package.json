@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "battlemap:hex": "node scripts/create_exact_hex_battlemap.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.3"
+  }
+}
