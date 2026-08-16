@@ -3,12 +3,26 @@
 .qmd/index.sqlite-*
 .qmd/cache/
 
+# Installed dependencies are reproducible from the tracked package manifests.
+node_modules/
+
+# Python bytecode is generated locally by validation scripts.
+__pycache__/
+
 # QMD models live in ~/.cache/qmd/models, but guard against stray copies
 *.gguf
 
-# Public, campaign-authored material in sources/ is tracked as provenance.
-# Private player material and assets without confirmed publication rights stay local.
+# This is a public repository: new files under sources/ stay local unless their
+# publication rights have been cleared and they are explicitly allowlisted below.
 # Add authorized sources by exact filename; never bulk-stage this directory.
+sources/**
+!sources/README.md
+!sources/handover-campanha-valmorian.md
+!sources/sessao_2_5_apoio_mesa_com_constructos_v2.docx.md
+!sources/sessao_3_estrutura_narrativa.md
+
+# Keep transient source-side editor files local even if a parent directory is
+# explicitly allowlisted in the future.
 sources/**/*.tmp
 sources/**/~$*
 sources/**/*.lock

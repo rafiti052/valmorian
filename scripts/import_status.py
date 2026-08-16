@@ -42,9 +42,9 @@ DISPOSITIONS = ("pending",) + COVERAGE
 AVAILABILITY = ("tracked", "local-only")
 
 
-def referenced_resources() -> dict[str, list[dict[str, str]]]:
-    """Map normalised resource string -> concepts and declared coverage."""
-    refs: dict[str, list[dict[str, str]]] = {}
+def referenced_resources() -> dict[str, list[dict[str, object]]]:
+    """Map normalised resource string -> concept citation metadata."""
+    refs: dict[str, list[dict[str, object]]] = {}
     for path in CODEX.rglob("*.md"):
         text = path.read_text(encoding="utf-8")
         m = FRONTMATTER_RE.match(text)
@@ -72,6 +72,7 @@ def referenced_resources() -> dict[str, list[dict[str, str]]]:
             refs.setdefault(normalise(res), []).append({
                 "concept": rel_concept,
                 "coverage": coverage,
+                "sha256": entry.get("sha256"),
             })
     return refs
 
@@ -137,7 +138,7 @@ def validate_terminal_disposition(
     resource: str,
     disposition: str,
     manifest_entry: dict,
-    source_refs: list[dict[str, str]],
+    source_refs: list[dict[str, object]],
 ) -> list[str]:
     """Prove a terminal disposition with real targets and source citations."""
     errors: list[str] = []
@@ -202,9 +203,33 @@ def validate_terminal_disposition(
     return errors
 
 
+def validate_concept_digests(
+    resource: str,
+    manifest_entry: dict,
+    source_refs: list[dict[str, object]],
+) -> list[str]:
+    """Ensure every local concept citation names the manifest intake digest."""
+    expected = manifest_entry.get("sha256")
+    errors: list[str] = []
+    for source_ref in source_refs:
+        concept = source_ref["concept"]
+        actual = source_ref.get("sha256")
+        if not isinstance(actual, str) or not re.fullmatch(r"[0-9a-f]{64}", actual):
+            errors.append(
+                f"concept /{concept} citation for {resource} is missing a valid "
+                f"sha256 (expected {expected})"
+            )
+        elif actual != expected:
+            errors.append(
+                f"concept /{concept} citation for {resource} has sha256 {actual}, "
+                f"expected {expected}"
+            )
+    return errors
+
+
 def effective_coverage(
     disposition: str,
-    source_refs: list[dict[str, str]],
+    source_refs: list[dict[str, object]],
     terminal_errors: list[str],
 ) -> str:
     """Derive coverage conservatively from evidence, bounded by the manifest.
@@ -312,6 +337,9 @@ def main() -> int:
                 rel = rel[len("sources/"):]
             disposition = manifest_entry.get("disposition", "pending")
             availability = manifest_entry.get("availability")
+            manifest_errors.extend(
+                validate_concept_digests(resource, manifest_entry, source_refs)
+            )
             terminal_errors: list[str] = []
             if disposition in ("full", "catalog-only", "deferred"):
                 terminal_errors = validate_terminal_disposition(
